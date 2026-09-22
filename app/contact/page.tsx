@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { conferenceData } from "@/data/conference";
-import ContactForm from "@/components/ContactForm";
-import { Mail, MapPin, Building2 } from "lucide-react";
+import { Mail, MapPin, Building2, Phone, ArrowRight, ExternalLink } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Contact Conference Secretariat | ic-ETITE'28",
@@ -9,26 +10,27 @@ export const metadata: Metadata = {
     "Official contact directory for ic-ETITE'28 at Vellore Institute of Technology, School of Computer Science Engineering & Information Systems (SCORE).",
 };
 
-import PageHeader from "@/components/PageHeader";
-
 const leadershipContacts = [
   {
     role: "Conference Chair",
     name: "Dr. John Singh. K",
     designation: "Professor",
     email: "johnsingh.k@vit.ac.in",
+    phone: "+919442451035",
   },
   {
     role: "Publication Chair",
     name: "Dr. Vijayan. R",
-    designation: "Professor",
+    designation: "Associate Professor",
     email: "rvijayan@vit.ac.in",
+    phone: "+919842350596",
   },
   {
     role: "Finance Chair",
     name: "Dr. Priya M",
     designation: "Associate Professor",
     email: "priya.m@vit.ac.in",
+    phone: "+919994628305",
   },
 ];
 
@@ -45,92 +47,107 @@ export default function ContactPage() {
         bgImage="/images/frame_1.jpg"
       />
 
-      <div className="container-x py-16 space-y-16">
-        {/* Top: Inquiry Form & Primary Secretariat Info */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          {/* Contact Details & Official Roles */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="bg-[#FAFBFD] p-7 sm:p-8 rounded-2xl border-2 border-slate-200 shadow-sm">
-              <div className="flex items-center gap-2.5 mb-4">
-                <Mail className="w-6 h-6 text-[#002147]" />
-                <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#002147]">
-                  Primary Conference Electronic Mail
-                </h2>
+      <div className="container-x py-14 sm:py-20 space-y-12 sm:space-y-16">
+        {/* Top: 3-Column Secretariat Information Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+          {/* Card 1: Primary Electronic Mail */}
+          <div className="bg-[#FAFBFD] p-7 sm:p-8 rounded-3xl border-2 border-slate-200 shadow-sm flex flex-col justify-between hover:border-[#002147] transition-all">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-[#002147] text-white flex items-center justify-center mb-5 shadow-sm">
+                <Mail className="w-6 h-6 text-[#FFB81C]" />
               </div>
-
-              <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-between">
-                <div>
-                  <span className="text-xs text-slate-500 uppercase tracking-wider block font-bold">
-                    Official Secretariat Inbox
-                  </span>
-                  <a
-                    href={`mailto:${contact.email}`}
-                    className="text-lg sm:text-xl font-bold text-[#004B87] hover:underline transition-colors mt-0.5 block"
-                  >
-                    {contact.email}
-                  </a>
-                </div>
-              </div>
-              <p className="text-sm sm:text-base text-slate-700 mt-4 leading-relaxed font-normal">
-                All paper submission queries, registration confirmations, and technical program concerns are addressed via
-                this central portal.
+              <span className="text-xs font-mono font-bold tracking-wider text-[#004B87] uppercase block mb-1">
+                Central Inquiry Desk
+              </span>
+              <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#002147] mb-3">
+                Official Email
+              </h2>
+              <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                All paper submission queries, registration confirmations, and technical program concerns are addressed via this central inbox.
               </p>
             </div>
 
-            {/* Academic Department & Secretariat Details */}
-            <div className="bg-white p-7 sm:p-8 rounded-2xl border-2 border-slate-200 shadow-sm space-y-4">
-              <h3 className="text-xl font-serif font-bold text-[#002147] flex items-center gap-2">
-                <Building2 className="w-5 h-5 text-[#004B87]" />
-                <span>Conference Secretariat &amp; Organizing School</span>
-              </h3>
-
-              <div className="space-y-3 text-sm sm:text-base">
-                <div className="p-4 rounded-xl bg-[#FAFBFD] border border-slate-200">
-                  <span className="text-xs font-bold text-[#004B87] uppercase tracking-wider block">
-                    Organizing Department
-                  </span>
-                  <p className="font-serif font-bold text-[#002147] text-base sm:text-lg mt-1">{contact.organizer}</p>
-                </div>
-
-                <div className="p-4 rounded-xl bg-[#FAFBFD] border border-slate-200">
-                  <span className="text-xs font-bold text-[#004B87] uppercase tracking-wider block">
-                    Institution
-                  </span>
-                  <p className="font-serif font-bold text-[#002147] text-base sm:text-lg mt-1">{contact.institution}</p>
-                </div>
-
-                <div className="p-4 rounded-xl bg-[#FAFBFD] border border-slate-200">
-                  <span className="text-xs font-bold text-[#004B87] uppercase tracking-wider block">
-                    Technical Sponsor
-                  </span>
-                  <p className="font-serif font-bold text-[#002147] text-base sm:text-lg mt-1">IEEE</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Campus Address Card */}
-            <div className="p-6 sm:p-7 rounded-2xl bg-[#FAFBFD] border-2 border-slate-200 text-sm sm:text-base text-slate-700 space-y-2">
-              <h3 className="font-serif font-bold text-[#002147] text-base sm:text-lg flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-[#002147]" />
-                <span>Host Department Address</span>
-              </h3>
-              <p className="leading-relaxed text-slate-700 font-normal">
-                {venue.fullAddress}
-              </p>
+            <div className="pt-4 border-t border-slate-200">
+              <a
+                href={`mailto:${contact.email}`}
+                className="w-full btn-primary text-sm py-3 px-4 flex items-center justify-center gap-2 rounded-xl text-center font-bold"
+              >
+                <Mail className="w-4 h-4 text-[#FFB81C]" />
+                <span className="truncate">{contact.email}</span>
+              </a>
             </div>
           </div>
 
-          {/* Formal Secretariat Inquiry Form */}
-          <div className="lg:col-span-6 bg-white p-7 sm:p-10 rounded-2xl border-2 border-slate-200 shadow-md">
-            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#002147] mb-2">
-              Transmit Inquiry to Secretariat
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 mb-6 leading-relaxed">
-              Complete this formal correspondence form. You will receive an official response at your institutional email
-              within 2 business days.
-            </p>
+          {/* Card 2: Academic Department & Organization */}
+          <div className="bg-[#FAFBFD] p-7 sm:p-8 rounded-3xl border-2 border-slate-200 shadow-sm flex flex-col justify-between hover:border-[#002147] transition-all">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-[#002147] text-white flex items-center justify-center mb-5 shadow-sm">
+                <Building2 className="w-6 h-6 text-[#FFB81C]" />
+              </div>
+              <span className="text-xs font-mono font-bold tracking-wider text-[#004B87] uppercase block mb-1">
+                Academic Secretariat
+              </span>
+              <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#002147] mb-3">
+                Organizing School
+              </h2>
+              <div className="space-y-3 text-xs sm:text-sm text-slate-700">
+                <div className="p-3 bg-white rounded-xl border border-slate-200">
+                  <p className="text-[11px] font-bold text-slate-500 uppercase">School / Dept</p>
+                  <p className="font-semibold text-[#002147] mt-0.5">{contact.organizer}</p>
+                </div>
+                <div className="p-3 bg-white rounded-xl border border-slate-200">
+                  <p className="text-[11px] font-bold text-slate-500 uppercase">Institution</p>
+                  <p className="font-semibold text-[#002147] mt-0.5">{contact.institution}</p>
+                </div>
+                <div className="p-3 bg-white rounded-xl border border-slate-200">
+                  <p className="text-[11px] font-bold text-slate-500 uppercase">Student Chapter</p>
+                  <p className="font-semibold text-[#002147] mt-0.5">IEEE Information Theory Society, VIT</p>
+                </div>
+              </div>
+            </div>
 
-            <ContactForm />
+            <div className="pt-4 border-t border-slate-200 mt-6">
+              <a
+                href="https://vit.ac.in/schools/school-of-computer-science-engineering-and-information-systems"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs sm:text-sm font-semibold text-[#004B87] hover:underline inline-flex items-center gap-1.5"
+              >
+                <span>Visit School Portal</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Card 3: Host Campus Address */}
+          <div className="bg-[#FAFBFD] p-7 sm:p-8 rounded-3xl border-2 border-slate-200 shadow-sm flex flex-col justify-between hover:border-[#002147] transition-all">
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-[#002147] text-white flex items-center justify-center mb-5 shadow-sm">
+                <MapPin className="w-6 h-6 text-[#FFB81C]" />
+              </div>
+              <span className="text-xs font-mono font-bold tracking-wider text-[#004B87] uppercase block mb-1">
+                Conference Venue
+              </span>
+              <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#002147] mb-3">
+                Campus Location
+              </h2>
+              <p className="text-sm text-slate-700 leading-relaxed font-normal mb-4">
+                {venue.fullAddress}
+              </p>
+              <div className="p-3 bg-white rounded-xl border border-slate-200 text-xs text-slate-600">
+                <span className="font-bold text-[#002147]">City:</span> Vellore, Tamil Nadu, India · <span className="font-bold text-[#002147]">PIN:</span> 632014
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-slate-200 mt-6">
+              <Link
+                href="/venue"
+                className="btn-outline w-full text-xs sm:text-sm py-2.5 px-4 flex items-center justify-center gap-2 rounded-xl text-center font-bold"
+              >
+                <span>Campus Venue &amp; Travel Guide</span>
+                <ArrowRight className="w-4 h-4 text-[#002147]" />
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -138,17 +155,18 @@ export default function ContactPage() {
         <section className="bg-white rounded-3xl border-2 border-slate-200 shadow-sm overflow-hidden p-6 sm:p-8 md:p-10">
           <div className="max-w-2xl mb-8">
             <span className="text-xs sm:text-sm font-bold text-[#002147] uppercase tracking-wider bg-[#FFF4DB] px-3.5 py-1.5 rounded-full border border-[#F5A623]/50 inline-block mb-3">
-              Official Conference Chairs
+              Direct Secretariat Contact Desk
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147]">
-              Key Committee Contacts
+              Contact Us — Key Committee Contacts
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2">
               Reach out directly to the respective conference leadership chairs for academic, publication, and financial queries.
             </p>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border-2 border-slate-200 shadow-xs">
+          {/* Desktop Table View */}
+          <div className="hidden md:block overflow-x-auto rounded-2xl border-2 border-slate-200 shadow-xs">
             <table className="w-full text-left text-sm sm:text-base border-collapse">
               <thead>
                 <tr className="bg-[#002147] text-white">
@@ -156,6 +174,7 @@ export default function ContactPage() {
                   <th scope="col" className="py-4 px-6 font-bold">Name</th>
                   <th scope="col" className="py-4 px-6 font-bold">Designation</th>
                   <th scope="col" className="py-4 px-6 font-bold">Email</th>
+                  <th scope="col" className="py-4 px-6 font-bold">Phone Number</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200 text-slate-900">
@@ -186,10 +205,53 @@ export default function ContactPage() {
                         <span>{c.email}</span>
                       </a>
                     </td>
+                    <td className="py-4 px-6 whitespace-nowrap font-mono text-sm sm:text-base">
+                      <a
+                        href={`tel:${c.phone}`}
+                        className="text-slate-800 hover:text-[#004B87] hover:underline inline-flex items-center gap-1.5 font-medium"
+                      >
+                        <Phone className="w-4 h-4 text-[#F5A623]" />
+                        <span>{c.phone}</span>
+                      </a>
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile Cards View */}
+          <div className="md:hidden space-y-4">
+            {leadershipContacts.map((c) => (
+              <div
+                key={c.role}
+                className="p-5 rounded-2xl bg-white border-2 border-slate-200 shadow-xs space-y-3"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="px-2.5 py-1 rounded-lg bg-[#002147]/5 border border-[#002147]/15 text-xs font-bold text-[#002147]">
+                    {c.role}
+                  </span>
+                  <span className="text-xs font-medium text-slate-500">{c.designation}</span>
+                </div>
+                <h3 className="text-lg font-serif font-bold text-[#002147]">{c.name}</h3>
+                <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
+                  <a
+                    href={`mailto:${c.email}`}
+                    className="flex items-center gap-2 text-sm text-[#004B87] font-medium"
+                  >
+                    <Mail className="w-4 h-4 text-[#004B87]" />
+                    <span className="truncate">{c.email}</span>
+                  </a>
+                  <a
+                    href={`tel:${c.phone}`}
+                    className="flex items-center gap-2 text-sm text-slate-800 font-mono font-medium"
+                  >
+                    <Phone className="w-4 h-4 text-[#F5A623]" />
+                    <span>{c.phone}</span>
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </div>

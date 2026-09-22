@@ -100,12 +100,12 @@ export default function CallForPapersPage() {
           {/* Checklist reminder */}
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-xl text-sm text-white/80 mt-2">
             {[
-              "IEEE two-column format",
-              "4–6 pages (incl. references)",
+              "IEEE standard formatting",
+              "Scopus indexed journal recommendations for selected papers",
               "No embedded links / headers / footers",
-              "No scanned or low-res images",
+              "No scanned images",
               "Original & unpublished work",
-              "No email submissions accepted",
+              "No email submissions accepted (EasyChair only)",
             ].map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#F5A623] shrink-0" />

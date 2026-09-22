@@ -38,7 +38,7 @@ export interface ConferenceInfo {
   };
   supportedBy: Array<{
     name: string;
-    role: "Supported By";
+    role: string;
     badgeText: string;
     website?: string;
   }>;
@@ -65,6 +65,13 @@ export interface ConferenceInfo {
     chairName?: string;
     publicationChair?: string;
     financeChair?: string;
+    phoneNumbers?: Array<{
+      role: string;
+      name: string;
+      designation: string;
+      email: string;
+      phone: string;
+    }>;
     address: string;
     socials: {
       instagram?: string;
@@ -77,6 +84,7 @@ export interface ConferenceInfo {
     url: string;
     emailSubmissionAccepted: boolean;
     plagiarismCheck: boolean;
+    scopusNote: string;
     rules: string[];
   };
   rankings: Array<{
@@ -103,12 +111,15 @@ export interface ConferenceInfo {
     edition24: {
       year: number;
       dates: string;
-      stats: Array<{ label: string; value: string; count: number; suffix?: string }>;
       description: string;
+      stats: Array<{ label: string; value: string; count: number; suffix?: string }>;
+      highlights: string[];
+      proceedingsUrl: string;
     };
     edition20: {
       year: number;
       dates: string;
+      description: string;
       proceedingsUrl: string;
       ieeeXploreIsbn: string;
       usbIsbn: string;
@@ -165,54 +176,54 @@ export const conferenceData: ConferenceInfo = {
       name: "IEEE Information Theory Society, VIT Student Chapter",
       role: "Supported By",
       badgeText: "Organizing Society Chapter",
-      website: "https://ieee-its-landing.vercel.app",
+      website: "https://ieee-its-1-tzbd.vercel.app/",
     },
   ],
   theme: {
-    title: "Advancing Research. Enabling Innovation. Connecting the World.",
-    tagline: "Shaping the frontier of emerging computational and engineering paradigms.",
+    title: "Theme of the Conference",
+    tagline: "Advancing research, innovation, and technological development in Information Technology and Engineering.",
     description:
-      "ic-ETITE’28 expresses the paramount significance of advancing fundamental and translational research across Information Technology, Computer Engineering, Communication Engineering, and Electronics Engineering. The conference provides an international forum for researchers, academicians, engineers, industry leaders, and scholars to present original scientific findings, examine transformative methodologies, and forge durable cross-border academic alliances.",
+      "ic-ETITE’28 emphasizes the importance of advancing research and innovation in Information Technology and Engineering. The conference aims to provide a global platform for researchers, academicians, engineers, industry professionals, and students to showcase their innovations, exchange knowledge, and explore emerging developments in science and technology. The conference is committed to promoting research, innovation, and technological development in Information Technology and Engineering. It seeks to foster international collaboration, encourage interdisciplinary research, and facilitate global research networks that support future joint initiatives and academic partnerships.",
     pillars: [
       {
-        title: "Scientific Rigor & Peer Review",
-        desc: "Strict adherence to IEEE peer-review standards ensuring high citation value and profound academic integrity.",
+        title: "Advancing Research & Innovation",
+        desc: "Promoting research, innovation, and technological development in Information Technology and Engineering.",
       },
       {
-        title: "Interdisciplinary Convergence",
-        desc: "Bridging the gap between theory-driven information mathematics and industry-ready hardware/software systems.",
+        title: "Global Scholarly Platform",
+        desc: "Providing a global podium to showcase innovations, exchange knowledge, and explore emerging scientific developments.",
       },
       {
-        title: "Global Scholarly Network",
-        desc: "Connecting eminent scientists from over 20 nations across North America, Europe, Asia, and Australasia.",
+        title: "International Collaboration",
+        desc: "Fostering international collaboration and encouraging interdisciplinary research across global engineering domains.",
       },
       {
         title: "Future Academic Partnerships",
-        desc: "Fostering joint research proposals, bilateral academic exchanges, and collaborative doctoral research.",
+        desc: "Facilitating global research networks that support future joint initiatives and academic partnerships.",
       },
     ],
   },
   aboutConference: {
     summary:
-      "An international academic forum for researchers, academicians, engineers, industry professionals, and students to present, exchange, and collaborate on emerging developments in Information Technology and Engineering.",
+      "The Third IEEE International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE’28) will be held at the Vellore Institute of Technology (VIT), Vellore, India, on 10–11 February 2028.",
     paragraphs: [
-      "The Third IEEE International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE’28) is organized by the School of Computer Science Engineering and Information Systems (SCORE) at Vellore Institute of Technology (VIT), Vellore, India.",
-      "The primary purpose of this biennial symposium is to elevate global research standards across information sciences, communications, intelligent computing, and microelectronics. It affords an international forum for delegates worldwide to disseminate peer-reviewed discoveries, explore disruptive technologies, and cultivate enduring business-research consortia.",
-      "Original, unpublished research manuscripts highlighting specific domains from fundamental theory to applied engineering systems are solicited. All accepted and presented papers will be submitted to the IEEE for inclusion in the IEEE Xplore® Digital Library, subject to meeting IEEE's rigorous quality benchmarks.",
+      "The Third IEEE International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE’28) will be held at the Vellore Institute of Technology (VIT), Vellore, India, on 10–11 February 2028.",
+      "The conference aims to provide an international platform for researchers, academicians, engineers, industry professionals, and students to present and exchange innovative research in Information Technology, Computer Engineering, Communication Engineering, Electronics Engineering, and related emerging areas. ic-ETITE’28 seeks to foster knowledge sharing, interdisciplinary collaboration, industry–academia interaction, and future research partnerships among participants from around the world.",
+      "Original and unpublished research papers addressing emerging challenges, innovative technologies, and recent developments are invited from researchers worldwide. The conference is committed to promoting research excellence and facilitating the dissemination of knowledge that contributes to the advancement of science, technology, and education.",
     ],
     audiences: [
-      "Principal Investigators & Faculty Researchers",
-      "Doctoral Scholars & Postgraduate Researchers",
-      "Corporate R&D Directors & Industrial Technologists",
-      "Practicing Engineers & System Architects",
-      "Undergraduate Innovators with Novel Findings",
+      "Researchers & Principal Investigators",
+      "Academicians & Faculty Members",
+      "Engineers & Industry Professionals",
+      "Research Scholars & Postgraduate Students",
+      "Undergraduate Innovators",
     ],
     focusAreas: [
-      "Peer-Reviewed Knowledge Dissemination",
-      "Interdisciplinary Computational Research",
-      "Translational Industry–Academia Interaction",
-      "International Bilateral Research Consortia",
-      "Emerging Paradigms in Information Theory & Engineering",
+      "Information Technology",
+      "Computer Engineering",
+      "Communication Engineering",
+      "Electronics Engineering",
+      "Interdisciplinary Collaborations & Partnerships",
     ],
   },
   contact: {
@@ -220,6 +231,29 @@ export const conferenceData: ConferenceInfo = {
     organizer: "School of Computer Science Engineering and Information Systems (SCORE)",
     institution: "Vellore Institute of Technology (VIT), Vellore",
     address: "School of Computer Science Engineering and Information Systems (SCORE), Vellore Institute of Technology, Vellore, Tamil Nadu, India - 632014",
+    phoneNumbers: [
+      {
+        role: "Conference Chair",
+        name: "Dr. John Singh. K",
+        designation: "Professor",
+        email: "johnsingh.k@vit.ac.in",
+        phone: "+919442451035",
+      },
+      {
+        role: "Publication Chair",
+        name: "Dr. Vijayan. R",
+        designation: "Associate Professor",
+        email: "rvijayan@vit.ac.in",
+        phone: "+919842350596",
+      },
+      {
+        role: "Finance Chair",
+        name: "Dr. Priya M",
+        designation: "Associate Professor",
+        email: "priya.m@vit.ac.in",
+        phone: "+919994628305",
+      },
+    ],
     socials: {
       instagram: "https://www.instagram.com/icetite20/",
       facebook: "https://www.facebook.com/icetite.icetite.3/",
@@ -230,13 +264,16 @@ export const conferenceData: ConferenceInfo = {
     url: "https://easychair.org/conferences/?conf=icetite28",
     emailSubmissionAccepted: false,
     plagiarismCheck: true,
+    scopusNote: "Extended version of selected papers will be recommended for publication in Scopus indexed journals with impact factor.",
     rules: [
-      "All submissions undergo a strict double-blind plagiarism check and standard IEEE technical scrutiny.",
-      "Manuscripts must adhere strictly to IEEE standard two-column conference formatting (Word or LaTeX template).",
-      "Manuscripts must not contain embedded hyperlinks, scanned images, running headers, or footers.",
-      "Submissions must consist of original, unpublished research not currently under review by any other journal or conference.",
-      "Email submissions will strictly NOT be accepted; all submissions must proceed through the official EasyChair portal.",
-      "In accordance with IEEE guidelines, at least one author of each accepted paper must register at the standard author rate and present the work at the conference.",
+      "The papers should be submitted through EasyChair (https://easychair.org/conferences/?conf=icetite28).",
+      "All submitted papers will go through a plagiarism check process.",
+      "The manuscript should not contain embedded links, scanned images, header and footer.",
+      "Email submission will not be accepted.",
+      "All queries related to the conference shall be addressed to icetiteconference@vit.ac.in.",
+      "Extended version of selected papers will be recommended for publication in Scopus indexed journals with impact factor.",
+      "Manuscripts must adhere strictly to IEEE standard two-column conference formatting.",
+      "In accordance with IEEE guidelines, at least one author of each accepted paper must register at the applicable author rate and present the work at the conference.",
     ],
   },
   rankings: [
@@ -244,31 +281,31 @@ export const conferenceData: ConferenceInfo = {
       agency: "QS World University Rankings by Subject 2026",
       year: "2026",
       highlight: "86 Globally (Computer Science & Information Systems)",
-      details: "Ranked 119 globally in Engineering & Technology, and 87 globally in Electrical & Electronic Engineering.",
+      details: "Ranked 119th globally in Engineering & Technology, 86th in Computer Science & Information Systems, and 87th in Electrical & Electronic Engineering, with several other disciplines placed among the top 200 globally.",
     },
     {
       agency: "QS Sustainability Rankings 2026",
       year: "2026",
-      highlight: "352 Globally · 7th in India",
-      details: "Recognized for institutional governance, sustainable campus practices, and high-impact sustainability research.",
+      highlight: "352nd Globally · 7th in India",
+      details: "Ranked 352nd globally and 7th among institutions in India, reflecting its performance in sustainability-related areas.",
     },
     {
-      agency: "Shanghai Ranking / ARWU 2025",
+      agency: "Shanghai Ranking (ARWU) 2025",
       year: "2025",
-      highlight: "501–600 Global Rank Band",
-      details: "Consistently positioned among the top premier universities in India according to the Academic Ranking of World Universities.",
+      highlight: "501–600 Global Rank Band · Top 1–2 in India",
+      details: "Placed in the 501–600 global rank band and in the 1–2 rank band among Indian institutions.",
     },
     {
       agency: "NAAC Accreditation",
       year: "Current",
-      highlight: "A++ Grade (Highest Tier)",
-      details: "Accredited with an exceptional institutional CGPA of 3.66 out of 4.0 in the 4th cycle of national accreditation.",
+      highlight: "A++ Grade · CGPA 3.66",
+      details: "VIT Vellore is accredited with an A++ grade, with a CGPA of 3.66 on a four-point scale.",
     },
     {
-      agency: "NIRF Rankings 2025 (Govt. of India)",
+      agency: "NIRF 2025 (Govt. of India)",
       year: "2025",
       highlight: "14th University · 14th Research · 16th Engineering",
-      details: "Nationally recognized by the Ministry of Education for outstanding research output and academic infrastructure.",
+      details: "VIT is ranked 14th in the University category, 14th in Research, and 16th in Engineering in the National Institutional Ranking Framework (NIRF), Government of India.",
     },
   ],
   scoreInfo: {
@@ -276,36 +313,38 @@ export const conferenceData: ConferenceInfo = {
     studentsCount: "5,900+",
     facultyCount: "188+",
     description:
-      "SCORE at Vellore Institute of Technology is a vanguard academic department offering comprehensive B.Tech, M.Tech, MCA, BCA, and doctoral research programs in Information Technology and Computing Sciences. With world-class laboratories, extensive corporate linkages, and active Center of Excellence facilities, the School nurtures transformative discovery across applied data science, autonomous systems, cybersecurity, and intelligent software engineering.",
+      "The School of Computer Science Engineering and Information Systems (SCORE) at Vellore Institute of Technology (VIT), Vellore, is a vibrant academic and research community committed to excellence in Computer Science, Information Technology, Artificial Intelligence, Data Engineering, Cyber Security, Software Engineering, and Computer Applications. The School offers a diverse range of undergraduate, postgraduate, research, and doctoral programmes, including B.Tech. in Information Technology, B.Tech. in Computer Science and Engineering (Artificial Intelligence and Data Engineering), B.Tech. in Computer Science and Engineering (Cyber Security), BCA, B.Sc. in Computer Science, M.Tech. in Computer Science and Engineering (Cybersecurity), M.Tech. in Software Engineering, MCA, M.Sc. in Artificial Intelligence and Machine Learning, M.Tech. by Research, and Ph.D. programmes, equipping students with strong technical knowledge, practical skills, and the ability to address real-world challenges. SCORE fosters a research-driven and innovation-oriented environment through interdisciplinary research, industry collaboration, consultancy, and engagement with leading academic and research organisations. Supported by state-of-the-art infrastructure, industry-supported laboratories, Centres of Excellence, and a strong community of students, faculty members, researchers, visiting professors, and industry professionals, the School promotes excellence in teaching, learning, research, and innovation. Through seminars, workshops, international expert talks, symposia, conferences, and industry interactions, SCORE provides opportunities to engage with emerging technologies and global research developments, while advancing its vision of transformative education, impactful research, innovation, and lifelong learning.",
     domains: [
-      "Artificial Intelligence & Deep Learning",
-      "Cybersecurity & Cryptographic Engineering",
-      "Data Engineering & Cloud Systems",
-      "Quantum Information Processing",
-      "Software Systems Architecture",
-      "Intelligent IoT & Edge Computing",
-      "Human-Centered Computing",
+      "B.Tech. in Information Technology",
+      "B.Tech. in CSE (Artificial Intelligence and Data Engineering)",
+      "B.Tech. in CSE (Cyber Security)",
+      "BCA & B.Sc. in Computer Science",
+      "M.Tech. in CSE (Cybersecurity)",
+      "M.Tech. in Software Engineering",
+      "MCA & M.Sc. in Artificial Intelligence and Machine Learning",
+      "M.Tech. by Research & Ph.D. Programmes",
     ],
   },
   ieeeItsInfo: {
-    name: "IEEE Information Theory Society, VIT Student Chapter",
+    name: "IEEE Information Theory Society, VIT",
     description:
-      "The IEEE Information Theory Society Student Chapter at VIT is a premier student organization dedicated to the theoretical mathematical underpinnings and practical realizations of information processing, coding theory, data compression, cryptography, and stochastic communication networks.",
+      "The IEEE Information Theory Society at VIT is a vibrant student chapter dedicated to exploring the latest advancements in information theory and applying them to address contemporary technological challenges. The chapter provides a nurturing platform for students to foster innovative ideas, develop technical expertise, and engage in meaningful research and projects. Through technical events, workshops, seminars, and collaborative initiatives, the chapter promotes knowledge sharing and practical learning while connecting students with partners and collaborators from academia and industry. By encouraging curiosity, creativity, and continuous learning, the IEEE Information Theory Society at VIT strives to empower students to develop innovative solutions, address emerging challenges, and contribute meaningfully to the advancement of information and communication technologies.",
     mission:
-      "To inspire curiosity, nurture rigorous mathematical inquiry, and provide a collaborative crucible where student innovators engineer modern communication breakthroughs under the mentorship of global experts.",
+      "By encouraging curiosity, creativity, and continuous learning, the IEEE Information Theory Society at VIT strives to empower students to develop innovative solutions, address emerging challenges, and contribute meaningfully to the advancement of information and communication technologies.",
     pillars: [
-      "Theoretical Information Sciences",
-      "Advanced Coding & Cryptography Workshops",
-      "Colloquia with International IEEE Fellows",
-      "Interdisciplinary Student R&D Projects",
-      "Academic Peer Mentoring & Publications",
+      "Information Theory & Advanced Computational Paradigms",
+      "Collaborative Technical Events, Seminars & Workshops",
+      "Interdisciplinary Student R&D & Industry Partnerships",
+      "Organizing the Flagship BOLT International Hackathon",
+      "Scholarly Peer Dissemination & Research Publication Support",
     ],
   },
   previousEditions: {
     edition24: {
       year: 2024,
       dates: "22–23 February 2024",
-      description: "ic-ETITE'24 assembled leading researchers across 19 countries with 32 technical sessions and 22 keynote addresses.",
+      description:
+        "Organized by SCORE, VIT Vellore: 22–23 February 2024. Technically co-sponsored by IEEE.",
       stats: [
         { label: "Papers Received", value: "1,688", count: 1688 },
         { label: "Countries Represented", value: "19", count: 19 },
@@ -314,18 +353,37 @@ export const conferenceData: ConferenceInfo = {
         { label: "Conference Participants", value: "1,088", count: 1088 },
         { label: "BOLT 2.0 Hackathon Registrations", value: "683", count: 683 },
       ],
+      highlights: [
+        "Organized by SCORE, VIT Vellore: 22–23 February 2024.",
+        "Technically co-sponsored by IEEE.",
+        "1,688 papers received from 19 countries.",
+        "32 technical sessions conducted.",
+        "22 keynote sessions delivered by eminent international academicians, Vice-Chancellors, IIT professors, and industry experts from Microsoft, Amazon, and other organizations.",
+        "Expert panel discussions were conducted with distinguished speakers from academia, IEEE, and industry.",
+        "1,088 participants attended the conference.",
+        "BOLT 2.0 International Hackathon: 683 registrations.",
+        "Technext’24: Industrial expo and project competition conducted.",
+        "Chief Guests: Dr. Zvi Galil, Georgia Institute of Technology, USA, and Shri S. Krishnan, IAS, Secretary, MeitY, Government of India.",
+        "Industry collaborations and sponsorships established with Intel, Cisco, Yellow.ai, Java Capital, and Seed VC Innovation.",
+        "IEEE Xplore Proceedings: https://ieeexplore.ieee.org/xpl/conhome/10493200/proceeding",
+      ],
+      proceedingsUrl: "https://ieeexplore.ieee.org/xpl/conhome/10493200/proceeding",
     },
     edition20: {
       year: 2020,
       dates: "24–25 February 2020",
+      description:
+        "The first IEEE International Conference on “Emerging Trends in Information Technology and Engineering” was organized on 24th & 25th February 2020.",
       proceedingsUrl: "https://ieeexplore.ieee.org/xpl/conhome/9070069/proceeding",
       ieeeXploreIsbn: "978-1-7281-4142-8",
       usbIsbn: "978-1-7281-4141-1",
       highlights: [
-        "Inaugural edition with all presented papers archived in the IEEE Xplore® Digital Library.",
-        "All presented papers archived in the IEEE Xplore® Digital Library.",
-        "21 rigorous technical presentation tracks and 17 distinguished keynote sessions.",
-        "Inaugural BOLT (Breakthrough on Locked Technology) Hackathon conducted with 500+ participants and ₹1,00,000 in prizes.",
+        "The first IEEE International Conference on “Emerging Trends in Information Technology and Engineering” was organized on 24th & 25th February 2020.",
+        "ic-ETITE’20 was technically co-sponsored by IEEE.",
+        "All the presented papers were published in the IEEE Xplore by the IEEE.",
+        "Electronic ISBN: 978-1-7281-4142-8 | USB ISBN: 978-1-7281-4141-1",
+        "ic-ETITE’20 had 21 technical and 17 keynote sessions.",
+        "A hackathon titled, “Breakthrough on Locked Technology” BOLT was conducted with 500+ participants and gave Rs. 1,00,000 as prize money.",
       ],
     },
   },

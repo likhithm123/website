@@ -12,7 +12,6 @@ import {
   Clock,
   Download,
   Building2,
-  ArrowRight,
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 
@@ -318,16 +317,6 @@ export default function VisaPage() {
           </div>
         </section>
 
-        {/* Quick Links Footer */}
-        <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-200">
-          <Link href="/venue" className="text-xs sm:text-sm font-semibold text-[#002147] hover:text-[#004B87] inline-flex items-center gap-1.5">
-            <span>← View Campus Venue &amp; Travel Guide</span>
-          </Link>
-          <Link href="/registration" className="btn-primary text-xs sm:text-sm py-2.5 px-6 inline-flex items-center gap-2">
-            <span>Registration Tariffs &amp; Fees</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
-        </div>
       </div>
     </div>
   );

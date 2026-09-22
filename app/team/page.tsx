@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+
 import { ieeeItsLeadership } from "@/data/team";
 
 export default function TeamPage() {
@@ -26,7 +26,7 @@ export default function TeamPage() {
           <div className="space-y-8 sm:space-y-10">
             <section className="space-y-2">
               <h2 className="text-xl sm:text-2xl font-bold text-[#004B87] tracking-tight">
-                Faculty Advisor &amp; Sponsor
+                Faculty Advisor
               </h2>
               <div className="space-y-2 pt-1">
                 {facultyMembers.map((member) => (
@@ -65,22 +65,6 @@ export default function TeamPage() {
             </section>
           </div>
 
-        </div>
-
-        {/* Bottom Navigation */}
-        <div className="mt-14 pt-8 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
-          <Link
-            href="/"
-            className="text-sm font-semibold text-[#004B87] hover:underline inline-flex items-center gap-1"
-          >
-            ← Back to Conference Home
-          </Link>
-          <Link
-            href="/committees"
-            className="text-sm font-semibold text-[#004B87] hover:underline inline-flex items-center gap-1"
-          >
-            View Conference Committees →
-          </Link>
         </div>
 
       </div>

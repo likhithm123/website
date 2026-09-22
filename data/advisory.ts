@@ -111,7 +111,7 @@ export const internationalAdvisoryData: AdvisoryMember[] = [
   {
     name: "Dr. David Stotts",
     role: "Associate Professor",
-    institution: "Department of Computer Science, University of North Carolina",
+    institution: "Dept. of Computer Science, University of North Carolina",
     country: "USA",
     portfolioUrl: "https://cs.unc.edu/person/david-stotts/",
   },
@@ -338,7 +338,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept of Electronics & Electrical Communication Engineering, Indian Institute of Technology Kharagpur",
     location: "Kharagpur",
     country: "India",
-    portfolioUrl: "http://www.iitkgp.ac.in/department/EC/faculty/ec-tkb",
   },
   {
     name: "Dr. Rajat Subhra Chakraborty",
@@ -346,7 +345,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Computer Science and Engineering, Indian Institute of Technology Kharagpur",
     location: "Kharagpur",
     country: "India",
-    portfolioUrl: "http://www.iitkgp.ac.in/department/CS/faculty/cs-rschakraborty",
   },
   {
     name: "Dr. K. Sreenivasa Rao",
@@ -354,15 +352,13 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Computer Science and Engineering, Indian Institute of Technology Kharagpur",
     location: "Kharagpur",
     country: "India",
-    portfolioUrl: "http://www.iitkgp.ac.in/department/CS/faculty/cs-ksrao",
   },
   {
     name: "Dr. Ashutosh Modi",
     role: "Associate Professor",
-    institution: "Dept. of Computer Science and Engineering, Indian Institute of Technology Kanpur",
-    location: "Kanpur",
+    institution: "Dept. of Computer Science and Engineering, Indian Institute of Technology Kharagpur",
+    location: "Kharagpur",
     country: "India",
-    portfolioUrl: "https://www.cse.iitk.ac.in/users/ashutoshm/",
   },
   {
     name: "Dr. Srinivas Talabattula",
@@ -370,15 +366,13 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Electronics & Communication Engineering, Indian Institute of Science Bangalore",
     location: "Bangalore",
     country: "India",
-    portfolioUrl: "https://ece.iisc.ac.in/~tsr/",
   },
   {
     name: "Dr. Y. N. Srikant",
     role: "Professor",
-    institution: "Dept. of Computer Science & Automation, Indian Institute of Science Bangalore",
+    institution: "Dept. of Electronics & Communication Engineering, Indian Institute of Science Bangalore",
     location: "Bangalore",
     country: "India",
-    portfolioUrl: "https://csa.iisc.ac.in/people/srikant/",
   },
   {
     name: "Dr. Urbi Chatterjee",
@@ -386,7 +380,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Department of Computer Science and Engineering, Indian Institute of Technology Kanpur",
     location: "Kanpur",
     country: "India",
-    portfolioUrl: "https://www.cse.iitk.ac.in/users/urbic/",
   },
   {
     name: "Dr. Kalidas Yeturu",
@@ -394,7 +387,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Department of Computer Science and Engineering, Indian Institute of Technology Tirupati",
     location: "Tirupati",
     country: "India",
-    portfolioUrl: "https://iittp.ac.in/dr-kalidas-yeturu",
   },
   {
     name: "Dr. Tharun Kumar Reddy Bollu",
@@ -402,7 +394,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Department of Electronics and Communication Engineering, Indian Institute of Technology Roorkee",
     location: "Roorkee",
     country: "India",
-    portfolioUrl: "https://ece.iitr.ac.in/tharun",
   },
   {
     name: "Dr. Subhasis Bhattacharjee",
@@ -410,15 +401,13 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Department of Computer Science and Engineering, Indian Institute of Technology Jammu",
     location: "Jammu",
     country: "India",
-    portfolioUrl: "https://www.iitjammu.ac.in/",
   },
   {
     name: "Dr. Abhishek Tewari",
-    role: "Associate Professor",
-    institution: "Department of Mechanical & Industrial Engineering, Indian Institute of Technology Roorkee",
+    role: "Faculty",
+    institution: "Indian Institute of Technology Roorkee",
     location: "Roorkee",
     country: "India",
-    portfolioUrl: "https://iitr.ac.in/",
   },
   {
     name: "Dr. Saravana Kumar M",
@@ -426,7 +415,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Electronics and Communication Engineering, Indian Institute of Technology Roorkee",
     location: "Roorkee",
     country: "India",
-    portfolioUrl: "https://ece.iitr.ac.in/",
   },
   {
     name: "Dr. Dharmendra Singh",
@@ -434,15 +422,13 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Department of Electronics & Communication Engineering, Indian Institute of Technology Roorkee",
     location: "Roorkee",
     country: "India",
-    portfolioUrl: "https://iitr.ac.in/",
   },
   {
     name: "Dr. Narendra Chaudhari",
     role: "Professor",
-    institution: "Department of Computer Science and Engineering, Indian Institute of Technology Indore",
+    institution: "Indian Institute of Technology Indore",
     location: "Indore",
     country: "India",
-    portfolioUrl: "https://www.iiti.ac.in/",
   },
   {
     name: "Dr. Sameer Kulkarni",
@@ -450,15 +436,13 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Department of Computer Science and Engineering, Indian Institute of Technology Gandhinagar",
     location: "Gandhinagar",
     country: "India",
-    portfolioUrl: "https://www.iitgn.ac.in/faculty/cse/sameer",
   },
   {
     name: "Dr. Jimson Mathew",
-    role: "Professor & Head",
+    role: "Associate Professor",
     institution: "Department of Computer Science and Engineering, Indian Institute of Technology Patna",
     location: "Patna",
     country: "India",
-    portfolioUrl: "https://www.iitp.ac.in/~mathew/",
   },
   {
     name: "Dr. Ayan Mondal",
@@ -466,7 +450,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Department of Computer Science and Engineering, Indian Institute of Technology Indore",
     location: "Indore",
     country: "India",
-    portfolioUrl: "https://www.iiti.ac.in/people/~ayanm/",
   },
   {
     name: "Dr. Puneet Gupta",
@@ -474,7 +457,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Department of Computer Science and Engineering, Indian Institute of Technology Indore",
     location: "Indore",
     country: "India",
-    portfolioUrl: "https://www.iiti.ac.in/people/~puneet/",
   },
   {
     name: "Dr. Srikant Srinivasan",
@@ -482,7 +464,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "School of Computing and Electrical Engineering, Indian Institute of Technology Mandi",
     location: "Mandi",
     country: "India",
-    portfolioUrl: "https://www.iitmandi.ac.in/",
   },
   {
     name: "Dr. Dileep A. D",
@@ -490,15 +471,13 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "School of Computing and Electrical Engineering, Indian Institute of Technology Mandi",
     location: "Mandi",
     country: "India",
-    portfolioUrl: "https://www.iitmandi.ac.in/",
   },
   {
     name: "Dr. Surya Prakash",
-    role: "Associate Professor",
+    role: "Professor",
     institution: "Department of Computer Science and Engineering, Indian Institute of Technology Indore",
     location: "Indore",
     country: "India",
-    portfolioUrl: "https://www.iiti.ac.in/people/~surya/",
   },
   {
     name: "Dr. G. Shrikanth Reddy",
@@ -506,23 +485,20 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "School of Computing and Electrical Engineering, Indian Institute of Technology Mandi",
     location: "Mandi",
     country: "India",
-    portfolioUrl: "https://www.iitmandi.ac.in/",
   },
   {
     name: "Dr. Anirban Sarkar",
-    role: "Assistant Professor",
+    role: "Associate Professor",
     institution: "School of Computing and Electrical Engineering, Indian Institute of Technology Mandi",
     location: "Mandi",
     country: "India",
-    portfolioUrl: "https://www.iitmandi.ac.in/",
   },
   {
     name: "Dr. Srinivas Pinisetty",
     role: "Assistant Professor",
-    institution: "School of Electrical Sciences, Indian Institute of Technology Bhubaneswar",
+    institution: "Electrical Sciences, Indian Institute of Technology Bhubaneswar",
     location: "Bhubaneswar",
     country: "India",
-    portfolioUrl: "https://www.iitbbs.ac.in/",
   },
   {
     name: "Dr. Suman Kumar Maji",
@@ -530,7 +506,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Department of Computer Science & Engineering, Indian Institute of Technology Patna",
     location: "Patna",
     country: "India",
-    portfolioUrl: "https://www.iitp.ac.in/~suman/",
   },
   {
     name: "Dr. Angshuman Paul",
@@ -538,7 +513,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Department of Computer Science & Engineering, Indian Institute of Technology Jodhpur",
     location: "Jodhpur",
     country: "India",
-    portfolioUrl: "https://iitj.ac.in/",
   },
   {
     name: "Dr. Narendra Kumar Dhar",
@@ -546,15 +520,13 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "School of Computing and Electrical Engineering, Indian Institute of Technology Mandi",
     location: "Mandi",
     country: "India",
-    portfolioUrl: "https://www.iitmandi.ac.in/",
   },
   {
     name: "Dr. Sateesh Kumar Peddoju",
-    role: "Associate Professor",
+    role: "Professor",
     institution: "Department of Computer Science & Engineering, Indian Institute of Technology Roorkee",
     location: "Roorkee",
     country: "India",
-    portfolioUrl: "https://iitr.ac.in/~CSE/Sateesh_Kumar_Peddoju",
   },
   {
     name: "Dr. Pratim Kundu",
@@ -562,7 +534,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "School of Computing and Electrical Engineering, Indian Institute of Technology Mandi",
     location: "Mandi",
     country: "India",
-    portfolioUrl: "https://www.iitmandi.ac.in/",
   },
   {
     name: "Dr. Shivashankar B",
@@ -570,7 +541,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Computer Science & Engineering, Indian Institute of Technology Guwahati",
     location: "Guwahati",
     country: "India",
-    portfolioUrl: "https://www.iitg.ac.in/",
   },
   {
     name: "Mr. H. R. Mohan",
@@ -586,7 +556,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Electronics & Communication Engineering, Indian Institute of Science Bangalore",
     location: "Bangalore",
     country: "India",
-    portfolioUrl: "https://ece.iisc.ac.in/~hari/",
   },
   {
     name: "Dr. S. V. Kulkarni",
@@ -594,7 +563,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Electrical Engineering, Indian Institute of Technology Bombay",
     location: "Mumbai",
     country: "India",
-    portfolioUrl: "https://www.ee.iitb.ac.in/~svk/",
   },
   {
     name: "Dr. Arun D. Mahindrakar",
@@ -602,7 +570,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Electrical Engineering, Indian Institute of Technology Madras",
     location: "Chennai",
     country: "India",
-    portfolioUrl: "https://ee.iitm.ac.in/arun_d_mahindrakar/",
   },
   {
     name: "Dr. Pabitra Mitra",
@@ -610,7 +577,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Computer Science & Engineering, Indian Institute of Technology Kharagpur",
     location: "Kharagpur",
     country: "India",
-    portfolioUrl: "http://www.iitkgp.ac.in/department/CS/faculty/cs-pabitra",
   },
   {
     name: "Dr. Dhiman Mallick",
@@ -618,7 +584,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Electrical Engineering, Indian Institute of Technology Delhi",
     location: "Delhi",
     country: "India",
-    portfolioUrl: "https://ee.iitd.ac.in/faculty-profile/108",
   },
   {
     name: "Dr. Nandakumar Nambath",
@@ -626,7 +591,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Electrical Engineering, Indian Institute of Technology Goa",
     location: "Goa",
     country: "India",
-    portfolioUrl: "https://iitgoa.ac.in/",
   },
   {
     name: "Dr. Subhananda Chakrabarti",
@@ -634,15 +598,13 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Electrical Engineering, Indian Institute of Technology Bombay",
     location: "Mumbai",
     country: "India",
-    portfolioUrl: "https://www.ee.iitb.ac.in/web/people/faculty/subhananda/",
   },
   {
     name: "Dr. Chandan Kumar Sarkar",
-    role: "Professor Emeritus",
+    role: "Professor",
     institution: "Dept. of Electronics & Telecommunication Engineering, Jadavpur University",
     location: "Kolkata",
     country: "India",
-    portfolioUrl: "http://www.jaduniv.edu.in/",
   },
   {
     name: "Dr. M. Nabi",
@@ -650,7 +612,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Electrical Engineering, Indian Institute of Technology Delhi",
     location: "Delhi",
     country: "India",
-    portfolioUrl: "https://ee.iitd.ac.in/faculty-profile/101",
   },
   {
     name: "Dr. Sougata Mukherjea",
@@ -658,7 +619,6 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Cloud Center of Excellence, IBM GTS Technology Services, IBM India",
     location: "Bangalore",
     country: "India",
-    portfolioUrl: "https://research.ibm.com/",
   },
   {
     name: "Dr. Shabbir Merchant",
@@ -666,15 +626,13 @@ export const nationalAdvisoryData: AdvisoryMember[] = [
     institution: "Dept. of Electrical Engineering, Indian Institute of Technology Bombay",
     location: "Mumbai",
     country: "India",
-    portfolioUrl: "https://www.ee.iitb.ac.in/~merchant/",
   },
   {
     name: "Dr. K. Vijayakumar",
     role: "Chairman",
-    institution: "ISTE Kerala Section & Professor, Indian Institute of Space Science and Technology",
+    institution: "ISTE Kerala Section",
     location: "Kerala",
     country: "India",
-    portfolioUrl: "https://www.iist.ac.in/",
   },
 ];
 
@@ -682,7 +640,7 @@ export const technicalCommitteeData: AdvisoryMember[] = [
   {
     name: "Dr. R. Manimegalai",
     role: "Professor",
-    institution: "Dept. of Computer Science & Engineering, PSG Institute of Technology and Applied Research",
+    institution: "Dept. of CSE, PSG Institute of Technology and Applied Research",
     location: "Coimbatore",
     country: "India",
     portfolioUrl: "https://psgitech.ac.in/",
@@ -690,7 +648,7 @@ export const technicalCommitteeData: AdvisoryMember[] = [
   {
     name: "Dr. V. Balamurugan",
     role: "Professor",
-    institution: "Dept. of Computer Science & Engineering, Manonmaniam Sundaranar University",
+    institution: "Dept. of CSE, Manonmaniam Sundaranar University",
     location: "Tirunelveli",
     country: "India",
     portfolioUrl: "https://www.msuniv.ac.in/",
@@ -729,7 +687,7 @@ export const technicalCommitteeData: AdvisoryMember[] = [
   },
   {
     name: "Mr. Jeeva S. Chelladhurai",
-    role: "CEO & Founder",
+    role: "CEO",
     institution: "Cosmorin",
     location: "Bangalore",
     country: "India",
@@ -786,8 +744,8 @@ export const technicalCommitteeData: AdvisoryMember[] = [
   {
     name: "Dr. M. P. Rajan",
     role: "Professor and Dean",
-    institution: "Indian Institute of Information Technology Kottayam",
-    location: "Kottayam",
+    institution: "Indian Institute of Information Technology, Kottayam",
+    location: "Delhi / Kottayam",
     country: "India",
     portfolioUrl: "https://www.iiitkottayam.ac.in/",
   },
@@ -801,7 +759,7 @@ export const technicalCommitteeData: AdvisoryMember[] = [
   },
   {
     name: "Dr. P. Kumar",
-    role: "Associate Professor",
+    role: "Faculty",
     institution: "Centre for Information Technology & Engineering, Manonmaniam Sundaranar University",
     location: "Tirunelveli",
     country: "India",
@@ -809,16 +767,16 @@ export const technicalCommitteeData: AdvisoryMember[] = [
   },
   {
     name: "Dr. P. Eswaran",
-    role: "Professor",
-    institution: "Department of Computer Science, Alagappa University",
+    role: "Faculty",
+    institution: "Alagappa University",
     location: "Karaikudi",
     country: "India",
     portfolioUrl: "https://www.alagappauniv.ac.in/",
   },
   {
     name: "Dr. M. Marikkannan",
-    role: "Professor & Head",
-    institution: "Dept. of Computer Science and Engineering, Government College of Engineering",
+    role: "Faculty",
+    institution: "Dept. of CSE, Government College of Engineering",
     location: "Erode",
     country: "India",
     portfolioUrl: "https://gceerode.ac.in/",
@@ -834,16 +792,16 @@ export const technicalCommitteeData: AdvisoryMember[] = [
   {
     name: "Dr. Asha Joseph",
     role: "Professor",
-    institution: "Dept. of Computer Science and Engineering, Amal Jyothi College of Engineering",
+    institution: "Amal Jyothi College of Engineering",
     location: "Kerala",
     country: "India",
     portfolioUrl: "https://www.ajce.in/",
   },
   {
     name: "Dr. Kunal Gagneja",
-    role: "Associate Professor",
-    institution: "Faculty of Engineering & Technology, SRM University",
-    location: "Delhi-NCR",
+    role: "Faculty",
+    institution: "SRM University",
+    location: "Delhi",
     country: "India",
     portfolioUrl: "https://www.srmup.in/",
   },
@@ -857,8 +815,8 @@ export const technicalCommitteeData: AdvisoryMember[] = [
   },
   {
     name: "Dr. R. Jayanthi",
-    role: "Professor",
-    institution: "School of Computer Science and Engineering, VIT Chennai",
+    role: "Faculty",
+    institution: "VIT",
     location: "Chennai",
     country: "India",
     portfolioUrl: "https://chennai.vit.ac.in/member/dr-jayanthi-r/",

@@ -34,7 +34,7 @@ export default function Footer() {
           {/* Institutional Accreditation Pill */}
           <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/5 border border-white/15 text-xs sm:text-sm text-white/90 shadow-sm">
             <Award className="w-4 h-4 text-[#FFB81C] shrink-0" />
-            <span className="font-medium">NIRF #10 in Engineering · NAAC A++ (CGPA 3.66 / 4.0)</span>
+            <span className="font-medium">NAAC A++ (CGPA 3.66 / 4.0) · NIRF 2025 #14 University · #16 Engineering</span>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@ export default function Footer() {
             </h3>
 
             <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
-              Third IEEE International Conference on Emerging Trends in Information Technology and Engineering.
+              The Third IEEE International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE’28).
               Organized by the{" "}
               <a
                 href="https://vit.ac.in/schools/school-of-computer-science-engineering-and-information-systems"
@@ -169,14 +169,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://easychair.org/conferences/?conf=icetite28"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/call-for-papers#submit"
                   className="hover:text-white transition-colors block"
                 >
-                  Paper Submission Portal
-                </a>
+                  Paper Submission Portal (EasyChair)
+                </Link>
               </li>
               <li>
                 <a
@@ -199,12 +197,12 @@ export default function Footer() {
           {/* Col 4: Institutional Sponsors & Chapters */}
           <div className="space-y-4">
             <p className="text-xs font-bold uppercase tracking-widest text-[#FFB81C]">
-              Institutions &amp; Chapters
+              Academic Host &amp; Chapters
             </p>
 
-            <div className="space-y-4 text-xs sm:text-sm">
-              <div className="p-3.5 rounded-xl bg-white/5 border border-white/10">
-                <p className="text-[11px] text-[#FFB81C] font-bold uppercase tracking-wider mb-1">Academic Host</p>
+            <div className="space-y-3 text-xs sm:text-sm">
+              <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                <p className="text-[11px] text-[#FFB81C] font-bold uppercase tracking-wider mb-0.5">Academic Host</p>
                 <a
                   href="https://vit.ac.in/schools/school-of-computer-science-engineering-and-information-systems"
                   target="_blank"
@@ -213,11 +211,10 @@ export default function Footer() {
                 >
                   SCORE · VIT Vellore ↗
                 </a>
-                <p className="text-[11px] text-white/60 mt-0.5">Silver Jubilee Tower (SJT), VIT Vellore</p>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/5 border border-white/10">
-                <p className="text-[11px] text-[#72EFDD] font-bold uppercase tracking-wider mb-1">Student Chapter</p>
+              <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                <p className="text-[11px] text-[#72EFDD] font-bold uppercase tracking-wider mb-0.5">Student Chapter</p>
                 <a
                   href="https://ieee-its-1-tzbd.vercel.app/"
                   target="_blank"
@@ -226,7 +223,11 @@ export default function Footer() {
                 >
                   IEEE ITS VIT Student Chapter ↗
                 </a>
-                <p className="text-[11px] text-white/60 mt-0.5">Information Theory Society</p>
+              </div>
+
+              <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                <p className="text-[11px] text-[#FFB81C] font-bold uppercase tracking-wider mb-0.5">Venue &amp; Dates</p>
+                <p className="text-white font-medium">10–11 February 2028 · VIT Vellore</p>
               </div>
             </div>
           </div>

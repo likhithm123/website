@@ -90,35 +90,34 @@ export default function RegistrationTable() {
 
           <div className="lg:col-span-4 bg-gradient-to-br from-[#002147] to-[#001733] text-white p-7 sm:p-8 rounded-2xl border border-white/10 shadow-lg flex flex-col justify-between">
             <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#F5A623] font-bold">
-                Online Portal
-              </span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F5A623]/20 border border-[#F5A623]/40 text-[#F5A623] text-xs font-mono font-bold uppercase tracking-wider mb-3">
+                <span className="w-2 h-2 rounded-full bg-[#F5A623] animate-pulse"></span>
+                Registration Notice
+              </div>
               <h3 className="text-2xl font-serif font-bold text-white mt-1 mb-3">
                 Register For ic-ETITE&apos;28
               </h3>
-              <p className="text-sm sm:text-base text-white/80 leading-relaxed mb-6 font-normal">
-                Complete your delegate or author registration via the official VIT Events Portal for Indian and
-                International participants.
+              <p className="text-sm sm:text-base text-white/80 leading-relaxed mb-5 font-normal">
+                Conference registration for delegates and presenting authors will open through the official VIT portal.
               </p>
+
+              <div className="p-4 rounded-xl bg-white/5 border border-white/15 space-y-2 mb-6">
+                <p className="text-sm font-bold text-[#F5A623]">
+                  Registration Dates TBA
+                </p>
+                <p className="text-xs text-white/70 leading-relaxed">
+                  Registration dates are to be announced soon. More details yet to come regarding official registration portals and instructions.
+                </p>
+              </div>
             </div>
 
-            <div className="space-y-3">
-              <a
-                href="https://events.vit.ac.in/events/ICETITE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3.5 px-5 rounded-xl bg-[#F5A623] hover:bg-[#D98200] text-[#002147] text-sm sm:text-base font-bold text-center block shadow-md transition-colors"
-              >
-                Register as Indian Delegate / Author →
-              </a>
-              <a
-                href="https://events.vit.ac.in/events/ICETITE/foreign"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3.5 px-5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm sm:text-base font-bold text-center block border border-white/20 transition-colors"
-              >
-                Register as Foreign Delegate / Author →
-              </a>
+            <div className="p-4 rounded-xl bg-white/10 border border-white/20 text-center">
+              <span className="text-sm font-semibold text-white/90 block">
+                Portal Opening Soon
+              </span>
+              <span className="text-xs text-white/60 mt-1 block">
+                Registration dates TBA &bull; More details yet to come
+              </span>
             </div>
           </div>
         </div>

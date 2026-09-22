@@ -11,7 +11,7 @@ export interface TeamMember {
 export const ieeeItsLeadership: TeamMember[] = [
   {
     name: "Dr. John Singh K",
-    role: "Faculty Sponsor & Branch Counselor",
+    role: "Faculty Advisor & Branch Counselor",
     title: "Professor, School of Computer Science Engineering & Information Systems (SCORE)",
     affiliation: "VIT Vellore",
     portfolioUrl: "https://vit.ac.in/information-technolo/dr-john-singh-k",

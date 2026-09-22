@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -10,30 +7,12 @@ import {
   Clock,
   Users,
   Trophy,
-  CheckCircle2,
-  ExternalLink,
   ChevronRight,
   ShieldCheck,
-  Send,
   Sparkles,
 } from "lucide-react";
 
 export default function HackathonPage() {
-  const [registered, setRegistered] = useState(false);
-  const [formData, setFormData] = useState({
-    teamName: "",
-    leaderName: "",
-    leaderEmail: "",
-    leaderPhone: "",
-    college: "",
-    track: "AI & Autonomous Agents",
-    teamSize: "3",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setRegistered(true);
-  };
 
   return (
     <div className="bg-white min-h-screen text-[#002147]">
@@ -94,7 +73,7 @@ export default function HackathonPage() {
             href="#register"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#CCFF00] hover:bg-[#b8e600] text-[#001C3D] font-extrabold text-sm transition-all transform hover:scale-105 shadow-[0_0_25px_rgba(204,255,0,0.4)]"
           >
-            <span>Register Your Team Now</span>
+            <span>Registration Dates TBA · More Details Yet to Come</span>
             <ChevronRight className="w-4 h-4 stroke-[3]" />
           </a>
         </div>
@@ -191,139 +170,71 @@ export default function HackathonPage() {
             </div>
           </div>
 
-          {/* Registration Form Box */}
+          {/* Registration Status Box (Dates TBA) */}
           <div id="register" className="md:col-span-5 scroll-mt-24">
-            <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 bg-[#F8FAFC] shadow-xl">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#CCFF00] animate-ping" />
-                <span className="text-xs font-bold text-[#DE6D1B] uppercase tracking-wider">Registration Form</span>
+            <div className="p-7 sm:p-9 rounded-3xl border-2 border-slate-200 bg-white shadow-xl space-y-6">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-[11px] font-black uppercase tracking-wider text-[#001C3D] bg-[#CCFF00] px-3 py-1 rounded-full shadow-xs">
+                  Registration Opening Soon
+                </span>
+                <span className="text-xs font-bold text-slate-500 font-mono">Status: TBA</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#002147] mb-1">Register for BOLT 3.0</h3>
-              <p className="text-sm text-slate-600 mb-6">
-                Teams of 2 to 4 members. Free registration supported by IEEE ITS Chapter.
-              </p>
 
-              {registered ? (
-                <div className="p-6 rounded-xl bg-emerald-50 border border-emerald-200 text-center space-y-3">
-                  <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto" />
-                  <h4 className="text-base font-bold text-emerald-900">Registration Received!</h4>
-                  <p className="text-sm text-emerald-800 leading-relaxed">
-                    Thank you, <strong>{formData.leaderName}</strong>! Your team <strong>&quot;{formData.teamName}&quot;</strong> has
-                    been registered for BOLT 3.0. Confirmation has been sent to <strong>{formData.leaderEmail}</strong>.
-                  </p>
-                  <button
-                    onClick={() => setRegistered(false)}
-                    className="text-sm font-bold text-emerald-700 underline mt-2"
-                  >
-                    Register another team
-                  </button>
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#002147] tracking-tight">
+                  Register for BOLT 3.0
+                </h3>
+                <p className="text-sm font-semibold text-[#DE6D1B] mt-1">
+                  Registration dates TBA — More details yet to come
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-[#00142E] text-white border border-[#CCFF00]/40 space-y-4 shadow-inner">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-12 h-12 rounded-xl bg-[#CCFF00]/15 border border-[#CCFF00]/40 flex items-center justify-center shrink-0">
+                    <Clock className="w-6 h-6 text-[#CCFF00]" />
+                  </div>
+                  <div>
+                    <p className="text-base font-bold text-[#CCFF00] tracking-wide">
+                      Portal Launch Scheduled Soon
+                    </p>
+                    <p className="text-xs text-white/70 mt-0.5">
+                      National Flagship 24h Offline Hackathon
+                    </p>
+                  </div>
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 text-sm font-medium">
-                  <div>
-                    <label className="block text-slate-700 font-semibold mb-1 text-sm">Team Name *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Quantum Pioneers"
-                      value={formData.teamName}
-                      onChange={(e) => setFormData({ ...formData, teamName: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#002147] bg-white text-slate-900 text-sm"
-                    />
+
+                <p className="text-xs sm:text-sm text-white/85 leading-relaxed">
+                  Official registration dates for BOLT 3.0 will be announced shortly along with the release of full problem statements, team guidelines, and judging rubrics.
+                </p>
+
+                <div className="pt-3 border-t border-white/10 space-y-2 text-xs text-white/80">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#CCFF00]">✓</span>
+                    <span>Teams of 2 to 4 members</span>
                   </div>
-
-                  <div>
-                    <label className="block text-slate-700 font-semibold mb-1 text-sm">Team Leader Name *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Full Name"
-                      value={formData.leaderName}
-                      onChange={(e) => setFormData({ ...formData, leaderName: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#002147] bg-white text-slate-900 text-sm"
-                    />
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#CCFF00]">✓</span>
+                    <span>₹1,00,000+ total prize pool</span>
                   </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-slate-700 font-semibold mb-1 text-sm">Email ID *</label>
-                      <input
-                        type="email"
-                        required
-                        placeholder="leader@college.edu"
-                        value={formData.leaderEmail}
-                        onChange={(e) => setFormData({ ...formData, leaderEmail: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#002147] bg-white text-slate-900 text-sm"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-slate-700 font-semibold mb-1 text-sm">Mobile / WhatsApp *</label>
-                      <input
-                        type="tel"
-                        required
-                        placeholder="+91 98765 43210"
-                        value={formData.leaderPhone}
-                        onChange={(e) => setFormData({ ...formData, leaderPhone: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#002147] bg-white text-slate-900 text-sm"
-                      />
-                    </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#CCFF00]">✓</span>
+                    <span>Free registration supported by IEEE ITS VIT Chapter</span>
                   </div>
+                </div>
+              </div>
 
-                  <div>
-                    <label className="block text-slate-700 font-semibold mb-1 text-sm">College / University Name *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Vellore Institute of Technology"
-                      value={formData.college}
-                      onChange={(e) => setFormData({ ...formData, college: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#002147] bg-white text-slate-900 text-sm"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-slate-700 font-semibold mb-1 text-sm">Preferred Track</label>
-                      <select
-                        value={formData.track}
-                        onChange={(e) => setFormData({ ...formData, track: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#002147] bg-white text-slate-900 text-sm"
-                      >
-                        <option>AI &amp; Autonomous Agents</option>
-                        <option>Cyber Trust &amp; Web3</option>
-                        <option>Smart Mobility &amp; IoT</option>
-                        <option>Healthcare &amp; Green Tech</option>
-                        <option>Open Innovation</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-slate-700 font-semibold mb-1 text-sm">Team Size</label>
-                      <select
-                        value={formData.teamSize}
-                        onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#002147] bg-white text-slate-900 text-sm"
-                      >
-                        <option value="2">2 Members</option>
-                        <option value="3">3 Members</option>
-                        <option value="4">4 Members</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full py-3.5 rounded-xl bg-[#002147] hover:bg-[#003366] text-white font-bold text-sm sm:text-base transition-colors flex items-center justify-center gap-2 shadow-md mt-3"
+              <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 text-center">
+                <p className="text-xs text-slate-600">
+                  Have questions before registration opens? Reach out to the secretariat at{" "}
+                  <a
+                    href="mailto:johnsingh.k@vit.ac.in"
+                    className="text-[#004B87] font-semibold underline hover:text-[#002147]"
                   >
-                    <Send className="w-4 h-4" />
-                    <span>Submit Hackathon Application</span>
-                  </button>
-
-                  <p className="text-xs text-slate-500 text-center pt-1">
-                    Shortlisted teams will be invited to the 24h Offline Hackathon at Silver Jubilee Tower (SJT), VIT Vellore.
-                  </p>
-                </form>
-              )}
+                    johnsingh.k@vit.ac.in
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

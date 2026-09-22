@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+
 import {
   internationalAdvisoryData,
   nationalAdvisoryData,
@@ -67,22 +67,6 @@ export default function AdvisoryPage() {
             </section>
           </div>
 
-        </div>
-
-        {/* Navigation */}
-        <div className="mt-14 pt-8 border-t border-slate-200 flex items-center justify-between">
-          <Link
-            href="/committees"
-            className="text-sm font-semibold text-[#004B87] hover:underline"
-          >
-            ← View Organizing Committee
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-semibold text-[#004B87] hover:underline"
-          >
-            Conference Home →
-          </Link>
         </div>
 
       </div>

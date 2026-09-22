@@ -7,8 +7,8 @@ export default function TechnicalSponsorsSection() {
   return (
     <section
       id="sponsors"
-      className="border-b border-[#E2E8F0] bg-white py-14 md:py-20 scroll-mt-20 select-none"
-      aria-label="Technical Sponsor and Organizing School"
+      className="border-b border-[#E2E8F0] bg-white py-12 md:py-16 scroll-mt-20 select-none"
+      aria-label="Technical Sponsors and Organizing School"
     >
       <div className="container-x">
         <div className="max-w-4xl mx-auto bg-white rounded-2xl p-6 sm:p-10 border border-slate-100 shadow-xs">
@@ -19,7 +19,7 @@ export default function TechnicalSponsorsSection() {
             </h3>
           </div>
 
-          {/* Kept Blank as requested */}
+          {/* To Be Announced */}
           <div className="flex justify-center items-center mb-12">
             <div className="h-16 w-72 rounded-2xl border border-dashed border-slate-200 flex items-center justify-center text-slate-400 text-xs font-medium tracking-wider uppercase">
               To Be Announced

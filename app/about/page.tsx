@@ -6,15 +6,7 @@ import {
   CheckCircle2,
   ExternalLink,
   Camera,
-  Sparkles,
   ChevronRight,
-  GraduationCap,
-  Globe2,
-  Users,
-  Layers,
-  BookOpen,
-  Building2,
-  Cpu,
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import GallerySlideshow from "@/components/GallerySlideshow";
@@ -22,34 +14,34 @@ import GallerySlideshow from "@/components/GallerySlideshow";
 export const metadata: Metadata = {
   title: "About ic-ETITE'28 | Vellore Institute of Technology",
   description:
-    "Learn about ic-ETITE'28, organized by SCORE, VIT Vellore, technically co-sponsored by IEEE. Explore conference legacy, VIT rankings, and IEEE ITS chapter.",
+    "Learn about ic-ETITE'28, organized by SCORE, VIT Vellore. Explore conference legacy, VIT rankings, and IEEE ITS chapter.",
 };
 
 const rankingsList = [
   {
     title: "QS World University Rankings by Subject 2026",
-    desc: "119th globally in Engineering & Technology · 86th in Computer Science & Information Systems · 87th in Electrical & Electronic Engineering",
-    badge: "Global Top 100",
-  },
-  {
-    title: "NIRF 2025 (Govt. of India)",
-    desc: "Ranked 14th in University category, 14th in Research, and 16th in Engineering in India",
-    badge: "Top 15 in India",
-  },
-  {
-    title: "NAAC Accreditation",
-    desc: "Accredited with the highest A++ Grade with a cumulative CGPA of 3.66 on a 4.0 scale",
-    badge: "A++ Grade",
+    desc: "VIT is ranked 119th globally in Engineering & Technology. VIT is also ranked 86th in Computer Science & Information Systems and 87th in Electrical & Electronic Engineering, with several other disciplines placed among the top 200 globally.",
+    badge: "QS Subject 2026",
   },
   {
     title: "QS Sustainability Rankings 2026",
-    desc: "Ranked 352nd globally and 7th among institutions in India for environmental and social impact",
+    desc: "VIT is ranked 352nd globally and 7th among institutions in India, reflecting its performance in sustainability-related areas.",
     badge: "7th in India",
   },
   {
     title: "Shanghai Ranking (ARWU) 2025",
-    desc: "Placed in 501–600 global rank band and in the 1–2 rank band among all Indian institutions",
-    badge: "Top 2 in India",
+    desc: "VIT is placed in the 501–600 global rank band and in the 1–2 rank band among Indian institutions.",
+    badge: "ARWU 2025",
+  },
+  {
+    title: "NAAC Accreditation",
+    desc: "VIT Vellore is accredited with an A++ grade, with a CGPA of 3.66 on a four-point scale.",
+    badge: "A++ Grade · CGPA 3.66",
+  },
+  {
+    title: "NIRF 2025 (Govt. of India)",
+    desc: "VIT is ranked 14th in the University category, 14th in Research, and 16th in Engineering in the National Institutional Ranking Framework (NIRF), Government of India.",
+    badge: "NIRF 2025",
   },
 ];
 
@@ -125,7 +117,7 @@ export default function AboutPage() {
       <PageHeader
         badge="Vellore Institute of Technology · SCORE"
         title="About ic-ETITE'28"
-        subtitle="Advancing foundational and applied breakthroughs across Information Technology and Engineering. Organized by SCORE, VIT Vellore, and technically co-sponsored by IEEE."
+        subtitle="The Third IEEE International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE’28) will be held at VIT Vellore, India, on 10–11 February 2028."
         breadcrumb="About Conference"
         bgImage="/images/frame_15.jpg"
       />
@@ -135,27 +127,26 @@ export default function AboutPage() {
         <section className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
           <div className="md:col-span-6 space-y-5">
             <span className="text-xs sm:text-sm font-bold text-[#002147] uppercase tracking-wider bg-[#FFF4DB] px-3.5 py-1.5 rounded-full border border-[#F5A623]/50">
-              Conference Overview
+              About ic-ETITE’28
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl text-[#002147] font-bold leading-tight">
-              An International Forum for Scholarly Excellence
+              An International Platform for Research &amp; Innovation
             </h2>
             <p className="text-base sm:text-lg leading-relaxed text-slate-700 font-normal">
-              The <strong>Third IEEE International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE&apos;28)</strong>{" "}
-              serves as an eminent global podium where international scientists, academicians, corporate R&amp;D technologists,
-              and scholars convene to disseminate original research.
+              The conference aims to provide an international platform for researchers, academicians, engineers, industry professionals, and students to present and exchange innovative research in Information Technology, Computer Engineering, Communication Engineering, Electronics Engineering, and related emerging areas.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-slate-700 font-normal">
-              Organized by the <strong>School of Computer Science Engineering and Information Systems (SCORE)</strong>, VIT Vellore,
-              and technically co-sponsored by <strong>IEEE</strong>, all presented papers will be submitted to the
-              <strong> IEEE Xplore® Digital Library</strong>.
+              ic-ETITE’28 seeks to foster knowledge sharing, interdisciplinary collaboration, industry–academia interaction, and future research partnerships among participants from around the world.
+            </p>
+            <p className="text-base leading-relaxed text-slate-700 font-normal">
+              Original and unpublished research papers addressing emerging challenges, innovative technologies, and recent developments are invited from researchers worldwide. The conference is committed to promoting research excellence and facilitating the dissemination of knowledge that contributes to the advancement of science, technology, and education.
             </p>
             <div className="pt-2 flex flex-wrap gap-3">
               <Link href="/call-for-papers" className="btn-primary text-sm font-bold py-2.5 px-5">
                 Call for Papers
               </Link>
               <Link href="/tracks" className="btn-outline text-sm font-semibold py-2.5 px-5">
-                Explore 4 Tracks
+                Explore Tracks
               </Link>
             </div>
           </div>
@@ -176,6 +167,26 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* The Theme of the Conference */}
+        <section className="bg-[#FAFBFD] border-2 border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm">
+          <div className="max-w-3xl mb-6">
+            <span className="text-xs sm:text-sm font-bold text-[#DE6D1B] uppercase tracking-wider bg-orange-50 px-3.5 py-1.5 rounded-full border border-orange-200 inline-block mb-3">
+              Conference Focus
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#002147]">
+              The theme of the Conference
+            </h2>
+          </div>
+          <div className="space-y-4 text-base sm:text-lg leading-relaxed text-slate-700">
+            <p>
+              ic-ETITE’28 emphasizes the importance of advancing research and innovation in Information Technology and Engineering. The conference aims to provide a global platform for researchers, academicians, engineers, industry professionals, and students to showcase their innovations, exchange knowledge, and explore emerging developments in science and technology.
+            </p>
+            <p>
+              The conference is committed to promoting research, innovation, and technological development in Information Technology and Engineering. It seeks to foster international collaboration, encourage interdisciplinary research, and facilitate global research networks that support future joint initiatives and academic partnerships.
+            </p>
+          </div>
+        </section>
+
         {/* ── HIGHLIGHTS OF PREVIOUS EDITIONS (ic-ETITE'24 & ic-ETITE'20) ── */}
         <section className="space-y-8">
           <div className="text-center max-w-3xl mx-auto">
@@ -186,7 +197,7 @@ export default function AboutPage() {
               Highlights of Previous Editions
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2">
-              A track record of scholarly rigor, high paper submission volume, international participation, and IEEE Xplore indexed proceedings.
+              A proven track record of research excellence, international keynote speakers, hackathons, and IEEE Xplore proceedings.
             </p>
           </div>
 
@@ -196,7 +207,7 @@ export default function AboutPage() {
               <div>
                 <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                   <span className="px-3 py-1 rounded-full bg-[#002147] text-white text-xs font-bold font-mono uppercase tracking-wider">
-                    Second Edition · 22–23 Feb 2024
+                    Second ic-ETITE’24 · 22–23 Feb 2024
                   </span>
                   <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
                     IEEE Xplore Indexed
@@ -204,10 +215,10 @@ export default function AboutPage() {
                 </div>
 
                 <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#002147] mb-2">
-                  Highlights of ic-ETITE’24
+                  Highlights of the Second ic-ETITE’24
                 </h3>
                 <p className="text-sm text-slate-600 mb-6">
-                  Organized by SCORE, VIT Vellore. Technically co-sponsored by IEEE and organized with IEEE ITS VIT.
+                  Organized by SCORE, VIT Vellore: 22–23 February 2024. Technically co-sponsored by IEEE.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5 mb-6 text-center">
@@ -240,19 +251,23 @@ export default function AboutPage() {
                 <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#002147] shrink-0 mt-0.5" />
-                    <span><strong>Chief Guests:</strong> Dr. Zvi Galil (Georgia Tech, USA) &amp; Shri S. Krishnan, IAS (Secretary, MeitY, Govt. of India).</span>
+                    <span><strong>Chief Guests:</strong> Dr. Zvi Galil, Georgia Institute of Technology, USA, and Shri S. Krishnan, IAS, Secretary, MeitY, Government of India.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#002147] shrink-0 mt-0.5" />
-                    <span><strong>Keynote Luminaries:</strong> Eminent academicians, Vice-Chancellors, IIT professors, and industry leaders from Microsoft, Amazon, and global labs.</span>
+                    <span><strong>Keynote Sessions:</strong> 22 keynote sessions delivered by eminent international academicians, Vice-Chancellors, IIT professors, and industry experts from Microsoft, Amazon, and other organizations.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#002147] shrink-0 mt-0.5" />
-                    <span><strong>Technext’24:</strong> Flagship industrial expo and project innovation competition.</span>
+                    <span><strong>Panel Discussions:</strong> Expert panel discussions were conducted with distinguished speakers from academia, IEEE, and industry.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#002147] shrink-0 mt-0.5" />
-                    <span><strong>Industry Collaborations &amp; Sponsors:</strong> Intel, Cisco, Yellow.ai, Java Capital, and Seed VC Innovation.</span>
+                    <span><strong>Technext’24:</strong> Industrial expo and project competition conducted.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#002147] shrink-0 mt-0.5" />
+                    <span><strong>Industry Collaborations &amp; Sponsorships:</strong> Intel, Cisco, Yellow.ai, Java Capital, and Seed VC Innovation.</span>
                   </li>
                 </ul>
               </div>
@@ -275,7 +290,7 @@ export default function AboutPage() {
               <div>
                 <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                   <span className="px-3 py-1 rounded-full bg-[#004B87] text-white text-xs font-bold font-mono uppercase tracking-wider">
-                    First Edition · 24–25 Feb 2020
+                    First ic-ETITE’20 · 24–25 Feb 2020
                   </span>
                   <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
                     IEEE Xplore Indexed
@@ -286,7 +301,7 @@ export default function AboutPage() {
                   Highlights of First ic-ETITE’20
                 </h3>
                 <p className="text-sm text-slate-600 mb-6">
-                  Inaugural edition technically co-sponsored by IEEE and organized by SCORE, VIT Vellore.
+                  The first IEEE International Conference on “Emerging Trends in Information Technology and Engineering” was organized on 24th &amp; 25th February 2020.
                 </p>
 
                 <div className="grid grid-cols-2 gap-3.5 mb-6 text-center">
@@ -303,15 +318,19 @@ export default function AboutPage() {
                 <ul className="space-y-3 text-xs sm:text-sm text-slate-700">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#004B87] shrink-0 mt-0.5" />
-                    <span><strong>100% Publication:</strong> All presented papers published in IEEE Xplore Digital Library.</span>
+                    <span><strong>Technical Co-Sponsorship:</strong> ic-ETITE’20 was technically co-sponsored by IEEE.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#004B87] shrink-0 mt-0.5" />
-                    <span><strong>Archival ISBNs:</strong> Electronic ISBN: <code className="font-mono text-[11px] bg-slate-100 px-1.5 py-0.5 rounded">978-1-7281-4142-8</code> · USB ISBN: <code className="font-mono text-[11px] bg-slate-100 px-1.5 py-0.5 rounded">978-1-7281-4141-1</code></span>
+                    <span><strong>IEEE Xplore Proceedings:</strong> All the presented papers were published in the IEEE Xplore by the IEEE.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#004B87] shrink-0 mt-0.5" />
-                    <span><strong>BOLT Hackathon:</strong> Breakthrough on Locked Technology national hackathon with 500+ participants and ₹1,00,000 cash prize pool.</span>
+                    <span><strong>Official ISBN:</strong> Electronic ISBN: <code className="font-mono text-[11px] bg-slate-100 px-1.5 py-0.5 rounded">978-1-7281-4142-8</code> | USB ISBN: <code className="font-mono text-[11px] bg-slate-100 px-1.5 py-0.5 rounded">978-1-7281-4141-1</code></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#004B87] shrink-0 mt-0.5" />
+                    <span><strong>BOLT Hackathon:</strong> A hackathon titled, “Breakthrough on Locked Technology” BOLT was conducted with 500+ participants and gave Rs. 1,00,000 as prize money.</span>
                   </li>
                 </ul>
               </div>
@@ -331,7 +350,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── PHOTO GALLERY OF PREVIOUS EDITIONS (AUTHENTIC HISTORICAL ARCHIVE) ── */}
+        {/* ── PHOTO GALLERY OF PREVIOUS EDITIONS ── */}
         <section className="bg-gradient-to-b from-[#FAFBFD] to-white border-2 border-slate-200 rounded-3xl p-6 sm:p-10 md:p-12 shadow-sm">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFF4DB] border border-[#F5A623]/40 text-xs font-bold text-[#002147] mb-2 uppercase tracking-wider">
@@ -346,7 +365,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Interactive Featured Slideshow Player */}
           <GallerySlideshow />
 
           {/* Curated Historical Moments 3-in-a-row Grid */}
@@ -427,13 +445,13 @@ export default function AboutPage() {
                 Host University
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl text-[#002147] font-bold leading-tight">
-                About Vellore Institute of Technology (VIT)
+                About VIT
               </h2>
               <p className="text-base leading-relaxed text-slate-700 font-normal">
-                Vellore Institute of Technology (VIT) was established in 1984 as Vellore Engineering College and granted university status by the Government of India in 2001 under Section 3 of the UGC Act, 1956. Founded by <strong>Dr. G. Viswanathan</strong>, VIT is committed to providing quality higher education and fostering excellence in teaching, research, and innovation.
+                Vellore Institute of Technology (VIT) was established in 1984 as Vellore Engineering College and was granted university status by the Government of India in 2001 under Section 3 of the University Grants Commission (UGC) Act, 1956. Founded by <strong>Dr. G. Viswanathan</strong>, VIT is committed to providing quality higher education and fostering excellence in teaching, research, and innovation.
               </p>
               <p className="text-base leading-relaxed text-slate-700 font-normal">
-                The University promotes a vibrant, cosmopolitan academic environment with extensive global partnerships across universities and research institutions worldwide. Guided by its motto <em>&ldquo;Transforming life through excellence in education and research,&rdquo;</em> VIT prepares scholars to address emerging global challenges.
+                The University promotes a vibrant and cosmopolitan academic environment, attracting students and faculty from across India and around the world. VIT places strong emphasis on research, innovation, international collaboration, and industry engagement. Its extensive academic and research collaborations with universities and institutions worldwide facilitate student and faculty exchanges, joint research, and global academic partnerships. With a strong focus on academic excellence and a professional approach to governance, VIT continues to advance its vision of <em>“Transforming life through excellence in education and research.”</em> The University remains committed to preparing students and researchers to address emerging global challenges and contribute meaningfully to society.
               </p>
             </div>
           </div>
@@ -442,13 +460,13 @@ export default function AboutPage() {
           <div className="bg-[#FAFBFD] border-2 border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm">
             <div className="max-w-3xl mb-8">
               <span className="text-xs sm:text-sm font-bold text-[#002147] uppercase tracking-wider bg-[#FFF4DB] px-3.5 py-1.5 rounded-full border border-[#F5A623]/50 inline-block mb-3">
-                Global Recognition
+                Global Recognition &amp; Quality Accreditations
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#002147] font-bold">
                 Ranking &amp; Accreditation
               </h3>
               <p className="text-sm sm:text-base text-slate-600 mt-2">
-                VIT&apos;s strong performance in national and international rankings reflects its consistent emphasis on academic and research excellence.
+                Vellore Institute of Technology (VIT) is committed to excellence in teaching, research, innovation, and global academic engagement. Its strong performance in national and international rankings and accreditation reflects its continuing emphasis on academic and research excellence.
               </p>
             </div>
 
@@ -483,13 +501,16 @@ export default function AboutPage() {
                 Organizing School
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl text-[#002147] font-bold">
-                School of Computer Science Engineering and Information Systems (SCORE)
+                About the School of Computer Science Engineering and Information Systems
               </h2>
               <p className="text-base sm:text-lg leading-relaxed text-slate-700">
-                The <strong>School of Computer Science Engineering and Information Systems (SCORE)</strong> at VIT Vellore is a vibrant academic and research community committed to excellence in Computer Science, Information Technology, Artificial Intelligence, Data Engineering, Cyber Security, Software Engineering, and Computer Applications.
+                The School of Computer Science Engineering and Information Systems (SCORE) at Vellore Institute of Technology (VIT), Vellore, is a vibrant academic and research community committed to excellence in Computer Science, Information Technology, Artificial Intelligence, Data Engineering, Cyber Security, Software Engineering, and Computer Applications.
               </p>
               <p className="text-sm sm:text-base leading-relaxed text-slate-600">
-                SCORE offers comprehensive academic programmes including <strong>B.Tech.</strong> in IT, CSE (AI &amp; Data Engineering), and CSE (Cyber Security); <strong>BCA</strong>, <strong>B.Sc.</strong> in Computer Science; <strong>M.Tech.</strong> in Cybersecurity, Software Engineering, and by Research; <strong>MCA</strong>, <strong>M.Sc.</strong> in AI &amp; ML, and <strong>Ph.D.</strong> programmes. Supported by state-of-the-art infrastructure, Centres of Excellence, industry-supported laboratories, and international expert interactions, SCORE promotes transformative education and lifelong learning.
+                The School offers a diverse range of undergraduate, postgraduate, research, and doctoral programmes, including B.Tech. in Information Technology, B.Tech. in Computer Science and Engineering (Artificial Intelligence and Data Engineering), B.Tech. in Computer Science and Engineering (Cyber Security), BCA, B.Sc. in Computer Science, M.Tech. in Computer Science and Engineering (Cybersecurity), M.Tech. in Software Engineering, MCA, M.Sc. in Artificial Intelligence and Machine Learning, M.Tech. by Research, and Ph.D. programmes, equipping students with strong technical knowledge, practical skills, and the ability to address real-world challenges.
+              </p>
+              <p className="text-sm sm:text-base leading-relaxed text-slate-600">
+                SCORE fosters a research-driven and innovation-oriented environment through interdisciplinary research, industry collaboration, consultancy, and engagement with leading academic and research organisations. Supported by state-of-the-art infrastructure, industry-supported laboratories, Centres of Excellence, and a strong community of students, faculty members, researchers, visiting professors, and industry professionals, the School promotes excellence in teaching, learning, research, and innovation. Through seminars, workshops, international expert talks, symposia, conferences, and industry interactions, SCORE provides opportunities to engage with emerging technologies and global research developments, while advancing its vision of transformative education, impactful research, innovation, and lifelong learning.
               </p>
             </div>
 
@@ -519,8 +540,8 @@ export default function AboutPage() {
               <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mt-1">Research Faculty</p>
             </div>
             <div className="p-5 rounded-2xl bg-[#FAFBFD] border border-slate-200 text-center">
-              <p className="text-3xl font-serif font-bold text-[#004B87]">15+</p>
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mt-1">CoEs &amp; Labs</p>
+              <p className="text-3xl font-serif font-bold text-[#004B87]">NAAC</p>
+              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mt-1">A++ Grade (3.66)</p>
             </div>
             <div className="p-5 rounded-2xl bg-[#FAFBFD] border border-slate-200 text-center">
               <p className="text-3xl font-serif font-bold text-emerald-700">IEEE</p>
@@ -536,13 +557,13 @@ export default function AboutPage() {
               Co-Organizing Chapter
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#002147] font-bold leading-tight">
-              About IEEE Information Theory Society, VIT Chapter
+              About IEEE Information Theory Society, VIT
             </h2>
             <p className="text-base leading-relaxed text-slate-700">
-              The <strong>IEEE Information Theory Society at VIT</strong> is a vibrant student chapter dedicated to exploring the latest advancements in information theory and applying them to address contemporary technological challenges.
+              The IEEE Information Theory Society at VIT is a vibrant student chapter dedicated to exploring the latest advancements in information theory and applying them to address contemporary technological challenges.
             </p>
             <p className="text-sm sm:text-base leading-relaxed text-slate-600">
-              The chapter provides a nurturing platform for students to foster innovative ideas, develop technical expertise, and engage in meaningful research and projects. Through technical events, workshops, seminars, and collaborative initiatives with partners from academia and industry, the chapter empowers students to develop innovative solutions and contribute meaningfully to the advancement of information and communication technologies.
+              The chapter provides a nurturing platform for students to foster innovative ideas, develop technical expertise, and engage in meaningful research and projects. Through technical events, workshops, seminars, and collaborative initiatives, the chapter promotes knowledge sharing and practical learning while connecting students with partners and collaborators from academia and industry. By encouraging curiosity, creativity, and continuous learning, the IEEE Information Theory Society at VIT strives to empower students to develop innovative solutions, address emerging challenges, and contribute meaningfully to the advancement of information and communication technologies.
             </p>
           </div>
 

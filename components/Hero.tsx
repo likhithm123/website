@@ -97,17 +97,17 @@ export default function Hero() {
             </h1>
 
             {/* Sub-heading: Full conference title exactly as reference */}
-            <p className="text-base sm:text-lg md:text-[1.25rem] text-white/95 leading-snug font-normal max-w-xl mb-7 drop-shadow">
-              Third International Conference on Emerging Trends in Information Technology and
-              Engineering (ic-ETITE&apos;28)
+            <p className="text-base sm:text-lg md:text-[1.2rem] text-white/95 leading-snug font-normal max-w-xl mb-4 drop-shadow">
+              The Third IEEE International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE&apos;28)
             </p>
-
-
+            <p className="text-xs sm:text-sm text-[#FFB81C] font-semibold mb-7">
+              Organized by School of Computer Science Engineering &amp; Information Systems (SCORE) · VIT Vellore
+            </p>
 
             {/* Dates & Location Line */}
             <div className="flex items-center gap-2 text-white/90 text-sm sm:text-base font-medium mb-9">
               <Calendar className="w-4 h-4 text-[#F5A623] shrink-0" />
-              <span>February 10–11, 2028 at VIT Vellore, India</span>
+              <span>February 10–11, 2028 at Vellore Institute of Technology (VIT), Vellore, India</span>
             </div>
 
             {/* Action Buttons: Enlarged Dark Download Brochure + Register for Expo + Call for Papers */}
@@ -146,11 +146,15 @@ export default function Hero() {
             <div className="mt-10 pt-6 border-t border-white/15 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-white/75">
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#F5A623]" />
-                Peer-Reviewed Conference
+                Organized by SCORE, VIT Vellore
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#F5A623]" />
-                Hosted by SCORE, VIT Vellore
+                IEEE ITS Student Chapter
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#F5A623]" />
+                NAAC A++ (CGPA 3.66)
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#F5A623]" />
@@ -201,9 +205,9 @@ export default function Hero() {
               <span>Vellore Institute of Technology (Deemed to be University under section 3 of UGC Act 1956)</span>
             </div>
             <div className="flex items-center gap-4 text-[#4A5568] font-medium">
-              <span>SCORE (School of Computer Science &amp; Engineering)</span>
+              <span>SCORE (School of Computer Science Engineering &amp; Information Systems)</span>
               <span>·</span>
-              <span>IEEE Information Theory Society</span>
+              <span>IEEE Information Theory Society, VIT</span>
             </div>
           </div>
         </div>
@@ -249,8 +253,8 @@ export default function Hero() {
                   <p className="text-sm font-bold text-[#002147] mt-0.5">SCORE, VIT</p>
                 </div>
                 <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                  <p className="text-[11px] uppercase tracking-wider text-[#4A5568] font-medium">Proceedings</p>
-                  <p className="text-sm font-bold text-[#002147] mt-0.5">IEEE Xplore®</p>
+                  <p className="text-[11px] uppercase tracking-wider text-[#4A5568] font-medium">Edition</p>
+                  <p className="text-sm font-bold text-[#002147] mt-0.5">3rd Edition</p>
                 </div>
               </div>
 
@@ -259,42 +263,40 @@ export default function Hero() {
                 <h3 className="text-sm font-bold text-[#002147]">About the Conference</h3>
                 <p className="text-xs leading-relaxed text-[#4A5568]">
                   The Third IEEE International Conference on Emerging Trends in Information Technology and
-                  Engineering (ic-ETITE’28) provides a high-level academic platform for researchers, academicians,
-                  and corporate engineers. Organized by the School of Computer Science Engineering and Information
-                  Systems (SCORE) at VIT Vellore, the conference fosters interdisciplinary cross-pollination across 8 specialized research tracks.
+                  Engineering (ic-ETITE’28) will be held at Vellore Institute of Technology (VIT), Vellore,
+                  India, on 10–11 February 2028.
                 </p>
               </div>
 
               {/* Research Tracks Highlights */}
               <div className="space-y-2">
-                <h3 className="text-sm font-bold text-[#002147]">Key Conference Tracks</h3>
+                <h3 className="text-sm font-bold text-[#002147]">Conference Tracks</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                   <div className="p-2.5 rounded-lg border border-[#E2E8F0] bg-white">
-                    <span className="font-semibold">Track 1:</span> Artificial Intelligence &amp; Autonomous Systems
+                    <span className="font-semibold text-[#002147]">Track 1:</span> Information Technology
                   </div>
                   <div className="p-2.5 rounded-lg border border-[#E2E8F0] bg-white">
-                    <span className="font-semibold">Track 2:</span> Next-Gen Networking, 6G &amp; IoT
+                    <span className="font-semibold text-[#002147]">Track 2:</span> Communication Engineering
                   </div>
                   <div className="p-2.5 rounded-lg border border-[#E2E8F0] bg-white">
-                    <span className="font-semibold">Track 3:</span> Cyber Security, Cryptography &amp; Trust
+                    <span className="font-semibold text-[#002147]">Track 3:</span> Computer Engineering
                   </div>
                   <div className="p-2.5 rounded-lg border border-[#E2E8F0] bg-white">
-                    <span className="font-semibold">Track 4:</span> Cloud, Quantum &amp; Distributed Computing
-                  </div>
-                  <div className="p-2.5 rounded-lg border border-[#E2E8F0] bg-white">
-                    <span className="font-semibold">Track 5:</span> VLSI, Embedded Systems &amp; Smart Sensors
-                  </div>
-                  <div className="p-2.5 rounded-lg border border-[#E2E8F0] bg-white">
-                    <span className="font-semibold">Track 6:</span> Computational Intelligence &amp; Data Science
+                    <span className="font-semibold text-[#002147]">Track 4:</span> Electronics Engineering
                   </div>
                 </div>
+              </div>
+
+              {/* Scopus Recommendation Note */}
+              <div className="p-3.5 rounded-xl bg-[#FFF4DB] border border-[#F5A623]/50 text-xs text-[#002147] font-medium">
+                ⭐ <strong>Publication Opportunity:</strong> Extended version of selected papers will be recommended for publication in Scopus indexed journals with impact factor.
               </div>
 
               {/* Registration overview */}
               <div className="p-3.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-between">
                 <div>
                   <p className="text-xs font-bold text-[#002147]">Full Paper Submission Deadline</p>
-                  <p className="text-xs text-[#4A5568]">October 05, 2027 via EasyChair</p>
+                  <p className="text-xs text-[#4A5568]">05 October 2027 via EasyChair</p>
                 </div>
                 <span className="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold">
                   Open for Submissions

@@ -1,16 +1,32 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Award, Globe, Building2, Cpu, Users } from "lucide-react";
+import {
+  chiefPatron,
+  patrons,
+  organizingChairs,
+  technicalProgrammeChairs,
+  publicationCommittee,
+  sponsorshipCommittee,
+  publicityAndMediaCommittee,
+  registrationCommittee,
+  boltHackathonCommittee,
+  technextExpoCommittee,
+  eventManagementCommittee,
+  guestCareCommittee,
+  conferenceCoordinatingCommittee,
+  executiveAdvisoryCommittee,
+} from "@/data/committees";
 import {
   internationalAdvisoryData,
   nationalAdvisoryData,
+  technicalCommitteeData,
 } from "@/data/advisory";
 
 interface TextMember {
   name: string;
-  affiliation: string;
+  affiliation?: string;
 }
 
 interface CommitteeSection {
@@ -23,61 +39,39 @@ type TabType = "organizing" | "international" | "national" | "technical" | "stud
 export default function CommitteesPage() {
   const [activeTab, setActiveTab] = useState<TabType>("organizing");
 
-  // Organizing Committee: Left Column
-  const organizingLeftSections: CommitteeSection[] = [
+  // Organizing Committee: Executive Leadership Sections
+  const executiveLeadershipLeft: CommitteeSection[] = [
     {
       title: "Chief Patron",
       members: [
         {
-          name: "Dr. G. Viswanathan",
-          affiliation: "Chancellor, VIT",
+          name: chiefPatron.name,
+          affiliation: chiefPatron.affiliation,
         },
       ],
     },
     {
       title: "Patrons",
+      members: patrons.map((p) => ({
+        name: p.name,
+        affiliation: p.affiliation,
+      })),
+    },
+    {
+      title: "Organizing Chair",
       members: [
         {
-          name: "Mr. Sankar Viswanathan",
-          affiliation: "Vice President, VIT",
-        },
-        {
-          name: "Dr. Sekar Viswanathan",
-          affiliation: "Vice President, VIT",
-        },
-        {
-          name: "Dr. G.V. Selvam",
-          affiliation: "Vice President, VIT",
-        },
-        {
-          name: "Dr. Rambabu Kodali",
-          affiliation: "Vice - Chancellor, VIT",
-        },
-        {
-          name: "Dr. Partha Sharathi Mallick",
-          affiliation: "Pro-Vice Chancellor, VIT, Vellore",
-        },
-        {
-          name: "Dr. Jayabarathi T",
-          affiliation: "Registrar, VIT",
+          name: organizingChairs.organizingChair.name,
+          affiliation: organizingChairs.organizingChair.affiliation,
         },
       ],
     },
     {
-      title: "Organising Chair",
+      title: "Organizing Co-chair",
       members: [
         {
-          name: "Dr. Sumathy S",
-          affiliation: "Professor & Dean, SCORE, VIT, Vellore",
-        },
-      ],
-    },
-    {
-      title: "Organising Co-chair",
-      members: [
-        {
-          name: "Dr. Dhinesh Babu. L. D",
-          affiliation: "Professor & Associate Dean, SCORE, VIT, Vellore",
+          name: organizingChairs.organizingCoChair.name,
+          affiliation: organizingChairs.organizingCoChair.affiliation,
         },
       ],
     },
@@ -85,56 +79,36 @@ export default function CommitteesPage() {
       title: "Conference Chair",
       members: [
         {
-          name: "Dr. John Singh. K",
-          affiliation: "Professor, SCORE, VIT, Vellore",
+          name: organizingChairs.conferenceChair.name,
+          affiliation: organizingChairs.conferenceChair.affiliation,
         },
       ],
     },
   ];
 
-  // Organizing Committee: Right Column
-  const organizingRightSections: CommitteeSection[] = [
-    {
-      title: "Organising Secretary",
-      members: [
-        {
-          name: "Dr. Shynu P. G",
-          affiliation: "Associate Professor, SCORE, VIT, Vellore",
-        },
-      ],
-    },
+  const executiveLeadershipRight: CommitteeSection[] = [
     {
       title: "Publication Chair",
       members: [
         {
-          name: "Dr. Vijayan R",
-          affiliation: "Professor, SCORE, VIT, Vellore",
+          name: organizingChairs.publicationChair.name,
+          affiliation: organizingChairs.publicationChair.affiliation,
         },
       ],
     },
     {
       title: "Publication Co-chairs",
-      members: [
-        {
-          name: "Dr. Meenatchi S",
-          affiliation: "Associate Professor, SCORE, VIT, Vellore",
-        },
-        {
-          name: "Dr. Brindha K",
-          affiliation: "Associate Professor, SCORE, VIT, Vellore",
-        },
-        {
-          name: "Dr. Malathy E",
-          affiliation: "Assistant Professor, SCORE, VIT, Vellore",
-        },
-      ],
+      members: organizingChairs.publicationCoChairs.map((p) => ({
+        name: p.name,
+        affiliation: p.affiliation,
+      })),
     },
     {
       title: "Finance Chair",
       members: [
         {
-          name: "Dr. Gunasekaran G",
-          affiliation: "Associate Professor, SCORE, VIT, Vellore",
+          name: organizingChairs.financeChair.name,
+          affiliation: organizingChairs.financeChair.affiliation,
         },
       ],
     },
@@ -142,77 +116,100 @@ export default function CommitteesPage() {
       title: "Finance Co-chair",
       members: [
         {
-          name: "Dr. Prasanna. S",
-          affiliation: "Associate Professor, SCORE, VIT, Vellore",
+          name: organizingChairs.financeCoChair.name,
+          affiliation: organizingChairs.financeCoChair.affiliation,
         },
       ],
     },
+    {
+      title: "Technical Programme Chairs",
+      members: technicalProgrammeChairs.map((m) => ({
+        name: m.name,
+        affiliation: m.affiliation,
+      })),
+    },
   ];
 
-  // Operations and Management Committees
-  const operationsCommittees: CommitteeSection[] = [
+  // Specific Functional Committees from Official Directory
+  const functionalCommittees: CommitteeSection[] = [
+    {
+      title: "Publication Committee",
+      members: publicationCommittee.map((m) => ({
+        name: m.name,
+        affiliation: `${m.role}, ${m.affiliation}`,
+      })),
+    },
     {
       title: "Sponsorship Committee",
-      members: [
-        { name: "Dr. Srimathi. C", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-        { name: "Dr. Sendhil Kumar. K. S", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-        { name: "Dr. Selva Rani. B", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-      ],
+      members: sponsorshipCommittee.map((m) => ({
+        name: m.name,
+        affiliation: `${m.role}, ${m.affiliation}`,
+      })),
     },
     {
       title: "Publicity and Media Committee",
-      members: [
-        { name: "Dr. Chiranji Lal Chowdhary", affiliation: "Professor, SCORE, VIT, Vellore" },
-        { name: "Dr. Radha. R", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-        { name: "Dr. Ramya. G", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-      ],
+      members: publicityAndMediaCommittee.map((m) => ({
+        name: m.name,
+        affiliation: `${m.role}, ${m.affiliation}`,
+      })),
     },
     {
       title: "Registration Committee",
-      members: [
-        { name: "Dr. Jasmine. N", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-        { name: "Dr. Umamaheswari. E", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-        { name: "Dr. Sivagami. M", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-      ],
+      members: registrationCommittee.map((m) => ({
+        name: m.name,
+        affiliation: `${m.role}, ${m.affiliation}`,
+      })),
+    },
+    {
+      title: "BOLT 3.0 Hackathon Committee",
+      members: boltHackathonCommittee.map((m) => ({
+        name: m.name,
+        affiliation: `${m.role}, ${m.affiliation}`,
+      })),
+    },
+    {
+      title: "Technext’28 Expo Committee",
+      members: technextExpoCommittee.map((m) => ({
+        name: m.name,
+        affiliation: `${m.role}, ${m.affiliation}`,
+      })),
     },
     {
       title: "Event Management Committee",
-      members: [
-        { name: "Dr. Srinivas Koppu", affiliation: "Professor, SCORE, VIT, Vellore" },
-        { name: "Dr. Priya. M", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-        { name: "Dr. Arivuselvan. K", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-      ],
+      members: eventManagementCommittee.map((m) => ({
+        name: m.name,
+        affiliation: `${m.role}, ${m.affiliation}`,
+      })),
+    },
+    {
+      title: "Guest Care Committee",
+      members: guestCareCommittee.map((m) => ({
+        name: m.name,
+        affiliation: `${m.role}, ${m.affiliation}`,
+      })),
+    },
+    {
+      title: "Conference Coordinating Committee",
+      members: conferenceCoordinatingCommittee.map((m) => ({
+        name: m.name,
+        affiliation: `${m.role}, ${m.affiliation}`,
+      })),
+    },
+    {
+      title: "Executive Advisory Committee",
+      members: executiveAdvisoryCommittee.map((m) => ({
+        name: m.name,
+        affiliation: `${m.role}, ${m.affiliation}`,
+      })),
     },
   ];
 
-  // Technical Committee
-  const technicalChairs: CommitteeSection = {
-    title: "Technical Programme Chairs",
-    members: [
-      { name: "Dr. Jeyanthi. N", affiliation: "Professor, SCORE, VIT, Vellore" },
-      { name: "Dr. Parkavi. K", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-      { name: "Dr. Saravanan. R", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-    ],
-  };
-
-  const technicalPublication: CommitteeSection = {
-    title: "Technical Review & Publication Committee",
-    members: [
-      { name: "Dr. Shola. U", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-      { name: "Dr. Deepa. M", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-      { name: "Dr. Govindarajan. M", affiliation: "Associate Professor, SCORE, VIT, Vellore" },
-      { name: "Dr. Mythili. N", affiliation: "Assistant Professor, SCORE, VIT, Vellore" },
-    ],
-  };
-
   // Student Committee Members
   const studentLeads: TextMember[] = [
-    { name: "Dr. John Singh K", affiliation: "Faculty Sponsor & Counselor, SCORE, VIT Vellore" },
     { name: "Likhith Medarametla", affiliation: "Lead Architect & Full Stack Lead, IEEE ITS Chapter, SCORE, VIT Vellore" },
     { name: "M.V.J.M Jaya Veera Maheshwar", affiliation: "Full Stack Developer, IEEE ITS Chapter, SCORE, VIT Vellore" },
     { name: "Judson Daniel", affiliation: "Frontend Developer, IEEE ITS Chapter, SCORE, VIT Vellore" },
     { name: "IEEE ITS Student Executive Board", affiliation: "Student Chapter Officers & Technical Associates, VIT Vellore" },
-    { name: "Conference Student Volunteer Cohort", affiliation: "Session Hosts & Delegate Support Teams, SCORE, VIT Vellore" },
   ];
 
   // Split international advisory array into two balanced columns
@@ -225,7 +222,7 @@ export default function CommitteesPage() {
   const natCol1 = nationalAdvisoryData.slice(0, natHalf);
   const natCol2 = nationalAdvisoryData.slice(natHalf);
 
-  // Tab configurations matching Image 2
+  // Tab configurations
   const tabs = [
     { id: "organizing" as TabType, label: "Organizing Committee", icon: Award },
     { id: "international" as TabType, label: "International Advisory", icon: Globe },
@@ -238,7 +235,7 @@ export default function CommitteesPage() {
     <main className="bg-white min-h-screen text-[#1A1A1A] py-8 sm:py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* SWITCHER PILL (Matching Image 2 Reference) */}
+        {/* SWITCHER PILL */}
         <div className="flex justify-center mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-1 sm:gap-1.5 p-1.5 bg-[#F8FAFC] border border-[#E2E8F0] rounded-full shadow-sm max-w-full overflow-x-auto no-scrollbar">
             {tabs.map((tab) => {
@@ -270,66 +267,67 @@ export default function CommitteesPage() {
 
         {/* 1. TAB: ORGANIZING COMMITTEE */}
         {activeTab === "organizing" && (
-          <div className="animate-in fade-in duration-200">
-            {/* Main Title in Blue */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#004B87] tracking-tight mb-8 sm:mb-10">
-              Organizing Committee
-            </h1>
+          <div className="animate-in fade-in duration-200 space-y-16">
+            <div>
+              <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#004B87] tracking-tight mb-8 sm:mb-10">
+                Organizing Committee
+              </h1>
 
-            {/* 2-Column Responsive Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-8 sm:gap-y-10">
-              {/* Left Column */}
-              <div className="space-y-8 sm:space-y-10">
-                {organizingLeftSections.map((section) => (
-                  <section key={section.title} className="space-y-2">
-                    <h2 className="text-xl sm:text-2xl font-bold text-[#004B87] tracking-tight">
-                      {section.title}
-                    </h2>
-                    <div className="space-y-1.5 pt-1">
-                      {section.members.map((member) => (
-                        <div
-                          key={member.name}
-                          className="text-[15px] sm:text-[15.5px] leading-relaxed text-[#222]"
-                        >
-                          <span className="font-bold text-black">{member.name}</span>
-                          {member.affiliation ? `, ${member.affiliation}` : ""}
-                        </div>
-                      ))}
-                    </div>
-                  </section>
-                ))}
-              </div>
+              {/* 2-Column Responsive Layout for Executive Leadership */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-8 sm:gap-y-10">
+                {/* Left Column */}
+                <div className="space-y-8 sm:space-y-10">
+                  {executiveLeadershipLeft.map((section) => (
+                    <section key={section.title} className="space-y-2">
+                      <h2 className="text-xl sm:text-2xl font-bold text-[#004B87] tracking-tight">
+                        {section.title}
+                      </h2>
+                      <div className="space-y-1.5 pt-1">
+                        {section.members.map((member) => (
+                          <div
+                            key={member.name}
+                            className="text-[15px] sm:text-[15.5px] leading-relaxed text-[#222]"
+                          >
+                            <span className="font-bold text-black">{member.name}</span>
+                            {member.affiliation ? `, ${member.affiliation}` : ""}
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+                </div>
 
-              {/* Right Column */}
-              <div className="space-y-8 sm:space-y-10">
-                {organizingRightSections.map((section) => (
-                  <section key={section.title} className="space-y-2">
-                    <h2 className="text-xl sm:text-2xl font-bold text-[#004B87] tracking-tight">
-                      {section.title}
-                    </h2>
-                    <div className="space-y-1.5 pt-1">
-                      {section.members.map((member) => (
-                        <div
-                          key={member.name}
-                          className="text-[15px] sm:text-[15.5px] leading-relaxed text-[#222]"
-                        >
-                          <span className="font-bold text-black">{member.name}</span>
-                          {member.affiliation ? `, ${member.affiliation}` : ""}
-                        </div>
-                      ))}
-                    </div>
-                  </section>
-                ))}
+                {/* Right Column */}
+                <div className="space-y-8 sm:space-y-10">
+                  {executiveLeadershipRight.map((section) => (
+                    <section key={section.title} className="space-y-2">
+                      <h2 className="text-xl sm:text-2xl font-bold text-[#004B87] tracking-tight">
+                        {section.title}
+                      </h2>
+                      <div className="space-y-1.5 pt-1">
+                        {section.members.map((member) => (
+                          <div
+                            key={member.name}
+                            className="text-[15px] sm:text-[15.5px] leading-relaxed text-[#222]"
+                          >
+                            <span className="font-bold text-black">{member.name}</span>
+                            {member.affiliation ? `, ${member.affiliation}` : ""}
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Operations & Management Committees */}
-            <div className="mt-16 pt-12 border-t border-slate-200">
+            {/* Functional & Departmental Committees */}
+            <div className="pt-12 border-t border-slate-200">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#004B87] tracking-tight mb-8">
-                Operations &amp; Management Committees
+                Committees &amp; Coordinators
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-10">
-                {operationsCommittees.map((group) => (
+                {functionalCommittees.map((group) => (
                   <section key={group.title} className="space-y-2">
                     <h3 className="text-xl sm:text-2xl font-bold text-[#004B87] tracking-tight">
                       {group.title}
@@ -363,7 +361,7 @@ export default function CommitteesPage() {
                 {intlCol1.map((m) => (
                   <div key={m.name} className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#222]">
                     <span className="font-bold text-black">{m.name}</span>
-                    {m.institution ? `, ${m.institution}` : ""}
+                    {m.role && m.institution ? `, ${m.role}, ${m.institution}` : m.institution ? `, ${m.institution}` : ""}
                     {m.country ? `, ${m.country}` : ""}
                   </div>
                 ))}
@@ -372,7 +370,7 @@ export default function CommitteesPage() {
                 {intlCol2.map((m) => (
                   <div key={m.name} className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#222]">
                     <span className="font-bold text-black">{m.name}</span>
-                    {m.institution ? `, ${m.institution}` : ""}
+                    {m.role && m.institution ? `, ${m.role}, ${m.institution}` : m.institution ? `, ${m.institution}` : ""}
                     {m.country ? `, ${m.country}` : ""}
                   </div>
                 ))}
@@ -390,16 +388,18 @@ export default function CommitteesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-4">
               <div className="space-y-3">
                 {natCol1.map((m) => (
-                  <div key={m.name} className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#222]">
+                  <div key={`${m.name}-${m.institution}`} className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#222]">
                     <span className="font-bold text-black">{m.name}</span>
+                    {m.role ? `, ${m.role}` : ""}
                     {m.institution ? `, ${m.institution}` : ""}
                   </div>
                 ))}
               </div>
               <div className="space-y-3">
                 {natCol2.map((m) => (
-                  <div key={m.name} className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#222]">
+                  <div key={`${m.name}-${m.institution}`} className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#222]">
                     <span className="font-bold text-black">{m.name}</span>
+                    {m.role ? `, ${m.role}` : ""}
                     {m.institution ? `, ${m.institution}` : ""}
                   </div>
                 ))}
@@ -412,36 +412,27 @@ export default function CommitteesPage() {
         {activeTab === "technical" && (
           <div className="animate-in fade-in duration-200">
             <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#004B87] tracking-tight mb-8 sm:mb-10">
-              Technical Committee &amp; Reviewers
+              Technical Committee
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-10">
-              <section className="space-y-3">
-                <h2 className="text-xl sm:text-2xl font-bold text-[#004B87] tracking-tight">
-                  {technicalChairs.title}
-                </h2>
-                <div className="space-y-2 pt-1">
-                  {technicalChairs.members.map((m) => (
-                    <div key={m.name} className="text-[15px] leading-relaxed text-[#222]">
-                      <span className="font-bold text-black">{m.name}</span>
-                      {`, ${m.affiliation}`}
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              <section className="space-y-3">
-                <h2 className="text-xl sm:text-2xl font-bold text-[#004B87] tracking-tight">
-                  {technicalPublication.title}
-                </h2>
-                <div className="space-y-2 pt-1">
-                  {technicalPublication.members.map((m) => (
-                    <div key={m.name} className="text-[15px] leading-relaxed text-[#222]">
-                      <span className="font-bold text-black">{m.name}</span>
-                      {`, ${m.affiliation}`}
-                    </div>
-                  ))}
-                </div>
-              </section>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-4">
+              <div className="space-y-3">
+                {technicalCommitteeData.slice(0, Math.ceil(technicalCommitteeData.length / 2)).map((m) => (
+                  <div key={m.name} className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#222]">
+                    <span className="font-bold text-black">{m.name}</span>
+                    {m.role ? `, ${m.role}` : ""}
+                    {m.institution ? `, ${m.institution}` : ""}
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-3">
+                {technicalCommitteeData.slice(Math.ceil(technicalCommitteeData.length / 2)).map((m) => (
+                  <div key={m.name} className="text-[14.5px] sm:text-[15px] leading-relaxed text-[#222]">
+                    <span className="font-bold text-black">{m.name}</span>
+                    {m.role ? `, ${m.role}` : ""}
+                    {m.institution ? `, ${m.institution}` : ""}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         )}
@@ -475,22 +466,6 @@ export default function CommitteesPage() {
             </div>
           </div>
         )}
-
-        {/* Bottom Navigation */}
-        <div className="mt-14 pt-8 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
-          <Link
-            href="/"
-            className="text-sm font-semibold text-[#004B87] hover:underline inline-flex items-center gap-1"
-          >
-            ← Back to Conference Home
-          </Link>
-          <Link
-            href="/team"
-            className="text-sm font-semibold text-[#004B87] hover:underline inline-flex items-center gap-1"
-          >
-            View Web Development Team →
-          </Link>
-        </div>
 
       </div>
     </main>

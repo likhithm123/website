@@ -9,6 +9,7 @@ import {
   CheckCircle,
   Download,
   AlertTriangle,
+  Award,
 } from "lucide-react";
 
 export default function CFPSection() {
@@ -17,23 +18,43 @@ export default function CFPSection() {
   return (
     <section id="cfp" className="py-16 sm:py-20 bg-white border-b border-[#E4E7EC]">
       <div className="container-x">
+        {/* Scopus Recommendation Banner */}
+        <div className="mb-12 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#002147] to-[#004B87] text-white shadow-md flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3.5">
+            <div className="w-12 h-12 rounded-xl bg-[#F5A623] text-[#002147] grid place-items-center shrink-0">
+              <Award className="w-7 h-7" />
+            </div>
+            <div>
+              <span className="text-xs font-mono font-bold tracking-widest text-[#FFB81C] uppercase block">
+                Journal Publication Opportunity
+              </span>
+              <p className="text-base sm:text-lg font-bold text-white mt-0.5 leading-snug">
+                Extended version of selected papers will be recommended for publication in Scopus indexed journals with impact factor.
+              </p>
+            </div>
+          </div>
+          <span className="shrink-0 px-4 py-2 rounded-xl bg-white/10 border border-white/20 text-xs font-bold font-mono tracking-wide text-white uppercase">
+            Scopus Indexed
+          </span>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: CFP Overview & Submission CTA */}
           <div className="lg:col-span-6 flex flex-col space-y-4">
             <span className="text-xs sm:text-sm font-bold text-[#002147] uppercase tracking-wider bg-[#FFF4DB] px-3.5 py-1.5 rounded-full border border-[#F5A623]/50 self-start">
-              Submission Guidelines &amp; Portal
+              Manuscript Submission
             </span>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#002147] tracking-tight leading-[1.15]">
-              Call for Papers &amp; Manuscripts
+              Call for Papers &amp; Manuscript Guidelines
             </h2>
 
             <p className="text-base sm:text-lg text-slate-800 leading-relaxed font-semibold">
-              Original and unpublished research papers addressing emerging challenges, innovative technologies, and foundational paradigms in Information Technology and Engineering are invited from researchers worldwide.
+              Original and unpublished research papers addressing emerging challenges, innovative technologies, and recent developments are invited from researchers worldwide.
             </p>
 
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-              All submitted papers will undergo rigorous double-blind plagiarism checks and strict IEEE peer-review scrutiny. Accepted and presented papers will be submitted to the IEEE for inclusion in the <strong>IEEE Xplore® Digital Library</strong>.
+              The Third IEEE International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE’28) will be held at Vellore Institute of Technology (VIT), Vellore, India, on 10–11 February 2028. All submitted papers will go through a plagiarism check process.
             </p>
 
             <div className="mt-4 p-6 sm:p-7 rounded-2xl bg-[#FAFBFD] border-2 border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-sm">
@@ -50,10 +71,11 @@ export default function CFPSection() {
               </div>
 
               <Link
-                href="#tracks"
+                href="/call-for-papers#submit"
                 className="btn-gold text-sm sm:text-base py-3 px-6 inline-flex items-center gap-2 shrink-0 font-bold shadow-md cursor-pointer"
               >
-                <span>Submit Your Paper</span>
+                <span>Submit on EasyChair</span>
+                <span className="text-base font-bold">→</span>
               </Link>
             </div>
 
@@ -83,47 +105,47 @@ export default function CFPSection() {
           <div className="lg:col-span-6 bg-[#FAFBFD] p-6 sm:p-8 rounded-2xl border-2 border-slate-200 shadow-sm flex flex-col space-y-4">
             <h3 className="text-lg sm:text-xl font-bold text-[#002147] flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-[#F5A623]" />
-              <span>Submission Compliance Rules</span>
+              <span>Manuscript Submission Rules</span>
             </h3>
 
             <div className="space-y-3 text-sm sm:text-base text-slate-800">
               <div className="p-4 rounded-xl bg-white border border-slate-200 flex items-start gap-3 shadow-xs">
                 <CheckCircle className="w-5 h-5 text-[#002147] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Plagiarism Process:</strong> All submissions undergo strict anti-plagiarism screening using IEEE CrossCheck standard verification tools.
+                  <strong>Plagiarism Check Process:</strong> All submitted papers will go through a plagiarism check process.
                 </span>
               </div>
 
               <div className="p-4 rounded-xl bg-white border border-slate-200 flex items-start gap-3 shadow-xs">
                 <AlertCircle className="w-5 h-5 text-[#004B87] shrink-0 mt-0.5" />
                 <span>
-                  <strong>No Hyperlinks &amp; Media:</strong> Manuscripts should not contain embedded live links or scanned low-resolution raster graphics.
+                  <strong>Formatting Requirements:</strong> The manuscript should not contain embedded links, scanned images, header and footer.
                 </span>
               </div>
 
               <div className="p-4 rounded-xl bg-white border border-slate-200 flex items-start gap-3 shadow-xs">
-                <AlertCircle className="w-5 h-5 text-[#004B87] shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-[#004B87] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Clean Standard Margins:</strong> Manuscripts must adhere strictly to IEEE two-column layout without custom running headers, footers, or page numbers.
+                  <strong>Originality:</strong> Original and unpublished research papers addressing emerging challenges, innovative technologies, and recent developments are invited.
                 </span>
               </div>
 
               <div className="p-4 rounded-xl bg-amber-50/80 border border-amber-200 flex items-start gap-3 text-amber-950">
                 <AlertTriangle className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
                 <span>
-                  <strong>No Email Submissions:</strong> Submissions transmitted via email will strictly <em>NOT</em> be considered under any circumstances; all papers must proceed via EasyChair.
+                  <strong>No Email Submission:</strong> Email submission will not be accepted. The papers should be submitted through EasyChair: <Link href="/call-for-papers#submit" className="font-semibold underline">EasyChair Submission Portal</Link>.
                 </span>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#E4E7EC] flex items-center justify-between text-xs text-[#4A5568]">
+            <div className="pt-4 border-t border-[#E4E7EC] flex items-center justify-between text-xs sm:text-sm text-[#4A5568]">
               <div className="flex items-center gap-1.5">
                 <Mail className="w-4 h-4 text-[#4A5568]" />
-                <span>Editorial Queries:</span>
+                <span>All queries related to the conference:</span>
               </div>
               <a
                 href={`mailto:${contact.email}`}
-                className="font-mono font-semibold text-[#0B6B4A] hover:underline"
+                className="font-mono font-semibold text-[#004B87] hover:underline"
               >
                 {contact.email}
               </a>

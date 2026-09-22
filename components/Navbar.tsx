@@ -33,9 +33,11 @@ export default function Navbar() {
     setMobileExpandedDropdown(null);
   }, [pathname]);
 
-  const isActive = (href: string) => {
-    if (href === "/" && pathname === "/") return true;
-    if (href !== "/" && pathname.startsWith(href)) return true;
+  const isActive = (item: NavItem) => {
+    if (item.href === "/" && pathname === "/") return true;
+    if (item.href !== "/" && !item.href.startsWith("#") && pathname === item.href) return true;
+    if (item.href !== "/" && !item.href.startsWith("#") && pathname.startsWith(item.href)) return true;
+    if (item.dropdownItems?.some((sub) => !sub.external && pathname === sub.href)) return true;
     return false;
   };
 
@@ -78,60 +80,25 @@ export default function Navbar() {
       hasDropdown: true,
       alignRight: false,
       dropdownItems: [
-        { label: "Scope & Research Tracks", href: "/tracks" },
-        { label: "Author Submission Guidelines", href: "/call-for-papers" },
-        { label: "Paper Templates (IEEE Format)", href: "/call-for-papers" },
-        { label: "Plagiarism Policy & Review Process", href: "/call-for-papers" },
-        {
-          label: "EasyChair Submission Portal ↗",
-          href: "https://easychair.org/conferences/?conf=icetite28",
-          external: true,
-        },
+        { label: "Submission Guidelines", href: "/call-for-papers" },
+        { label: "Conference Research Tracks", href: "/tracks" },
+        { label: "Submit on EasyChair", href: "/call-for-papers#submit" },
       ],
     },
     {
       label: "Dates",
       href: "/important-dates",
-      hasDropdown: true,
-      alignRight: false,
-      dropdownItems: [
-        { label: "Milestone Schedule Timeline", href: "/important-dates" },
-        { label: "Full Paper Submission Deadline", href: "/important-dates" },
-        { label: "Acceptance Notification", href: "/important-dates" },
-        { label: "Camera-Ready Final Submission", href: "/important-dates" },
-        { label: "Conference Days (Feb 10–11, 2028)", href: "/important-dates" },
-      ],
+      hasDropdown: false,
     },
     {
       label: "Registration",
       href: "/registration",
-      hasDropdown: true,
-      alignRight: true,
-      dropdownItems: [
-        { label: "Registration Tariffs & Categories", href: "/registration" },
-        { label: "Indian Authors & Delegates (INR)", href: "/registration" },
-        { label: "International Authors (USD)", href: "/registration" },
-        { label: "Student & Co-Author Registration", href: "/registration" },
-        { label: "Online Fee Payment & Invoicing", href: "/registration" },
-        { label: "International Delegate Visa Assistance", href: "/visa" },
-      ],
+      hasDropdown: false,
     },
     {
       label: "Visa",
       href: "/visa",
-      hasDropdown: true,
-      alignRight: true,
-      dropdownItems: [
-        { label: "Conference Visa Guidelines", href: "/visa" },
-        { label: "Request Visa Invitation Letter", href: "/visa#invitation-letter" },
-        {
-          label: "Indian e-Visa Official Portal ↗",
-          href: "https://indianvisaonline.gov.in/evisa/tvoa.html",
-          external: true,
-        },
-        { label: "Government of India Clearances", href: "/visa" },
-        { label: "Campus Venue & Travel Logistics", href: "/venue" },
-      ],
+      hasDropdown: false,
     },
     {
       label: "Events",
@@ -139,10 +106,9 @@ export default function Navbar() {
       hasDropdown: true,
       alignRight: true,
       dropdownItems: [
-        { label: "BOLT 3.0 National Flagship Hackathon", href: "/hackathon" },
-        { label: "Keynote & Plenary Addresses", href: "/keynote-speakers" },
-        { label: "Technical Paper Presentation Sessions", href: "/tracks" },
-        { label: "Student Symposia & Workshops", href: "/about" },
+        { label: "BOLT 3.0 Hackathon", href: "/hackathon" },
+        { label: "Keynote Speakers", href: "/keynote-speakers" },
+        { label: "Paper Presentation Tracks", href: "/tracks" },
       ],
     },
     {
@@ -151,18 +117,16 @@ export default function Navbar() {
       hasDropdown: false,
     },
     {
-      label: "Other",
-      href: "#other",
+      label: "More",
+      href: "/venue",
       hasDropdown: true,
       alignRight: true,
       dropdownItems: [
-        { label: "Organizing Committee", href: "/committees" },
         { label: "Advisory Board", href: "/advisory" },
-        { label: "Campus Venue & Travel Logistics", href: "/venue" },
-        { label: "Keynote Luminaries & Speakers", href: "/keynote-speakers" },
+        { label: "Campus Venue & Travel", href: "/venue" },
         { label: "Web Development Team", href: "/team" },
         {
-          label: "IEEE ITS VIT Chapter Portal ↗",
+          label: "IEEE ITS Chapter Portal ↗",
           href: "https://ieee-its-1-tzbd.vercel.app/",
           external: true,
         },
@@ -215,25 +179,13 @@ export default function Navbar() {
               />
             </div>
           </a>
-
-          {/* BOLT 3.0 Hackathon Tag for wider screens */}
-          <Link
-            href="/hackathon"
-            className="group hidden 2xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#00142E] hover:bg-[#00244D] border border-[#CCFF00] shadow-[0_0_12px_rgba(204,255,0,0.25)] shrink-0"
-            title="Register for BOLT 3.0 National Flagship Hackathon"
-          >
-            <Zap className="w-3 h-3 text-[#CCFF00] fill-[#CCFF00]" />
-            <span className="text-xs font-black tracking-wide text-[#CCFF00]">
-              BOLT 3.0
-            </span>
-          </Link>
         </div>
 
         {/* DESKTOP NAVIGATION ITEMS WITH CRISP SELECTION EFFECT */}
         <div className="hidden xl:flex items-center flex-nowrap whitespace-nowrap min-w-0">
           <ul className="flex items-center gap-0.5 2xl:gap-1 text-[12px] 2xl:text-[13px] font-semibold text-white flex-nowrap whitespace-nowrap">
             {navItems.map((item) => {
-              const active = isActive(item.href);
+              const active = isActive(item);
               const isOpen = activeDropdown === item.label;
 
               return (
@@ -306,8 +258,20 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* RIGHT: Official VIT Logo on right side */}
+        {/* RIGHT: BOLT 3.0 Tag & Official VIT Logo on right side */}
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          {/* BOLT 3.0 Hackathon Tag */}
+          <Link
+            href="/hackathon"
+            className="group flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#00142E] hover:bg-[#00244D] border border-[#CCFF00] shadow-[0_0_12px_rgba(204,255,0,0.25)] transition-all hover:scale-105 shrink-0"
+            title="Register for BOLT 3.0 National Flagship Hackathon"
+          >
+            <Zap className="w-3.5 h-3.5 text-[#CCFF00] fill-[#CCFF00] animate-pulse" />
+            <span className="text-[11px] sm:text-xs font-black tracking-wide text-[#CCFF00]">
+              BOLT 3.0
+            </span>
+          </Link>
+
           <Link
             href="/"
             title="Vellore Institute of Technology"
@@ -364,7 +328,7 @@ export default function Navbar() {
             {/* Navigation List with Accordions */}
             <ul className="flex flex-col gap-1 text-base font-semibold">
               {navItems.map((item) => {
-                const active = isActive(item.href);
+                const active = isActive(item);
                 const isExpanded = mobileExpandedDropdown === item.label;
 
                 return (
@@ -447,15 +411,14 @@ export default function Navbar() {
                 <ExternalLink className="w-3.5 h-3.5 text-[#72EFDD]" />
               </a>
 
-              <a
-                href="https://easychair.org/conferences/?conf=icetite28"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/call-for-papers#submit"
+                onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-between p-3.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-white"
               >
-                <span className="font-semibold">EasyChair Submission Portal</span>
-                <ExternalLink className="w-3.5 h-3.5 text-[#FFB81C]" />
-              </a>
+                <span className="font-semibold">Submit Paper on EasyChair</span>
+                <span className="text-[#FFB81C] font-bold text-sm">→</span>
+              </Link>
             </div>
           </div>
         </div>
