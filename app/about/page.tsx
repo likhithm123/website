@@ -124,9 +124,9 @@ export default function AboutPage() {
 
       <div className="container-x py-16 md:py-24 space-y-20">
         {/* Conference Overview */}
-        <section className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
-          <div className="md:col-span-6 space-y-5">
-            <span className="text-xs sm:text-sm font-bold text-[#002147] uppercase tracking-wider bg-[#FFF4DB] px-3.5 py-1.5 rounded-full border border-[#F5A623]/50">
+        <section className="grid md:grid-cols-12 gap-10 md:gap-14 items-stretch">
+          <div className="md:col-span-6 space-y-5 flex flex-col justify-center">
+            <span className="text-xs sm:text-sm font-bold text-[#002147] uppercase tracking-wider bg-[#FFF4DB] px-3.5 py-1.5 rounded-full border border-[#F5A623]/50 w-fit">
               About ic-ETITE’28
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl text-[#002147] font-bold leading-tight">
@@ -151,18 +151,19 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="md:col-span-6">
-            <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-lg">
-              <Image
-                src="/images/gallery/icetite24_inauguration.webp"
-                alt="ic-ETITE Conference Plenary Session"
-                width={800}
-                height={450}
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="w-full h-auto object-cover"
-              />
-              <div className="p-4 bg-slate-50 border-t border-slate-200 text-xs sm:text-sm text-slate-600 font-medium">
+          <div className="md:col-span-6 flex flex-col">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
+              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+                <Image
+                  src="/images/gallery/icetite24_inauguration.webp"
+                  alt="ic-ETITE Conference Plenary Session"
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-3 bg-slate-50 border-t border-slate-200 text-xs sm:text-sm text-slate-600 font-medium rounded-b-xl mt-2.5">
                 Dignitaries and keynote luminaries at ic-ETITE, Anna Auditorium, VIT Vellore
               </div>
             </div>
@@ -190,7 +191,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── HIGHLIGHTS OF PREVIOUS EDITIONS (ic-ETITE'24 & ic-ETITE'20) ── */}
-        <section className="space-y-8">
+        <section id="highlights" className="space-y-8 scroll-mt-24">
           <div className="text-center max-w-3xl mx-auto">
             <span className="text-xs sm:text-sm font-bold text-[#004B87] uppercase tracking-wider bg-[#EBF3F8] px-3.5 py-1.5 rounded-full border border-[#004B87]/30 inline-block mb-3">
               Conference Heritage &amp; Impact
@@ -441,25 +442,26 @@ export default function AboutPage() {
 
         {/* ── ABOUT VIT & RANKINGS ── */}
         <section className="space-y-12">
-          <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
-            <div className="md:col-span-6 order-2 md:order-1">
-              <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-lg">
-                <Image
-                  src="/images/vit-campus.webp"
-                  alt="VIT Vellore Main Campus Entrance"
-                  width={800}
-                  height={450}
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="p-4 bg-slate-50 border-t border-slate-200 text-xs sm:text-sm text-slate-600 font-medium">
+          <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-stretch">
+            <div className="md:col-span-6 order-2 md:order-1 flex flex-col">
+              <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
+                <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+                  <Image
+                    src="/images/vit-campus.webp"
+                    alt="VIT Vellore Main Campus Entrance"
+                    fill
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="p-3 bg-slate-50 border-t border-slate-200 text-xs sm:text-sm text-slate-600 font-medium rounded-b-xl mt-2.5">
                   Vellore Institute of Technology (VIT), Vellore Main Campus Entrance
                 </div>
               </div>
             </div>
 
-            <div className="md:col-span-6 order-1 md:order-2 space-y-5">
+            <div className="md:col-span-6 order-1 md:order-2 space-y-5 flex flex-col justify-center">
               <span className="text-xs sm:text-sm font-bold text-[#002147] uppercase tracking-wider bg-[#FFF4DB] px-3.5 py-1.5 rounded-full border border-[#F5A623]/50">
                 Host University
               </span>
@@ -514,9 +516,9 @@ export default function AboutPage() {
 
         {/* ── ABOUT SCORE ── */}
         <section className="bg-white border-2 border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm">
-          <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-center mb-10">
-            <div className="md:col-span-7 space-y-4">
-              <span className="text-xs sm:text-sm font-bold text-[#004B87] uppercase tracking-wider bg-[#EBF3F8] px-3.5 py-1.5 rounded-full border border-[#004B87]/30 inline-block">
+          <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-stretch mb-10">
+            <div className="md:col-span-7 space-y-4 flex flex-col justify-center">
+              <span className="text-xs sm:text-sm font-bold text-[#004B87] uppercase tracking-wider bg-[#EBF3F8] px-3.5 py-1.5 rounded-full border border-[#004B87]/30 inline-block w-fit">
                 Organizing School
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl text-[#002147] font-bold">
@@ -533,18 +535,19 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="md:col-span-5">
-              <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md">
-                <Image
-                  src="/images/004A3344.webp"
-                  alt="ic-ETITE Conference Plenary Gathering at Anna Auditorium, VIT Vellore"
-                  width={600}
-                  height={400}
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="p-3 bg-slate-50 border-t border-slate-200 text-xs text-slate-600 font-medium">
+            <div className="md:col-span-5 flex flex-col">
+              <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
+                <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+                  <Image
+                    src="/images/004A3344.webp"
+                    alt="ic-ETITE Conference Plenary Gathering at Anna Auditorium, VIT Vellore"
+                    fill
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="p-3 bg-slate-50 border-t border-slate-200 text-xs text-slate-600 font-medium rounded-b-xl mt-2.5">
                   SCORE Academic Facilities &amp; Technology Infrastructure, VIT Vellore
                 </div>
               </div>
@@ -572,9 +575,9 @@ export default function AboutPage() {
         </section>
 
         {/* ── ABOUT IEEE ITS CHAPTER ── */}
-        <section className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
-          <div className="md:col-span-6 space-y-4">
-            <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
+        <section className="grid md:grid-cols-12 gap-10 md:gap-14 items-stretch">
+          <div className="md:col-span-6 space-y-4 flex flex-col justify-center">
+            <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 w-fit">
               Co-Organizing Chapter
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#002147] font-bold leading-tight">
@@ -588,18 +591,19 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="md:col-span-6">
-            <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-lg">
-              <Image
-                src="/images/ieee-its-workshop.webp"
-                alt="IEEE Information Theory Society Workshop at VIT"
-                width={800}
-                height={450}
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="w-full h-auto object-cover"
-              />
-              <div className="p-4 bg-slate-50 border-t border-slate-200 text-xs sm:text-sm text-slate-600 font-medium">
+          <div className="md:col-span-6 flex flex-col">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
+              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+                <Image
+                  src="/images/ieee-its-workshop.webp"
+                  alt="IEEE Information Theory Society Workshop at VIT"
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-3 bg-slate-50 border-t border-slate-200 text-xs sm:text-sm text-slate-600 font-medium rounded-b-xl mt-2.5">
                 IEEE Information Theory Society student researchers and faculty symposium at VIT Vellore
               </div>
             </div>

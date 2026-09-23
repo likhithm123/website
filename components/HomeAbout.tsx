@@ -5,10 +5,10 @@ export default function HomeAbout() {
   return (
     <section className="bg-white py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
 
           {/* Text */}
-          <div>
+          <div className="flex flex-col justify-center">
             <p className="text-orange-500 font-bold text-sm tracking-widest uppercase mb-3">About The Conference</p>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-5 leading-tight">
               ic-ETITE&apos;28 — Emerging Trends in IT &amp; Engineering
@@ -36,19 +36,21 @@ export default function HomeAbout() {
             </div>
           </div>
 
-          {/* 2024 conference photo */}
-          <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 aspect-video flex items-center justify-center relative">
-            <Image
-              src="/images/ic-etite24.webp"
-              alt="ic-ETITE'24 conference session"
-              fill
-              loading="lazy"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-5 pb-4 pt-16 z-10">
-              <p className="text-white font-semibold text-sm">ic-ETITE&apos;24</p>
-              <p className="text-white/75 text-xs mt-1">Conference session, VIT Vellore</p>
+          {/* 2024 conference photo: Fills full height */}
+          <div className="flex flex-col">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex-1 relative min-h-[360px] sm:min-h-[420px]">
+              <Image
+                src="/images/ic-etite24.webp"
+                alt="ic-ETITE'24 conference session"
+                fill
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-5 pb-4 pt-16 z-10">
+                <p className="text-white font-semibold text-sm">ic-ETITE&apos;24</p>
+                <p className="text-white/75 text-xs mt-1">Conference session, VIT Vellore</p>
+              </div>
             </div>
           </div>
         </div>

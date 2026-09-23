@@ -10,10 +10,10 @@ export default function AboutAndThemesSection() {
         {/* =========================================================================
             1. ABOUT IC-ETITE'28
         ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-stretch">
           {/* Text Column */}
-          <div className="lg:col-span-7 space-y-4 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF4DB] border border-[#F5A623]/50 text-xs font-bold text-[#002147] uppercase tracking-wider">
+          <div className="lg:col-span-6 space-y-4 text-left flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF4DB] border border-[#F5A623]/50 text-xs font-bold text-[#002147] uppercase tracking-wider w-fit">
               <span>Organized by SCORE · VIT Vellore, India</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#E05A00] font-serif">
@@ -40,15 +40,15 @@ export default function AboutAndThemesSection() {
             </p>
           </div>
 
-          {/* Image Column: Framed Photo */}
-          <div className="lg:col-span-5">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative w-full h-[280px] sm:h-[350px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+          {/* Image Column: Framed Photo that Fills the Height */}
+          <div className="lg:col-span-6 flex flex-col">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
+              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/004A3218.webp"
                   alt="Dignitaries releasing conference proceedings on dais at ic-ETITE International Conference"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
@@ -60,16 +60,16 @@ export default function AboutAndThemesSection() {
         {/* =========================================================================
             2. THEME OF THE CONFERENCE
         ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-stretch">
           {/* Image Column (Left on Desktop) */}
-          <div className="lg:col-span-5 order-2 lg:order-1">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative w-full h-[280px] sm:h-[350px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+          <div className="lg:col-span-6 order-2 lg:order-1 flex flex-col">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
+              <div className="relative w-full flex-1 min-h-[320px] sm:min-h-[380px] lg:min-h-[420px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/004A3344.webp"
                   alt="Auditorium Gathering with ic-ETITE Conference Banner at VIT Vellore"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
@@ -78,7 +78,7 @@ export default function AboutAndThemesSection() {
           </div>
 
           {/* Text Column (Right on Desktop) */}
-          <div className="lg:col-span-7 space-y-4 text-left order-1 lg:order-2">
+          <div className="lg:col-span-6 space-y-4 text-left order-1 lg:order-2 flex flex-col justify-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#E05A00] font-serif">
               The theme of the Conference
             </h2>
@@ -100,10 +100,10 @@ export default function AboutAndThemesSection() {
         {/* =========================================================================
             3. ABOUT VIT (Vellore Institute of Technology)
         ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center pt-8 border-t border-slate-200">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-stretch pt-8 border-t border-slate-200">
           {/* Text Column */}
-          <div className="lg:col-span-7 space-y-4 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#002147]/5 border border-[#002147]/15 text-xs font-bold text-[#002147] uppercase tracking-wider">
+          <div className="lg:col-span-6 space-y-4 text-left flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#002147]/5 border border-[#002147]/15 text-xs font-bold text-[#002147] uppercase tracking-wider w-fit">
               <Award className="w-3.5 h-3.5 text-[#F5A623]" />
               <span>Host University · Established 1984</span>
             </div>
@@ -141,15 +141,15 @@ export default function AboutAndThemesSection() {
             </div>
           </div>
 
-          {/* Image Column */}
-          <div className="lg:col-span-5">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative w-full h-[280px] sm:h-[350px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+          {/* Image Column: Fills Height */}
+          <div className="lg:col-span-6 flex flex-col">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
+              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/frame_15.webp"
                   alt="VIT Vellore Landmark Campus"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
@@ -161,16 +161,16 @@ export default function AboutAndThemesSection() {
         {/* =========================================================================
             4. ABOUT SCORE
         ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
-          {/* Image Column (Left on Desktop) */}
-          <div className="lg:col-span-5 order-2 lg:order-1">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative w-full h-[280px] sm:h-[350px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-stretch">
+          {/* Image Column (Left on Desktop): Fills Height */}
+          <div className="lg:col-span-6 order-2 lg:order-1 flex flex-col">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
+              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] lg:min-h-[500px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/frame_1.webp"
                   alt="Silver Jubilee Tower (SJT) & Computing Laboratories at SCORE VIT Vellore"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
@@ -179,8 +179,8 @@ export default function AboutAndThemesSection() {
           </div>
 
           {/* Text Column (Right on Desktop) */}
-          <div className="lg:col-span-7 space-y-4 text-left order-1 lg:order-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004B87]/5 border border-[#004B87]/15 text-xs font-bold text-[#004B87] uppercase tracking-wider">
+          <div className="lg:col-span-6 space-y-4 text-left order-1 lg:order-2 flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004B87]/5 border border-[#004B87]/15 text-xs font-bold text-[#004B87] uppercase tracking-wider w-fit">
               <Cpu className="w-3.5 h-3.5" />
               <span>Organizing School</span>
             </div>
@@ -228,10 +228,10 @@ export default function AboutAndThemesSection() {
         {/* =========================================================================
             5. ABOUT IEEE INFORMATION THEORY SOCIETY, VIT
         ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-stretch">
           {/* Text Column */}
-          <div className="lg:col-span-7 space-y-4 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00B4D8]/10 border border-[#00B4D8]/30 text-xs font-bold text-[#004B87] uppercase tracking-wider">
+          <div className="lg:col-span-6 space-y-4 text-left flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00B4D8]/10 border border-[#00B4D8]/30 text-xs font-bold text-[#004B87] uppercase tracking-wider w-fit">
               <Globe2 className="w-3.5 h-3.5 text-[#00B4D8]" />
               <span>Technical Student Body · VIT Vellore Chapter</span>
             </div>
@@ -266,15 +266,15 @@ export default function AboutAndThemesSection() {
             </div>
           </div>
 
-          {/* Image Column */}
-          <div className="lg:col-span-5">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative w-full h-[280px] sm:h-[350px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+          {/* Image Column: Fills Height */}
+          <div className="lg:col-span-6 flex flex-col">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
+              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/ieee-its-workshop.webp"
                   alt="IEEE Information Theory Society Technical Symposium Session"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />

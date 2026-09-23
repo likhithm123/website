@@ -248,7 +248,7 @@ export default function GallerySlideshow() {
             fill
             loading="lazy"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-            className="object-contain md:object-cover transition-all duration-700 brightness-95"
+            className="object-cover transition-all duration-700 brightness-95"
           />
 
           {/* Vignette Gradients */}
