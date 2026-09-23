@@ -133,10 +133,6 @@ export default function HomePastEditions() {
                 <span className="px-3.5 py-1 rounded-full bg-[#004B87] text-white text-xs font-bold font-mono uppercase tracking-wider">
                   Inaugural Edition · 24–25 Feb 2020
                 </span>
-                <span className="text-xs font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200 inline-flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-                  ISBN 978-1-7281-4142-8
-                </span>
               </div>
 
               {/* Photo that fills empty space */}

@@ -41,9 +41,9 @@ export default function AboutAndThemesSection() {
           </div>
 
           {/* Image Column: Framed Photo that Fills the Height */}
-          <div className="lg:col-span-6 flex flex-col">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
-              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+          <div className="lg:col-span-6 flex flex-col justify-center">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/004A3218.webp"
                   alt="Dignitaries releasing conference proceedings on dais at ic-ETITE International Conference"
@@ -60,11 +60,11 @@ export default function AboutAndThemesSection() {
         {/* =========================================================================
             2. THEME OF THE CONFERENCE
         ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           {/* Image Column (Left on Desktop) */}
-          <div className="lg:col-span-6 order-2 lg:order-1 flex flex-col">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
-              <div className="relative w-full flex-1 min-h-[320px] sm:min-h-[380px] lg:min-h-[420px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+          <div className="lg:col-span-6 order-2 lg:order-1 flex flex-col justify-center">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/004A3344.webp"
                   alt="Auditorium Gathering with ic-ETITE Conference Banner at VIT Vellore"
@@ -141,10 +141,10 @@ export default function AboutAndThemesSection() {
             </div>
           </div>
 
-          {/* Image Column: Fills Height */}
-          <div className="lg:col-span-6 flex flex-col">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
-              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+          {/* Image Column */}
+          <div className="lg:col-span-6 flex flex-col justify-center">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/frame_15.webp"
                   alt="VIT Vellore Landmark Campus"
@@ -161,11 +161,11 @@ export default function AboutAndThemesSection() {
         {/* =========================================================================
             4. ABOUT SCORE
         ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-stretch">
-          {/* Image Column (Left on Desktop): Fills Height */}
-          <div className="lg:col-span-6 order-2 lg:order-1 flex flex-col">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
-              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] lg:min-h-[500px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+          {/* Image Column (Left on Desktop) */}
+          <div className="lg:col-span-6 order-2 lg:order-1 flex flex-col justify-center">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/frame_1.webp"
                   alt="Silver Jubilee Tower (SJT) & Computing Laboratories at SCORE VIT Vellore"
@@ -266,10 +266,10 @@ export default function AboutAndThemesSection() {
             </div>
           </div>
 
-          {/* Image Column: Fills Height */}
-          <div className="lg:col-span-6 flex flex-col">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
-              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+          {/* Image Column */}
+          <div className="lg:col-span-6 flex flex-col justify-center">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/ieee-its-workshop.webp"
                   alt="IEEE Information Theory Society Technical Symposium Session"

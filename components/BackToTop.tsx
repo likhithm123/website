@@ -29,12 +29,11 @@ export default function BackToTop() {
     <button
       id="back-to-top"
       onClick={scrollToTop}
-      aria-label="Navigate to top"
-      title="Navigate to top"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-[#0056B3] hover:bg-[#00428C] active:bg-[#003366] text-white shadow-[0_4px_16px_rgba(0,86,179,0.4)] border border-blue-400/40 transition-all hover:scale-105 active:scale-95 group cursor-pointer"
+      aria-label="Back to top"
+      title="Back to top"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0056B3] hover:bg-[#00428C] active:bg-[#003366] text-white shadow-[0_4px_18px_rgba(0,86,179,0.45)] border border-blue-400/40 transition-all hover:scale-110 active:scale-95 group cursor-pointer"
     >
-      <ArrowUp className="w-4 h-4 text-[#72EFDD] group-hover:-translate-y-0.5 transition-transform" />
-      <span className="text-xs font-bold tracking-wide">Top</span>
+      <ArrowUp className="w-6 h-6 sm:w-7 sm:h-7 text-[#72EFDD] group-hover:text-white group-hover:-translate-y-1 transition-all" strokeWidth={2.5} />
     </button>
   );
 }

@@ -151,9 +151,9 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="md:col-span-6 flex flex-col">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
-              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+          <div className="md:col-span-6 flex flex-col justify-center">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/gallery/icetite24_inauguration.webp"
                   alt="ic-ETITE Conference Plenary Session"
@@ -442,10 +442,10 @@ export default function AboutPage() {
 
         {/* ── ABOUT VIT & RANKINGS ── */}
         <section className="space-y-12">
-          <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-stretch">
-            <div className="md:col-span-6 order-2 md:order-1 flex flex-col">
-              <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
-                <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+          <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
+            <div className="md:col-span-6 order-2 md:order-1 flex flex-col justify-center">
+              <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                   <Image
                     src="/images/vit-campus.webp"
                     alt="VIT Vellore Main Campus Entrance"
@@ -516,7 +516,7 @@ export default function AboutPage() {
 
         {/* ── ABOUT SCORE ── */}
         <section className="bg-white border-2 border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm">
-          <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-stretch mb-10">
+          <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-center mb-10">
             <div className="md:col-span-7 space-y-4 flex flex-col justify-center">
               <span className="text-xs sm:text-sm font-bold text-[#004B87] uppercase tracking-wider bg-[#EBF3F8] px-3.5 py-1.5 rounded-full border border-[#004B87]/30 inline-block w-fit">
                 Organizing School
@@ -535,9 +535,9 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="md:col-span-5 flex flex-col">
-              <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
-                <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+            <div className="md:col-span-5 flex flex-col justify-center">
+              <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                   <Image
                     src="/images/004A3344.webp"
                     alt="ic-ETITE Conference Plenary Gathering at Anna Auditorium, VIT Vellore"
@@ -575,7 +575,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── ABOUT IEEE ITS CHAPTER ── */}
-        <section className="grid md:grid-cols-12 gap-10 md:gap-14 items-stretch">
+        <section className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
           <div className="md:col-span-6 space-y-4 flex flex-col justify-center">
             <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 w-fit">
               Co-Organizing Chapter
@@ -591,9 +591,9 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="md:col-span-6 flex flex-col">
-            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex-1 flex flex-col">
-              <div className="relative w-full flex-1 min-h-[350px] sm:min-h-[420px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+          <div className="md:col-span-6 flex flex-col justify-center">
+            <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
                   src="/images/ieee-its-workshop.webp"
                   alt="IEEE Information Theory Society Workshop at VIT"

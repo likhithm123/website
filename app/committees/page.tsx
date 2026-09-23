@@ -7,6 +7,7 @@ import {
   patrons,
   organizingChairs,
   technicalProgrammeChairs,
+  executiveAdvisoryCommittee,
   publicationCommittee,
   sponsorshipCommittee,
   publicityAndMediaCommittee,
@@ -16,7 +17,6 @@ import {
   eventManagementCommittee,
   guestCareCommittee,
   conferenceCoordinatingCommittee,
-  executiveAdvisoryCommittee,
 } from "@/data/committees";
 import {
   internationalAdvisoryData,
@@ -133,6 +133,13 @@ export default function CommitteesPage() {
   // Specific Functional Committees from Official Directory
   const functionalCommittees: CommitteeSection[] = [
     {
+      title: "Executive Advisory Committee",
+      members: executiveAdvisoryCommittee.map((m) => ({
+        name: m.name,
+        affiliation: `${m.role}, ${m.affiliation}`,
+      })),
+    },
+    {
       title: "Publication Committee",
       members: publicationCommittee.map((m) => ({
         name: m.name,
@@ -191,13 +198,6 @@ export default function CommitteesPage() {
     {
       title: "Conference Coordinating Committee",
       members: conferenceCoordinatingCommittee.map((m) => ({
-        name: m.name,
-        affiliation: `${m.role}, ${m.affiliation}`,
-      })),
-    },
-    {
-      title: "Executive Advisory Committee",
-      members: executiveAdvisoryCommittee.map((m) => ({
         name: m.name,
         affiliation: `${m.role}, ${m.affiliation}`,
       })),

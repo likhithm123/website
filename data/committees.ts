@@ -181,6 +181,86 @@ export const technicalProgrammeChairs: CommitteeMember[] = [
   },
 ];
 
+export const executiveAdvisoryCommittee: CommitteeMember[] = [
+  {
+    name: "Dr. Arivuselvan K",
+    role: "HOD / IT",
+    affiliation: "SCORE, VIT, Vellore",
+    image: "/images/faculty/dr-arivuselvan-k.webp",
+    portfolioUrl: "https://vit.ac.in/information-technolo/dr-arivuselvan-k-2",
+  },
+  {
+    name: "Dr. Thanapal. P",
+    role: "HOD / SSE",
+    affiliation: "SCORE, VIT, Vellore",
+    image: "/images/faculty/dr-thanapal-p.webp",
+    portfolioUrl: "https://vit.ac.in/smart-computing/dr-thanapal-p",
+  },
+  {
+    name: "Dr. Selvarani. B",
+    role: "HOD / CSIS",
+    affiliation: "SCORE, VIT, Vellore",
+    image: "/images/faculty/dr-selva-rani-b.webp",
+    portfolioUrl: "https://vit.ac.in/school/allfaculty/score/cyber-security-and-intelligent-systems",
+  },
+  {
+    name: "Dr. Senthilkumar. N",
+    role: "HOD / CA",
+    affiliation: "SCORE, VIT, Vellore",
+    image: "/images/faculty/dr-senthil-kumar-n.webp",
+    portfolioUrl: "https://vit.ac.in/computer-application/dr-senthil-kumar-n",
+  },
+  {
+    name: "Dr. Sumathy. S",
+    role: "Professor",
+    affiliation: "SCORE, VIT, Vellore",
+    image: "/images/faculty/dr-sumathy-s.webp",
+    portfolioUrl: "https://vit.ac.in/information-technolo/dr-sumathy-s",
+  },
+  {
+    name: "Dr. Dinesh Babu. L. D",
+    role: "Professor",
+    affiliation: "SCORE, VIT, Vellore",
+    image: "/images/faculty/dr-dhinesh-babu-l-d.webp",
+    portfolioUrl: "https://vit.ac.in/system-and-software/dr-dhinesh-babu-l-d",
+  },
+  {
+    name: "Dr. Valarmathi. B",
+    role: "Professor",
+    affiliation: "SCORE, VIT, Vellore",
+    image: "/images/faculty/dr-valarmathi-b.webp",
+    portfolioUrl: "https://vit.ac.in/system-and-software/dr-valarmathi-b",
+  },
+  {
+    name: "Dr. Nadesh. R. K",
+    role: "Professor",
+    affiliation: "SCORE, VIT, Vellore",
+    image: "/images/faculty/dr-nadesh-r-k.webp",
+    portfolioUrl: "https://vit.ac.in/information-technolo/dr-nadesh-r-k",
+  },
+  {
+    name: "Dr. Sujatha. R",
+    role: "Professor",
+    affiliation: "SCORE, VIT, Vellore",
+    image: "/images/faculty/dr-sujatha-r.webp",
+    portfolioUrl: "https://vit.ac.in/system-and-software/dr-sujatha-r",
+  },
+  {
+    name: "Dr. Chiranji Lal Chowdhary",
+    role: "Professor",
+    affiliation: "SCORE, VIT, Vellore",
+    image: "/images/faculty/dr-chiranji-lal-chowdhary.webp",
+    portfolioUrl: "https://vit.ac.in/system-and-software/dr-chiranji-lal-chowdhary",
+  },
+  {
+    name: "Dr. Ramya. G",
+    role: "Associate Professor",
+    affiliation: "SCORE, VIT, Vellore",
+    image: "/images/faculty/dr-ramya-g.webp",
+    portfolioUrl: "https://vit.ac.in/information-technolo/dr-ramya-g",
+  },
+];
+
 export const publicationCommittee: CommitteeMember[] = [
   {
     name: "Dr. Angulakshmi. M",
@@ -537,86 +617,6 @@ export const conferenceCoordinatingCommittee: CommitteeMember[] = [
   },
 ];
 
-export const executiveAdvisoryCommittee: CommitteeMember[] = [
-  {
-    name: "Dr. Arivuselvan K",
-    role: "HOD / IT",
-    affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-arivuselvan-k.webp",
-    portfolioUrl: "https://vit.ac.in/information-technolo/dr-arivuselvan-k-2",
-  },
-  {
-    name: "Dr. Thanapal. P",
-    role: "HOD / SSE",
-    affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-thanapal-p.webp",
-    portfolioUrl: "https://vit.ac.in/smart-computing/dr-thanapal-p",
-  },
-  {
-    name: "Dr. Selvarani. B",
-    role: "HOD / CSIS",
-    affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-selva-rani-b.webp",
-    portfolioUrl: "https://vit.ac.in/school/allfaculty/score/cyber-security-and-intelligent-systems",
-  },
-  {
-    name: "Dr. Senthilkumar. N",
-    role: "HOD / CA",
-    affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-senthil-kumar-n.webp",
-    portfolioUrl: "https://vit.ac.in/computer-application/dr-senthil-kumar-n",
-  },
-  {
-    name: "Dr. Sumathy. S",
-    role: "Professor",
-    affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-sumathy-s.webp",
-    portfolioUrl: "https://vit.ac.in/information-technolo/dr-sumathy-s",
-  },
-  {
-    name: "Dr. Dinesh Babu. L. D",
-    role: "Professor",
-    affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-dhinesh-babu-l-d.webp",
-    portfolioUrl: "https://vit.ac.in/system-and-software/dr-dhinesh-babu-l-d",
-  },
-  {
-    name: "Dr. Valarmathi. B",
-    role: "Professor",
-    affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-valarmathi-b.webp",
-    portfolioUrl: "https://vit.ac.in/system-and-software/dr-valarmathi-b",
-  },
-  {
-    name: "Dr. Nadesh. R. K",
-    role: "Professor",
-    affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-nadesh-r-k.webp",
-    portfolioUrl: "https://vit.ac.in/information-technolo/dr-nadesh-r-k",
-  },
-  {
-    name: "Dr. Sujatha. R",
-    role: "Professor",
-    affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-sujatha-r.webp",
-    portfolioUrl: "https://vit.ac.in/system-and-software/dr-sujatha-r",
-  },
-  {
-    name: "Dr. Chiranji Lal Chowdhary",
-    role: "Professor",
-    affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-chiranji-lal-chowdhary.webp",
-    portfolioUrl: "https://vit.ac.in/system-and-software/dr-chiranji-lal-chowdhary",
-  },
-  {
-    name: "Dr. Ramya. G",
-    role: "Associate Professor",
-    affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-ramya-g.webp",
-    portfolioUrl: "https://vit.ac.in/information-technolo/dr-ramya-g",
-  },
-];
-
 export const organizingCommitteesData: CommitteeGroup[] = [
   {
     id: "organizing-leadership",
@@ -637,6 +637,12 @@ export const organizingCommitteesData: CommitteeGroup[] = [
     title: "Technical Programme Chairs",
     description: "Curating scientific tracks, reviewing technical paper submissions, and organizing session tracks.",
     members: technicalProgrammeChairs,
+  },
+  {
+    id: "executive-committee",
+    title: "Executive Advisory Committee",
+    description: "Department heads and distinguished senior professors overseeing academic governance and advisory directions.",
+    members: executiveAdvisoryCommittee,
   },
   {
     id: "publication-committee",
@@ -691,11 +697,5 @@ export const organizingCommitteesData: CommitteeGroup[] = [
     title: "Conference Coordinating Committee",
     description: "Operational synchronization across departments, track monitoring, and session chair support.",
     members: conferenceCoordinatingCommittee,
-  },
-  {
-    id: "executive-committee",
-    title: "Executive Advisory Committee",
-    description: "Department heads and distinguished senior professors overseeing academic governance and advisory directions.",
-    members: executiveAdvisoryCommittee,
   },
 ];
