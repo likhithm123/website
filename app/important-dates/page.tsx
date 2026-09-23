@@ -1,24 +1,21 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import DatesTimeline from "@/components/DatesTimeline";
-import CFPSection from "@/components/CFPSection";
 import { importantDatesData } from "@/data/dates";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Important Dates & Milestone Schedule | ic-ETITE'28",
   description:
-    "Official schedule of paper submission deadlines, peer review acceptance notices, camera ready milestones, and symposium dates for ic-ETITE'28.",
+    "Official schedule and milestone dates for ic-ETITE'28 at Vellore Institute of Technology (VIT), Vellore.",
 };
-
-import PageHeader from "@/components/PageHeader";
 
 export default function ImportantDatesPage() {
   return (
     <div className="bg-white min-h-screen text-[#002147]">
       <PageHeader
-        badge="Submission Milestones · IEEE Deadlines"
+        badge="Official Milestone Schedule"
         title="Important Dates & Timeline"
-        subtitle="Please adhere strictly to the official conference submission schedule. All deadlines are 23:59 IST (UTC +05:30)."
+        subtitle="Official conference dates and milestone schedule for ic-ETITE'28. All deadlines are 23:59 IST (UTC +05:30)."
         breadcrumb="Important Dates"
         bgImage="/images/frame_1.jpg"
       />
@@ -33,8 +30,7 @@ export default function ImportantDatesPage() {
               <thead className="bg-[#002147] text-white">
                 <tr>
                   <th className="py-4.5 px-6 font-bold text-sm sm:text-base tracking-wide">Event Milestone</th>
-                  <th className="py-4.5 px-6 font-bold text-sm sm:text-base tracking-wide">Scheduled Date</th>
-                  <th className="py-4.5 px-6 font-bold text-sm sm:text-base tracking-wide">Action</th>
+                  <th className="py-4.5 px-6 font-bold text-sm sm:text-base tracking-wide text-right">Scheduled Date</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#E2E8F0] text-[#002147]">
@@ -46,20 +42,8 @@ export default function ImportantDatesPage() {
                         {item.description}
                       </p>
                     </td>
-                    <td className="py-5 px-6 font-sans font-bold tabular-nums text-base sm:text-lg text-[#002147] whitespace-nowrap">
+                    <td className="py-5 px-6 font-bold tabular-nums text-base sm:text-lg text-[#002147] whitespace-nowrap text-right">
                       {item.date}
-                    </td>
-                    <td className="py-5 px-6 whitespace-nowrap">
-                      {item.id === "paper-submission" ? (
-                        <Link
-                          href="/call-for-papers#submit"
-                          className="text-sm font-bold text-[#0B6B4A] hover:underline inline-flex items-center gap-1.5"
-                        >
-                          Submit Now
-                        </Link>
-                      ) : (
-                        <span className="text-sm font-medium text-slate-500">Scheduled</span>
-                      )}
                     </td>
                   </tr>
                 ))}
@@ -68,8 +52,6 @@ export default function ImportantDatesPage() {
           </div>
         </div>
       </section>
-
-      <CFPSection />
     </div>
   );
 }

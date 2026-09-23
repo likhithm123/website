@@ -162,7 +162,7 @@ export default function VisaPage() {
                   href="https://indianvisaonline.gov.in/visa/index.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-outline w-full text-xs sm:text-sm flex items-center justify-center gap-2 py-3"
+                  className="btn-primary w-full text-xs sm:text-sm flex items-center justify-center gap-2 py-3"
                 >
                   <span>Regular Visa Application Portal</span>
                   <ExternalLink className="w-4 h-4" />

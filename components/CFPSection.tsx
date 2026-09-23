@@ -25,7 +25,7 @@ export default function CFPSection() {
               <Award className="w-7 h-7" />
             </div>
             <div>
-              <span className="text-xs font-mono font-bold tracking-widest text-[#FFB81C] uppercase block">
+              <span className="text-xs font-bold tracking-widest text-[#FFB81C] uppercase block">
                 Journal Publication Opportunity
               </span>
               <p className="text-base sm:text-lg font-bold text-white mt-0.5 leading-snug">
@@ -33,7 +33,7 @@ export default function CFPSection() {
               </p>
             </div>
           </div>
-          <span className="shrink-0 px-4 py-2 rounded-xl bg-white/10 border border-white/20 text-xs font-bold font-mono tracking-wide text-white uppercase">
+          <span className="shrink-0 px-4 py-2 rounded-xl bg-white/10 border border-white/20 text-xs font-bold tracking-wide text-white uppercase">
             Scopus Indexed
           </span>
         </div>
@@ -45,11 +45,11 @@ export default function CFPSection() {
               Manuscript Submission
             </span>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#002147] tracking-tight leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#002147] tracking-tight leading-[1.15]">
               Call for Papers &amp; Manuscript Guidelines
             </h2>
 
-            <p className="text-base sm:text-lg text-slate-800 leading-relaxed font-semibold">
+            <p className="text-base sm:text-lg text-slate-800 leading-relaxed font-medium">
               Original and unpublished research papers addressing emerging challenges, innovative technologies, and recent developments are invited from researchers worldwide.
             </p>
 
@@ -59,20 +59,17 @@ export default function CFPSection() {
 
             <div className="mt-4 p-6 sm:p-7 rounded-2xl bg-[#FAFBFD] border-2 border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-sm">
               <div>
-                <span className="text-xs font-mono tracking-widest uppercase text-slate-500 font-bold">
+                <span className="text-xs tracking-wider uppercase text-slate-500 font-bold">
                   Official Submission Portal
                 </span>
-                <p className="text-xl font-bold text-[#002147] mt-0.5">
+                <p className="text-xl font-bold text-[#002147] mt-1">
                   EasyChair Conference System
-                </p>
-                <p className="text-xs sm:text-sm text-slate-600 font-medium">
-                  Track: <span className="font-mono font-bold text-[#004B87]">icetite28</span>
                 </p>
               </div>
 
               <Link
                 href="/call-for-papers#submit"
-                className="btn-gold text-sm sm:text-base py-3 px-6 inline-flex items-center gap-2 shrink-0 font-bold shadow-md cursor-pointer"
+                className="bg-[#004B87] hover:bg-[#003366] text-white rounded-full text-sm sm:text-base py-3 px-6 inline-flex items-center gap-2 shrink-0 font-bold shadow-md cursor-pointer transition-transform hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>Submit on EasyChair</span>
                 <span className="text-base font-bold">→</span>
@@ -80,24 +77,28 @@ export default function CFPSection() {
             </div>
 
             {/* Template downloads */}
-            <div className="mt-4 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-700">
-              <span className="font-bold text-[#002147]">IEEE Manuscript Templates:</span>
-              <a
-                href="https://www.ieee.org/conferences/publishing/templates.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3.5 py-2 rounded-lg bg-white hover:bg-slate-50 text-[#002147] font-semibold text-xs sm:text-sm border border-slate-200 transition-colors inline-flex items-center gap-1.5 shadow-2xs"
-              >
-                <Download className="w-4 h-4 text-[#004B87]" /> Word Template (.docx)
-              </a>
-              <a
-                href="https://www.ieee.org/conferences/publishing/templates.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3.5 py-2 rounded-lg bg-white hover:bg-slate-50 text-[#002147] font-semibold text-xs sm:text-sm border border-slate-200 transition-colors inline-flex items-center gap-1.5 shadow-2xs"
-              >
-                <Download className="w-4 h-4 text-[#004B87]" /> LaTeX Package (.zip)
-              </a>
+            <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs sm:text-sm">
+              <span className="font-bold text-[#002147] shrink-0">IEEE Manuscript Templates:</span>
+              <div className="flex items-center gap-2 sm:gap-2.5 flex-wrap sm:flex-nowrap">
+                <a
+                  href="https://www.ieee.org/conferences/publishing/templates.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3.5 py-2 rounded-lg bg-[#002147] hover:bg-[#003366] text-white font-semibold text-xs sm:text-sm transition-colors inline-flex items-center gap-1.5 shadow-sm whitespace-nowrap"
+                >
+                  <Download className="w-4 h-4 text-white" />
+                  <span>Word Template (.docx)</span>
+                </a>
+                <a
+                  href="https://www.ieee.org/conferences/publishing/templates.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3.5 py-2 rounded-lg bg-[#002147] hover:bg-[#003366] text-white font-semibold text-xs sm:text-sm transition-colors inline-flex items-center gap-1.5 shadow-sm whitespace-nowrap"
+                >
+                  <Download className="w-4 h-4 text-white" />
+                  <span>LaTeX Package (.zip)</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -133,19 +134,19 @@ export default function CFPSection() {
               <div className="p-4 rounded-xl bg-amber-50/80 border border-amber-200 flex items-start gap-3 text-amber-950">
                 <AlertTriangle className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
                 <span>
-                  <strong>No Email Submission:</strong> Email submission will not be accepted. The papers should be submitted through EasyChair: <Link href="/call-for-papers#submit" className="font-semibold underline">EasyChair Submission Portal</Link>.
+                  <strong>No Email Submission:</strong> Email submission will not be accepted. The papers should be submitted through EasyChair: <Link href="/call-for-papers#submit" className="font-semibold underline text-[#002147]">EasyChair Submission Portal</Link>.
                 </span>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#E4E7EC] flex items-center justify-between text-xs sm:text-sm text-[#4A5568]">
-              <div className="flex items-center gap-1.5">
-                <Mail className="w-4 h-4 text-[#4A5568]" />
+            <div className="pt-4 border-t border-[#E4E7EC] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs sm:text-sm text-[#4A5568]">
+              <div className="flex items-center gap-1.5 font-medium">
+                <Mail className="w-4 h-4 text-[#004B87]" />
                 <span>All queries related to the conference:</span>
               </div>
               <a
                 href={`mailto:${contact.email}`}
-                className="font-mono font-semibold text-[#004B87] hover:underline"
+                className="font-bold text-[#004B87] hover:underline"
               >
                 {contact.email}
               </a>

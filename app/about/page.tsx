@@ -272,14 +272,21 @@ export default function AboutPage() {
                 </ul>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-slate-200">
+              <div className="pt-6 mt-6 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/about/icetite24"
+                  className="bg-[#002147] hover:bg-[#003366] text-white font-bold text-xs flex-1 py-3 px-4 rounded-xl inline-flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99] shadow-sm"
+                >
+                  <Camera className="w-4 h-4 text-[#72EFDD]" />
+                  <span>View ic-ETITE’24 Photos</span>
+                </Link>
                 <a
                   href="https://ieeexplore.ieee.org/xpl/conhome/10493200/proceeding"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary text-xs w-full py-3 inline-flex items-center justify-center gap-2"
+                  className="bg-[#004B87] hover:bg-[#003366] text-white font-bold text-xs flex-1 py-3 px-4 rounded-xl inline-flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99] shadow-sm"
                 >
-                  <span>Access ic-ETITE’24 IEEE Xplore Proceedings</span>
+                  <span>Access IEEE Proceedings</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
@@ -297,7 +304,7 @@ export default function AboutPage() {
                   </span>
                 </div>
 
-                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#002147] mb-2">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#002147] mb-2">
                   Highlights of First ic-ETITE’20
                 </h3>
                 <p className="text-sm text-slate-600 mb-6">
@@ -306,11 +313,11 @@ export default function AboutPage() {
 
                 <div className="grid grid-cols-2 gap-3.5 mb-6 text-center">
                   <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                    <p className="text-3xl font-serif font-bold text-[#002147]">21</p>
+                    <p className="text-3xl font-bold text-[#002147]">21</p>
                     <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mt-1">Technical Sessions</p>
                   </div>
                   <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                    <p className="text-3xl font-serif font-bold text-[#002147]">17</p>
+                    <p className="text-3xl font-bold text-[#002147]">17</p>
                     <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mt-1">Keynote Sessions</p>
                   </div>
                 </div>
@@ -335,14 +342,21 @@ export default function AboutPage() {
                 </ul>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-slate-200">
+              <div className="pt-6 mt-6 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/about/icetite20"
+                  className="bg-[#002147] hover:bg-[#003366] text-white font-bold text-xs flex-1 py-3 px-4 rounded-xl inline-flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99] shadow-sm"
+                >
+                  <Camera className="w-4 h-4 text-[#72EFDD]" />
+                  <span>View ic-ETITE’20 Photos</span>
+                </Link>
                 <a
                   href="https://ieeexplore.ieee.org/xpl/conhome/9070069/proceeding"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-outline text-xs w-full py-3 inline-flex items-center justify-center gap-2"
+                  className="bg-[#004B87] hover:bg-[#003366] text-white font-bold text-xs flex-1 py-3 px-4 rounded-xl inline-flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99] shadow-sm"
                 >
-                  <span>Access ic-ETITE’20 IEEE Xplore Proceedings</span>
+                  <span>Access IEEE Proceedings</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>

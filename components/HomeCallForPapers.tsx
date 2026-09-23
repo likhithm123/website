@@ -24,7 +24,7 @@ export default function HomeCallForPapers() {
             <p className="text-[12.5px] tracking-wider uppercase text-[#4A5568] font-semibold">
               Manuscript Submission
             </p>
-            <h2 className="font-serif text-[clamp(1.8rem,3.4vw,2.6rem)] text-[#101B2E] leading-tight">
+            <h2 className="text-[clamp(1.8rem,3.4vw,2.6rem)] font-bold text-[#101B2E] leading-tight">
               Call for Papers &amp; Original Research
             </h2>
             <p className="text-[15px] leading-relaxed text-[#101B2E]/80">
@@ -61,7 +61,7 @@ export default function HomeCallForPapers() {
               <ul className="space-y-3.5 text-[14px] text-[#101B2E]/85">
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#004B87] shrink-0" />
-                  <span>The papers should be submitted through EasyChair (icetite28 portal).</span>
+                  <span>The papers should be submitted through EasyChair portal.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#004B87] shrink-0" />

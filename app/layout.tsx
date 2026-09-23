@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import LoadingScreen from "@/components/LoadingScreen";
-import Navbar from "@/components/Navbar";
+import AppNavbar from "@/components/AppNavbar";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 
@@ -66,7 +66,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
         {/* JSON-LD Structured Data for Academic Conference Event */}
@@ -112,7 +112,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col bg-white text-[#101B2E] antialiased">
         <LoadingScreen />
-        <Navbar />
+        <AppNavbar />
         <main className="flex-1">{children}</main>
         <Footer />
         <BackToTop />

@@ -207,9 +207,8 @@ export default function CommitteesPage() {
   // Student Committee Members
   const studentLeads: TextMember[] = [
     { name: "Likhith Medarametla", affiliation: "Lead Architect & Full Stack Lead, IEEE ITS Chapter, SCORE, VIT Vellore" },
+    { name: "Judson Daniel", affiliation: "Lead Architect & Full Stack Lead, IEEE ITS Chapter, SCORE, VIT Vellore" },
     { name: "M.V.J.M Jaya Veera Maheshwar", affiliation: "Full Stack Developer, IEEE ITS Chapter, SCORE, VIT Vellore" },
-    { name: "Judson Daniel", affiliation: "Frontend Developer, IEEE ITS Chapter, SCORE, VIT Vellore" },
-    { name: "IEEE ITS Student Executive Board", affiliation: "Student Chapter Officers & Technical Associates, VIT Vellore" },
   ];
 
   // Split international advisory array into two balanced columns
@@ -446,23 +445,13 @@ export default function CommitteesPage() {
             <p className="text-base text-slate-600 mb-8 sm:mb-10">
               Student leadership, engineering development team, and volunteer coordinators powering ic-ETITE&apos;28.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-8">
-              <div className="space-y-3">
-                {studentLeads.slice(0, 3).map((m) => (
-                  <div key={m.name} className="text-[15px] leading-relaxed text-[#222]">
-                    <span className="font-bold text-black">{m.name}</span>
-                    {`, ${m.affiliation}`}
-                  </div>
-                ))}
-              </div>
-              <div className="space-y-3">
-                {studentLeads.slice(3).map((m) => (
-                  <div key={m.name} className="text-[15px] leading-relaxed text-[#222]">
-                    <span className="font-bold text-black">{m.name}</span>
-                    {`, ${m.affiliation}`}
-                  </div>
-                ))}
-              </div>
+            <div className="flex flex-col items-center gap-4">
+              {studentLeads.map((m) => (
+                <div key={m.name} className="text-[15px] leading-relaxed text-[#222] text-center">
+                  <span className="font-bold text-black">{m.name}</span>
+                  {`, ${m.affiliation}`}
+                </div>
+              ))}
             </div>
           </div>
         )}

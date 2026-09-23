@@ -29,7 +29,7 @@ export default function CallForPapersPage() {
       <section className="py-16 bg-[#F7F8FA] border-b border-[#E4E7EC]">
         <div className="container-x">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#002147]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#002147] tracking-tight">
               Detailed Manuscript Preparation Guidelines
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2">
@@ -40,7 +40,7 @@ export default function CallForPapersPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-7 rounded-2xl border-2 border-slate-200 shadow-sm hover:border-[#002147] transition-all">
               <FileCheck className="w-7 h-7 text-[#002147] mb-4" />
-              <h3 className="font-serif font-bold text-[#002147] text-lg sm:text-xl mb-2">
+              <h3 className="font-bold text-[#002147] text-lg sm:text-xl mb-2">
                 1. Manuscript Length &amp; Layout
               </h3>
               <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
@@ -51,7 +51,7 @@ export default function CallForPapersPage() {
 
             <div className="bg-white p-7 rounded-2xl border-2 border-slate-200 shadow-sm hover:border-[#002147] transition-all">
               <ShieldCheck className="w-7 h-7 text-[#004B87] mb-4" />
-              <h3 className="font-serif font-bold text-[#002147] text-lg sm:text-xl mb-2">
+              <h3 className="font-bold text-[#002147] text-lg sm:text-xl mb-2">
                 2. IEEE PDF eXpress Compliance
               </h3>
               <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
@@ -62,7 +62,7 @@ export default function CallForPapersPage() {
 
             <div className="bg-white p-7 rounded-2xl border-2 border-slate-200 shadow-sm hover:border-[#002147] transition-all">
               <CheckCircle2 className="w-7 h-7 text-[#002147] mb-4" />
-              <h3 className="font-serif font-bold text-[#002147] text-lg sm:text-xl mb-2">
+              <h3 className="font-bold text-[#002147] text-lg sm:text-xl mb-2">
                 3. Author Presentation Policy
               </h3>
               <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
@@ -89,16 +89,16 @@ export default function CallForPapersPage() {
             Submissions Open — EasyChair Portal
           </span>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight">
             Ready to Submit Your Paper?
           </h2>
 
-          <p className="text-base sm:text-lg text-white/75 leading-relaxed max-w-2xl">
+          <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl font-normal">
             You have reviewed all the guidelines above. Click below to proceed to the official EasyChair submission portal for ic-ETITE&apos;28. Ensure your manuscript follows IEEE two-column formatting before uploading.
           </p>
 
           {/* Checklist reminder */}
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-xl text-sm text-white/80 mt-2">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full max-w-xl text-sm sm:text-[14.5px] text-white/85 mt-2 text-left">
             {[
               "IEEE standard formatting",
               "Scopus indexed journal recommendations for selected papers",
@@ -107,9 +107,9 @@ export default function CallForPapersPage() {
               "Original & unpublished work",
               "No email submissions accepted (EasyChair only)",
             ].map((item) => (
-              <li key={item} className="flex items-center gap-2">
+              <li key={item} className="flex items-center gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#F5A623] shrink-0" />
-                <span>{item}</span>
+                <span className="leading-snug">{item}</span>
               </li>
             ))}
           </ul>
@@ -119,15 +119,11 @@ export default function CallForPapersPage() {
             href="https://easychair.org/conferences/?conf=icetite28"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-[#F5A623] hover:bg-[#e09616] text-[#002147] font-bold text-base sm:text-lg shadow-xl shadow-black/30 transition-all hover:scale-105 active:scale-95"
+            className="mt-4 inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-[#004B87] hover:bg-[#003366] text-white font-bold text-base sm:text-lg shadow-xl shadow-black/30 transition-all hover:scale-105 active:scale-95 border border-white/20"
           >
             <span>Submit Your Paper on EasyChair</span>
             <ExternalLink className="w-5 h-5" />
           </a>
-
-          <p className="text-xs text-white/45 mt-1">
-            Conference track: <span className="font-mono font-semibold text-white/60">icetite28</span> · Opens in a new tab
-          </p>
         </div>
       </section>
     </div>

@@ -38,7 +38,7 @@ export default function HomeImportantDates() {
             <Calendar className="w-3.5 h-3.5" />
             <span>Key Milestone Timeline</span>
           </div>
-          <h2 className="font-serif text-[clamp(1.8rem,3.4vw,2.6rem)] text-[#101B2E]">Important Dates</h2>
+          <h2 className="text-[clamp(1.8rem,3.4vw,2.6rem)] font-bold text-[#101B2E]">Important Dates</h2>
           <p className="mt-2 text-[14.5px] text-[#4A5568]">
             Key deadlines for authors, reviewers, and delegates planning attendance for ic-ETITE&apos;28.
           </p>

@@ -58,10 +58,6 @@ export default function VenueMap() {
                 <span>Open in Google Maps</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
-
-              <span className="text-xs sm:text-sm text-slate-600 text-center sm:text-left font-medium">
-                Conveniently located on Chennai–Bengaluru National Highway.
-              </span>
             </div>
           </div>
         </div>

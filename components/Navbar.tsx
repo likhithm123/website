@@ -34,10 +34,11 @@ export default function Navbar() {
   }, [pathname]);
 
   const isActive = (item: NavItem) => {
-    if (item.href === "/" && pathname === "/") return true;
-    if (item.href !== "/" && !item.href.startsWith("#") && pathname === item.href) return true;
-    if (item.href !== "/" && !item.href.startsWith("#") && pathname.startsWith(item.href)) return true;
-    if (item.dropdownItems?.some((sub) => !sub.external && pathname === sub.href)) return true;
+    if (pathname === "/") {
+      return item.href === "/";
+    }
+    if (item.href !== "/" && !item.href.startsWith("#") && (pathname === item.href || pathname.startsWith(item.href + "/"))) return true;
+    if (item.dropdownItems?.some((sub) => !sub.external && sub.href !== "/" && (pathname === sub.href || pathname.startsWith(sub.href + "/")))) return true;
     return false;
   };
 
@@ -102,11 +103,14 @@ export default function Navbar() {
     },
     {
       label: "Events",
-      href: "/hackathon",
+      href: "/events",
       hasDropdown: true,
       alignRight: true,
       dropdownItems: [
+        { label: "All Co-located Events", href: "/events" },
+        { label: "ic-ETITE'28 Conference", href: "/" },
         { label: "BOLT 3.0 Hackathon", href: "/hackathon" },
+        { label: "TechNext '28 Expo", href: "/technext" },
         { label: "Keynote Speakers", href: "/keynote-speakers" },
         { label: "Paper Presentation Tracks", href: "/tracks" },
       ],
@@ -258,12 +262,28 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* RIGHT: BOLT 3.0 Tag & Official VIT Logo on right side */}
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-          {/* BOLT 3.0 Hackathon Tag */}
+        {/* RIGHT: TechNext '28 & BOLT 3.0 Tags (Desktop Only) + Official VIT Logo */}
+        <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+          {/* TechNext '28 Tag (Desktop) */}
+          <Link
+            href="/technext"
+            className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-[#84E320]/60 shadow-[0_0_12px_rgba(132,227,32,0.25)] transition-all hover:scale-105 shrink-0"
+            title="TechNext '28 National Industrial Expo"
+          >
+            <div className="relative h-4 w-16">
+              <Image
+                src="/logos/technext-logo.png"
+                alt="TechNext '28"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </Link>
+
+          {/* BOLT 3.0 Hackathon Tag (Desktop) */}
           <Link
             href="/hackathon"
-            className="group flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#00142E] hover:bg-[#00244D] border border-[#CCFF00] shadow-[0_0_12px_rgba(204,255,0,0.25)] transition-all hover:scale-105 shrink-0"
+            className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#00142E] hover:bg-[#00244D] border border-[#CCFF00] shadow-[0_0_12px_rgba(204,255,0,0.25)] transition-all hover:scale-105 shrink-0"
             title="Register for BOLT 3.0 National Flagship Hackathon"
           >
             <Zap className="w-3.5 h-3.5 text-[#CCFF00] fill-[#CCFF00] animate-pulse" />
@@ -272,12 +292,13 @@ export default function Navbar() {
             </span>
           </Link>
 
+          {/* VIT Logo */}
           <Link
             href="/"
             title="Vellore Institute of Technology"
             className="flex items-center shrink-0 hover:opacity-95 transition-opacity"
           >
-            <div className="relative h-7 sm:h-8 xl:h-9 w-24 sm:w-32 xl:w-36">
+            <div className="relative h-7 sm:h-8 xl:h-9 w-20 sm:w-28 xl:w-36">
               <Image
                 src="/logos/vit-header-logo.webp"
                 alt="VIT Vellore Institute of Technology"
@@ -305,24 +326,52 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="xl:hidden fixed inset-x-0 top-[52px] sm:top-[57px] bottom-0 bg-[#00142E] border-t border-white/15 text-white shadow-2xl z-40 overflow-y-auto animate-in slide-in-from-top-2 duration-200">
           <div className="container-x py-6 space-y-6 pb-20">
-            {/* BOLT 3.0 Hackathon Banner in Mobile Drawer */}
-            <div className="p-4 rounded-2xl bg-gradient-to-r from-[#00142E] to-[#002244] border border-[#CCFF00]/50 shadow-lg flex items-center justify-between gap-3">
-              <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-full bg-[#CCFF00]/15 flex items-center justify-center shrink-0">
-                  <Zap className="w-5 h-5 text-[#CCFF00] fill-[#CCFF00]" />
+            {/* Co-located Events Highlights in Mobile Drawer */}
+            <div className="space-y-2.5">
+              {/* BOLT 3.0 Card */}
+              <div className="p-3.5 rounded-2xl bg-gradient-to-r from-[#00142E] to-[#002244] border border-[#CCFF00]/50 shadow-md flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-full bg-[#CCFF00]/15 flex items-center justify-center shrink-0">
+                    <Zap className="w-4 h-4 text-[#CCFF00] fill-[#CCFF00]" />
+                  </div>
+                  <div>
+                    <p className="text-xs sm:text-sm font-black text-[#CCFF00] tracking-wide">BOLT 3.0 Hackathon</p>
+                    <p className="text-[10px] text-white/70">National Flagship 24h Sprint</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm font-black text-[#CCFF00] tracking-wide">BOLT 3.0 Hackathon</p>
-                  <p className="text-[11px] text-white/70">National Flagship 36hr Hackathon</p>
-                </div>
+                <Link
+                  href="/hackathon"
+                  onClick={() => setMobileOpen(false)}
+                  className="px-2.5 py-1 rounded-lg bg-[#CCFF00] text-[#001C3D] font-bold text-[11px] tracking-wider uppercase hover:bg-white transition-colors shrink-0"
+                >
+                  Explore
+                </Link>
               </div>
-              <Link
-                href="/hackathon"
-                onClick={() => setMobileOpen(false)}
-                className="px-3 py-1.5 rounded-lg bg-[#CCFF00] text-[#001C3D] font-bold text-xs tracking-wider uppercase hover:bg-white transition-colors shrink-0"
-              >
-                Register
-              </Link>
+
+              {/* TechNext '28 Card */}
+              <div className="p-3.5 rounded-2xl bg-gradient-to-r from-[#001733] to-[#002244] border border-[#84E320]/50 shadow-md flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="relative h-5 w-16">
+                    <Image
+                      src="/logos/technext-logo.png"
+                      alt="TechNext '28"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-xs sm:text-sm font-black text-[#84E320] tracking-wide">TechNext &apos;28 Expo</p>
+                    <p className="text-[10px] text-white/70">Industrial Expo &amp; Stalls</p>
+                  </div>
+                </div>
+                <Link
+                  href="/technext"
+                  onClick={() => setMobileOpen(false)}
+                  className="px-2.5 py-1 rounded-lg bg-[#84E320] text-[#0B0324] font-bold text-[11px] tracking-wider uppercase hover:bg-white transition-colors shrink-0"
+                >
+                  Explore
+                </Link>
+              </div>
             </div>
 
             {/* Navigation List with Accordions */}

@@ -122,9 +122,9 @@ export default function Hero() {
                 <span className="tracking-wide">Download Brochure</span>
               </button>
 
-              {/* Register for Expo Button (replaced Submit Paper) */}
+              {/* Register for Expo Button (redirects to TechNext '28) */}
               <Link
-                href="/registration"
+                href="/technext"
                 className="btn-gold group flex items-center gap-2.5 px-7 py-3.5 sm:px-8 sm:py-4 text-sm sm:text-base font-bold shadow-xl transition-all hover:scale-105"
                 aria-label="Register for Expo"
               >
