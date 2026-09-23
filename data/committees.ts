@@ -41,7 +41,7 @@ export const patrons: CommitteeMember[] = [
     name: "Dr. G.V. Selvam",
     role: "Patron",
     affiliation: "Vice President, VIT",
-    image: "/images/patron-gv-selvam.jpg",
+    image: "/images/patron-gv-selvam.webp",
     portfolioUrl: "https://vit.ac.in/dr-gv-selvam",
   },
   {
@@ -55,7 +55,7 @@ export const patrons: CommitteeMember[] = [
     name: "Ms. Kadhambari S Viswanathan",
     role: "Patron",
     affiliation: "Assistant Vice - President, VIT",
-    image: "/images/patron-kadhambari-viswanathan.jpg",
+    image: "/images/patron-kadhambari-viswanathan.webp",
     portfolioUrl: "https://vit.ac.in/ms-kadhambari-s-viswanathan",
   },
   {
@@ -101,7 +101,7 @@ export const organizingChairs = {
     name: "Dr. Jeyanthi. N",
     role: "Organizing Co-chair",
     affiliation: "Professor & Associate Dean, SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-jeyanthi-n.jpg",
+    image: "/images/faculty/dr-jeyanthi-n.webp",
     portfolioUrl: "https://vit.ac.in/system-and-software/dr-jeyanthi-n",
   },
   conferenceChair: {
@@ -123,7 +123,7 @@ export const organizingChairs = {
       name: "Dr. Brindha. K",
       role: "Publication Co-chair",
       affiliation: "Professor, SCORE, VIT, Vellore",
-      image: "/images/faculty/dr-brindha-k.jpg",
+      image: "/images/faculty/dr-brindha-k.webp",
       portfolioUrl: "https://vit.ac.in/smart-computing/dr-brindha-k",
     },
     {
@@ -162,7 +162,7 @@ export const technicalProgrammeChairs: CommitteeMember[] = [
     name: "Dr. Krithika. L. B",
     role: "Technical Programme Chair",
     affiliation: "Associate Professor, SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-krithika-l-b.jpg",
+    image: "/images/faculty/dr-krithika-l-b.webp",
     portfolioUrl: "https://vit.ac.in/system-and-software/dr-krithika-l-b",
   },
   {
@@ -200,7 +200,7 @@ export const publicationCommittee: CommitteeMember[] = [
     name: "Dr. Padmakumari. P",
     role: "Associate Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-padmakumari-p.jpg",
+    image: "/images/faculty/dr-padmakumari-p.webp",
     portfolioUrl: "https://vit.ac.in/computer-application/dr-padmakumari-p",
   },
   {
@@ -249,14 +249,14 @@ export const publicationCommittee: CommitteeMember[] = [
     name: "Dr. Yogaraja. C. A",
     role: "Assistant Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-yoga-raja-c-a.jpg",
+    image: "/images/faculty/dr-yoga-raja-c-a.webp",
     portfolioUrl: "https://vit.ac.in/information-technolo/dr-yoga-raja-c-a",
   },
   {
     name: "Dr. Ayeswarya. S",
     role: "Assistant Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-ayeswarya-s.jpg",
+    image: "/images/faculty/dr-ayeswarya-s.webp",
     portfolioUrl: "https://vit.ac.in/schools/school-of-computer-science-engineering-and-information-systems",
   },
 ];
@@ -290,14 +290,14 @@ export const publicityAndMediaCommittee: CommitteeMember[] = [
     name: "Dr. Sumangali. K",
     role: "Associate Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-sumangali-k.jpg",
+    image: "/images/faculty/dr-sumangali-k.webp",
     portfolioUrl: "https://vit.ac.in/information-technolo/dr-sumangali-k",
   },
   {
     name: "Dr. Asha. N",
     role: "Associate Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-asha-n.jpg",
+    image: "/images/faculty/dr-asha-n.webp",
     portfolioUrl: "https://vit.ac.in/computer-application/dr-asha-n",
   },
 ];
@@ -321,14 +321,14 @@ export const registrationCommittee: CommitteeMember[] = [
     name: "Dr. Bhuvana. S",
     role: "Associate Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-bhuvana-s.jpg",
+    image: "/images/faculty/dr-bhuvana-s.webp",
     portfolioUrl: "https://vit.ac.in/smart-computing/dr-bhuvana-s",
   },
   {
     name: "Dr. Sivashankari. R",
     role: "Assistant Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-sivashankari-r.jpg",
+    image: "/images/faculty/dr-sivashankari-r.webp",
     portfolioUrl: "https://vit.ac.in/smart-computing/dr-sivashankari-r",
   },
   {
@@ -352,14 +352,14 @@ export const boltHackathonCommittee: CommitteeMember[] = [
     name: "Dr. Brijendra Singh",
     role: "Associate Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-brijendra-singh.jpg",
+    image: "/images/faculty/dr-brijendra-singh.webp",
     portfolioUrl: "https://vit.ac.in/schools/school-of-information-technology-and-engineering",
   },
   {
     name: "Dr. Krishnamoorthy. N",
     role: "Associate Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-krishnamoorthy-n.jpg",
+    image: "/images/faculty/dr-krishnamoorthy-n.webp",
     portfolioUrl: "https://vit.ac.in/system-and-software/dr-krishnamoorthy-n",
   },
 ];
@@ -369,14 +369,14 @@ export const technextExpoCommittee: CommitteeMember[] = [
     name: "Dr. Raghavan. R",
     role: "Associate Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-raghavan-r.jpg",
+    image: "/images/faculty/dr-raghavan-r.webp",
     portfolioUrl: "https://vit.ac.in/information-technolo/dr-raghavan-r",
   },
   {
     name: "Dr. Balaji E",
     role: "Assistant Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-balaji-e.jpg",
+    image: "/images/faculty/dr-balaji-e.webp",
     portfolioUrl: "https://vit.ac.in/smart-computing/dr-balaji-e",
   },
   {
@@ -407,21 +407,21 @@ export const eventManagementCommittee: CommitteeMember[] = [
     name: "Dr. Vanmathi. C",
     role: "Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-vanmathi-c.jpg",
+    image: "/images/faculty/dr-vanmathi-c.webp",
     portfolioUrl: "https://vit.ac.in/system-and-software/dr-vanmathi-c",
   },
   {
     name: "Dr. Mangayarkarasi. R",
     role: "Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-mangayarkarasi-r.jpg",
+    image: "/images/faculty/dr-mangayarkarasi-r.webp",
     portfolioUrl: "https://vit.ac.in/information-technolo/dr-mangayarkarasi-r",
   },
   {
     name: "Dr. Sudha. M",
     role: "Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-sudha-m.jpg",
+    image: "/images/faculty/dr-sudha-m.webp",
     portfolioUrl: "https://vit.ac.in/information-technolo/dr-sudha-m",
   },
   {
@@ -435,7 +435,7 @@ export const eventManagementCommittee: CommitteeMember[] = [
     name: "Dr. Chemmalar Selvi. G",
     role: "Associate Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-chemmalar-selvi-g.jpg",
+    image: "/images/faculty/dr-chemmalar-selvi-g.webp",
     portfolioUrl: "https://vit.ac.in/system-and-software/dr-chemmalar-selvi-g",
   },
 ];
@@ -445,7 +445,7 @@ export const guestCareCommittee: CommitteeMember[] = [
     name: "Dr. Dharmendra Singh Rajput",
     role: "Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-dharmendra-singh-rajput.jpg",
+    image: "/images/faculty/dr-dharmendra-singh-rajput.webp",
     portfolioUrl: "https://vit.ac.in/smart-computing/dr-dharmendra-singh-rajput",
   },
   {
@@ -476,14 +476,14 @@ export const conferenceCoordinatingCommittee: CommitteeMember[] = [
     name: "Dr. Anitha. A",
     role: "Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-anitha-a.jpg",
+    image: "/images/faculty/dr-anitha-a.webp",
     portfolioUrl: "https://vit.ac.in/smart-computing/dr-anitha-a",
   },
   {
     name: "Dr. Pounambal. M",
     role: "Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-pounambal-m.jpg",
+    image: "/images/faculty/dr-pounambal-m.webp",
     portfolioUrl: "https://vit.ac.in/system-and-software/dr-pounambal-m",
   },
   {
@@ -497,7 +497,7 @@ export const conferenceCoordinatingCommittee: CommitteeMember[] = [
     name: "Dr. Jagadeesh. G",
     role: "Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-jagadeesh-g.jpg",
+    image: "/images/faculty/dr-jagadeesh-g.webp",
     portfolioUrl: "https://vit.ac.in/smart-computing/dr-jagadeesh-g",
   },
   {
@@ -532,7 +532,7 @@ export const conferenceCoordinatingCommittee: CommitteeMember[] = [
     name: "Dr. Mythili. N",
     role: "Associate Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-mythili-n.jpg",
+    image: "/images/faculty/dr-mythili-n.webp",
     portfolioUrl: "https://vit.ac.in/information-technolo/dr-mythili-n",
   },
 ];
@@ -542,7 +542,7 @@ export const executiveAdvisoryCommittee: CommitteeMember[] = [
     name: "Dr. Arivuselvan K",
     role: "HOD / IT",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-arivuselvan-k.jpg",
+    image: "/images/faculty/dr-arivuselvan-k.webp",
     portfolioUrl: "https://vit.ac.in/information-technolo/dr-arivuselvan-k-2",
   },
   {
@@ -570,7 +570,7 @@ export const executiveAdvisoryCommittee: CommitteeMember[] = [
     name: "Dr. Sumathy. S",
     role: "Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-sumathy-s.jpg",
+    image: "/images/faculty/dr-sumathy-s.webp",
     portfolioUrl: "https://vit.ac.in/information-technolo/dr-sumathy-s",
   },
   {
@@ -591,7 +591,7 @@ export const executiveAdvisoryCommittee: CommitteeMember[] = [
     name: "Dr. Nadesh. R. K",
     role: "Professor",
     affiliation: "SCORE, VIT, Vellore",
-    image: "/images/faculty/dr-nadesh-r-k.jpg",
+    image: "/images/faculty/dr-nadesh-r-k.webp",
     portfolioUrl: "https://vit.ac.in/information-technolo/dr-nadesh-r-k",
   },
   {

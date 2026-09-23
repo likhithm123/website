@@ -128,6 +128,7 @@ export default function Navbar() {
       dropdownItems: [
         { label: "Advisory Board", href: "/advisory" },
         { label: "Campus Venue & Travel", href: "/venue" },
+        { label: "Visa & Travel Information", href: "/visa" },
         { label: "Web Development Team", href: "/team" },
         {
           label: "IEEE ITS Chapter Portal ↗",
@@ -144,22 +145,23 @@ export default function Navbar() {
       className="sticky top-0 z-50 w-full bg-[#002147] shadow-xl border-b border-white/15 py-2 sm:py-2.5"
     >
       <nav
-        className="w-full max-w-[1700px] mx-auto px-3 sm:px-4 xl:px-6 flex items-center justify-between gap-2.5 xl:gap-3.5"
+        className="w-full max-w-[1700px] mx-auto px-3 sm:px-4 xl:px-4 2xl:px-6 flex items-center justify-between gap-1.5 xl:gap-2 2xl:gap-3"
         aria-label="Conference Primary Navigation"
       >
         {/* LEFT: ic-ETITE '28 Logo & IEEE ITS Emblem */}
-        <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 shrink-0">
           <Link
             href="/"
             title="ic-ETITE'28 International Conference"
             className="flex items-center shrink-0 hover:opacity-90 transition-opacity"
           >
-            <div className="relative h-7 sm:h-8 xl:h-9 w-24 sm:w-28 xl:w-32">
+            <div className="relative h-7 sm:h-8 w-24 sm:w-28 xl:w-30 2xl:w-36">
               <Image
                 src="/logos/ic-etite28-cropped-transparent.png"
-                alt="ic-ETITE'28"
+                alt="ic-ETITE'28 Conference Logo"
                 fill
-                className="object-contain object-left"
+                sizes="(max-width: 640px) 112px, 144px"
+                className="object-contain object-left drop-shadow-[0_1px_4px_rgba(0,0,0,0.35)]"
                 priority
               />
             </div>
@@ -173,11 +175,12 @@ export default function Navbar() {
             title="IEEE Information Theory Society"
             className="flex items-center shrink-0 hover:opacity-90 transition-opacity"
           >
-            <div className="relative h-7 sm:h-8 xl:h-9 w-7 sm:w-8 xl:w-9 rounded-full overflow-hidden border border-white/20 shadow-xs bg-[#00142E]">
+            <div className="relative h-7 sm:h-8 xl:h-8.5 w-7 sm:w-8 xl:w-8.5 rounded-full overflow-hidden border border-white/20 shadow-xs bg-[#00142E]">
               <Image
                 src="/logos/ieee-its-circle-logo.png"
                 alt="IEEE Information Theory Society Emblem"
                 fill
+                sizes="(max-width: 640px) 28px, 36px"
                 className="object-contain rounded-full"
                 priority
               />
@@ -185,9 +188,9 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* DESKTOP NAVIGATION ITEMS WITH CRISP SELECTION EFFECT */}
+        {/* DESKTOP NAVIGATION ITEMS */}
         <div className="hidden xl:flex items-center flex-nowrap whitespace-nowrap min-w-0">
-          <ul className="flex items-center gap-0.5 2xl:gap-1 text-[12px] 2xl:text-[13px] font-semibold text-white flex-nowrap whitespace-nowrap">
+          <ul className="flex items-center gap-0 xl:gap-0.5 2xl:gap-1 text-[12px] xl:text-[12.5px] 2xl:text-[14px] font-semibold text-white flex-nowrap whitespace-nowrap">
             {navItems.map((item) => {
               const active = isActive(item);
               const isOpen = activeDropdown === item.label;
@@ -205,7 +208,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className={`relative inline-flex items-center gap-1 py-1.5 px-2 2xl:px-3 rounded-full transition-all whitespace-nowrap ${
+                    className={`relative inline-flex items-center gap-0.5 xl:gap-1 py-1.5 px-1.5 xl:px-2 2xl:px-2.5 rounded-full transition-all whitespace-nowrap ${
                       active
                         ? "bg-white/25 text-[#FFB81C] font-bold border border-white/35 shadow-[0_2px_8px_rgba(0,0,0,0.2)]"
                         : "text-white/85 hover:text-white hover:bg-white/10"
@@ -214,7 +217,7 @@ export default function Navbar() {
                     <span>{item.label}</span>
                     {item.hasDropdown && (
                       <ChevronDown
-                        className={`w-3 h-3 transition-transform duration-200 opacity-80 ${
+                        className={`w-3 h-3 2xl:w-3.5 2xl:h-3.5 transition-transform duration-200 opacity-80 ${
                           isOpen ? "rotate-180" : ""
                         }`}
                       />
@@ -239,7 +242,7 @@ export default function Navbar() {
                               href={subItem.href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-center justify-between px-4 py-2.5 text-[13px] text-white/90 hover:text-white hover:bg-white/10 transition-colors"
+                              className="flex items-center justify-between px-4 py-2.5 text-[13px] 2xl:text-sm text-white/90 hover:text-white hover:bg-white/10 transition-colors"
                             >
                               <span>{subItem.label}</span>
                               <ExternalLink className="w-3.5 h-3.5 text-[#FFB81C]" />
@@ -247,7 +250,7 @@ export default function Navbar() {
                           ) : (
                             <Link
                               href={subItem.href}
-                              className="block px-4 py-2.5 text-[13px] text-white/90 hover:text-[#FFB81C] hover:bg-white/10 transition-colors"
+                              className="block px-4 py-2.5 text-[13px] 2xl:text-sm text-white/90 hover:text-[#FFB81C] hover:bg-white/10 transition-colors"
                             >
                               {subItem.label}
                             </Link>
@@ -263,46 +266,48 @@ export default function Navbar() {
         </div>
 
         {/* RIGHT: TechNext '28 & BOLT 3.0 Tags (Desktop Only) + Official VIT Logo */}
-        <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
-          {/* TechNext '28 Tag (Desktop) */}
+        <div className="flex items-center gap-1.5 xl:gap-2 2xl:gap-2.5 shrink-0 ml-1 xl:ml-1.5 2xl:ml-2">
+          {/* TechNext '28 Tag (Desktop) - EQUAL SIZE (w-24 2xl:w-28, h-8) */}
           <Link
             href="/technext"
-            className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-[#84E320]/60 shadow-[0_0_12px_rgba(132,227,32,0.25)] transition-all hover:scale-105 shrink-0"
+            className="hidden xl:flex items-center justify-center h-8 w-24 2xl:w-28 rounded-full bg-white/10 hover:bg-white/20 border border-[#84E320]/70 shadow-[0_0_12px_rgba(132,227,32,0.25)] transition-all hover:scale-105 shrink-0"
             title="TechNext '28 National Industrial Expo"
           >
-            <div className="relative h-4 w-16">
+            <div className="relative h-3 2xl:h-3.5 w-16 2xl:w-20">
               <Image
                 src="/logos/technext-logo.png"
                 alt="TechNext '28"
                 fill
+                sizes="80px"
                 className="object-contain"
               />
             </div>
           </Link>
 
-          {/* BOLT 3.0 Hackathon Tag (Desktop) */}
+          {/* BOLT 3.0 Hackathon Tag (Desktop) - EQUAL SIZE (w-24 2xl:w-28, h-8) */}
           <Link
             href="/hackathon"
-            className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#00142E] hover:bg-[#00244D] border border-[#CCFF00] shadow-[0_0_12px_rgba(204,255,0,0.25)] transition-all hover:scale-105 shrink-0"
+            className="hidden xl:flex items-center justify-center gap-1 2xl:gap-1.5 h-8 w-24 2xl:w-28 rounded-full bg-[#00142E] hover:bg-[#00244D] border border-[#CCFF00] shadow-[0_0_12px_rgba(204,255,0,0.25)] transition-all hover:scale-105 shrink-0"
             title="Register for BOLT 3.0 National Flagship Hackathon"
           >
-            <Zap className="w-3.5 h-3.5 text-[#CCFF00] fill-[#CCFF00] animate-pulse" />
-            <span className="text-[11px] sm:text-xs font-black tracking-wide text-[#CCFF00]">
+            <Zap className="w-3 h-3 2xl:w-3.5 2xl:h-3.5 text-[#CCFF00] fill-[#CCFF00] animate-pulse shrink-0" />
+            <span className="text-[10.5px] 2xl:text-[11px] font-black tracking-wide text-[#CCFF00] whitespace-nowrap">
               BOLT 3.0
             </span>
           </Link>
 
-          {/* VIT Logo */}
+          {/* VIT Logo - PROPORTIONAL & VISIBLE */}
           <Link
             href="/"
             title="Vellore Institute of Technology"
             className="flex items-center shrink-0 hover:opacity-95 transition-opacity"
           >
-            <div className="relative h-7 sm:h-8 xl:h-9 w-20 sm:w-28 xl:w-36">
+            <div className="relative h-7 sm:h-8 xl:h-8 2xl:h-9 w-20 sm:w-24 xl:w-28 2xl:w-36">
               <Image
                 src="/logos/vit-header-logo.webp"
                 alt="VIT Vellore Institute of Technology"
                 fill
+                sizes="(max-width: 640px) 80px, 144px"
                 className="object-contain object-right"
                 priority
               />
@@ -356,6 +361,7 @@ export default function Navbar() {
                       src="/logos/technext-logo.png"
                       alt="TechNext '28"
                       fill
+                      sizes="64px"
                       className="object-contain"
                     />
                   </div>

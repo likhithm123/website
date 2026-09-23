@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Handshake, ExternalLink, Mail, ShieldCheck } from "lucide-react";
+import { Handshake, ExternalLink, Mail, ShieldCheck, Download } from "lucide-react";
 
 export default function HomeSponsorsPartners() {
   const previousCollaborators = [
@@ -130,13 +130,14 @@ export default function HomeSponsorsPartners() {
               <span>Inquire for Sponsorship</span>
             </a>
             <a
-              href="https://drive.google.com/file/d/1l6NLqeEptX34qIWFk08i8B4Nsjk762tt/view"
+              href="/brochure_ic-ETITE'24.pdf"
+              download="brochure_ic-ETITE'24.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline text-xs inline-flex items-center gap-1.5"
             >
+              <Download className="w-3.5 h-3.5 text-[#FFB81C]" />
               <span>Download Brochure</span>
-              <ExternalLink className="w-3.5 h-3.5 opacity-60" />
             </a>
           </div>
         </div>

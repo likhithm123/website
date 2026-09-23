@@ -30,6 +30,7 @@ export default function BoltNavbar() {
                 src="/logos/bolt-logo-white.png"
                 alt="BOLT 3.0 Hackathon"
                 fill
+                sizes="(max-width: 640px) 112px, 144px"
                 className="object-contain object-left"
                 priority
               />

@@ -17,7 +17,7 @@ export default function VenuePage() {
         title="Conference Venue & Travel"
         subtitle="Vellore Institute of Technology (VIT), Vellore, Tamil Nadu, India. Immediate proximity to Katpadi Junction Railway Station with excellent regional and international transport connectivity."
         breadcrumb="Venue & Travel"
-        bgImage="/images/frame_5.jpg"
+        bgImage="/images/frame_.webp"
       />
 
       <VenueMap />

@@ -44,7 +44,7 @@ export default function ContactPage() {
         title="Contact Conference Secretariat"
         subtitle="For inquiries regarding paper submissions, track scopes, delegate registrations, and official visa facilitation letters, please reach out to our team."
         breadcrumb="Contact"
-        bgImage="/images/frame_1.jpg"
+        bgImage="/images/frame_.webp"
       />
 
       <div className="container-x py-14 sm:py-20 space-y-12 sm:space-y-16">

@@ -22,7 +22,7 @@ export default function KeynoteSpeakersPage() {
         title="Keynote Speakers & Plenary Chairs"
         subtitle="Leading international researchers, IEEE Fellows, and corporate research directors who shape the intellectual trajectory of the ic-ETITE conference series."
         breadcrumb="Keynote Speakers"
-        bgImage="/images/frame_15.jpg"
+        bgImage="/images/frame_.webp"
       />
 
       <div className="container-x py-16">

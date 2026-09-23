@@ -13,10 +13,12 @@ export default function VenueMap() {
           <div className="lg:col-span-6">
             <div className="relative rounded-2xl overflow-hidden border border-[#E4E7EC] shadow-md">
               <Image
-                src="/images/vit-campus.jpg"
+                src="/images/vit-campus.webp"
                 alt="VIT Vellore Main Campus Entrance"
                 width={800}
                 height={450}
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full h-auto object-cover"
               />
               <div className="p-4 bg-[#F7F8FA] border-t border-[#E4E7EC] text-xs text-[#4A5568]">

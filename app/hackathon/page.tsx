@@ -153,11 +153,12 @@ export default function HackathonPage() {
               <div className="relative rounded-3xl overflow-hidden border-2 border-slate-200 shadow-xl group">
                 <div className="relative h-72 sm:h-96 w-full">
                   <Image
-                    src="/images/bolt20/bolt_01.jpeg"
+                    src="/images/bolt20/bolt_01.webp"
                     alt="BOLT 2.0 Hackathon Sprint"
                     fill
+                    sizes="(max-width: 768px) 100vw, 40vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    priority
+                    loading="lazy"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent flex flex-col justify-end p-6">

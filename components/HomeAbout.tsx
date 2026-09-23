@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomeAbout() {
   return (
@@ -37,9 +38,15 @@ export default function HomeAbout() {
 
           {/* 2024 conference photo */}
           <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 aspect-video flex items-center justify-center relative">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/ic-etite24.jpg" alt="ic-ETITE'24 conference session" className="w-full h-full object-cover" />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-5 pb-4 pt-16">
+            <Image
+              src="/images/ic-etite24.webp"
+              alt="ic-ETITE'24 conference session"
+              fill
+              loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-5 pb-4 pt-16 z-10">
               <p className="text-white font-semibold text-sm">ic-ETITE&apos;24</p>
               <p className="text-white/75 text-xs mt-1">Conference session, VIT Vellore</p>
             </div>

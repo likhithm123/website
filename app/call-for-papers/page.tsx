@@ -20,7 +20,7 @@ export default function CallForPapersPage() {
         title="Call for Papers & Submission Guidelines"
         subtitle="Authors are invited to submit original, unpublished research papers. All presented papers will be submitted to IEEE for inclusion in IEEE Xplore® Digital Library."
         breadcrumb="Call for Papers"
-        bgImage="/images/frame_15.jpg"
+        bgImage="/images/frame_.webp"
       />
 
       <CFPSection />

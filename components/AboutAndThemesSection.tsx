@@ -45,11 +45,12 @@ export default function AboutAndThemesSection() {
             <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative w-full h-[280px] sm:h-[350px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
-                  src="/images/004A3218.JPG"
+                  src="/images/004A3218.webp"
                   alt="Dignitaries releasing conference proceedings on dais at ic-ETITE International Conference"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                  priority
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -65,10 +66,12 @@ export default function AboutAndThemesSection() {
             <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative w-full h-[280px] sm:h-[350px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
-                  src="/images/004A3344.JPG"
+                  src="/images/004A3344.webp"
                   alt="Auditorium Gathering with ic-ETITE Conference Banner at VIT Vellore"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -143,10 +146,12 @@ export default function AboutAndThemesSection() {
             <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative w-full h-[280px] sm:h-[350px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
-                  src="/images/frame_15.jpg"
+                  src="/images/frame_15.webp"
                   alt="VIT Vellore Landmark Campus"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -162,10 +167,12 @@ export default function AboutAndThemesSection() {
             <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative w-full h-[280px] sm:h-[350px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
-                  src="/images/frame_1.jpg"
+                  src="/images/frame_1.webp"
                   alt="Silver Jubilee Tower (SJT) & Computing Laboratories at SCORE VIT Vellore"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -264,10 +271,12 @@ export default function AboutAndThemesSection() {
             <div className="p-2.5 bg-white border-2 border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative w-full h-[280px] sm:h-[350px] rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
-                  src="/images/ieee-its-workshop.jpg"
+                  src="/images/ieee-its-workshop.webp"
                   alt="IEEE Information Theory Society Technical Symposium Session"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
               </div>
             </div>

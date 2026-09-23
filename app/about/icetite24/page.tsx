@@ -19,7 +19,7 @@ export default function Icetite24ArchivePage() {
         title="ic-ETITE'24 Photo Gallery & Highlights"
         subtitle="Official moments, keynote plenary addresses, proceedings release, and track sessions from ic-ETITE'24 at Anna Auditorium, VIT Vellore."
         breadcrumb="ic-ETITE'24 Archive"
-        bgImage="/images/frame_15.jpg"
+        bgImage="/images/frame_.webp"
       />
 
       <div className="container-x py-12 sm:py-16">

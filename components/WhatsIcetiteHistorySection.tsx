@@ -105,10 +105,12 @@ export default function WhatsIcetiteHistorySection() {
           <div className="md:col-span-6">
             <div className="relative rounded-2xl overflow-hidden border border-[#E4E7EC] shadow-[0_10px_30px_rgba(16,27,46,0.08)] group">
               <Image
-                src="/images/vit-auditorium.jpg"
+                src="/images/vit-auditorium.webp"
                 alt="ic-ETITE International Conference Session in Grand Auditorium"
                 width={800}
                 height={450}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
               />
               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#101B2E]/90 via-[#101B2E]/40 to-transparent p-5 text-white">

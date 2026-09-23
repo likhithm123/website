@@ -27,7 +27,7 @@ export interface GalleryItem {
 export const galleryItems: GalleryItem[] = [
   {
     id: "stage-2020",
-    image: "/images/gallery/icetite20_stage_inaugural.jpg",
+    image: "/images/gallery/icetite20_stage_inaugural.webp",
     title: "Main Dais & Inaugural Ceremony",
     edition: "ic-ETITE'20 Inaugural Edition",
     location: "Anna Auditorium Main Stage, VIT Vellore",
@@ -37,7 +37,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "plenary-audience-2020",
-    image: "/images/gallery/icetite20_plenary_audience.jpg",
+    image: "/images/gallery/icetite20_plenary_audience.webp",
     title: "Grand Plenary Audience & Delegates",
     edition: "ic-ETITE'20 Plenary Hall",
     location: "Anna Auditorium, VIT Vellore",
@@ -47,7 +47,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "tree-barsky-2020",
-    image: "/images/gallery/icetite20_tree_plantation_barsky.jpg",
+    image: "/images/gallery/icetite20_tree_plantation_barsky.webp",
     title: "Tree Plantation - Prof. Brian A. Barsky (UC Berkeley)",
     edition: "Green Campus Tradition · ic-ETITE'20",
     location: "Auditorium Lawns, VIT Vellore",
@@ -57,7 +57,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "tree-abraham-2020",
-    image: "/images/gallery/icetite20_tree_plantation_abraham.jpg",
+    image: "/images/gallery/icetite20_tree_plantation_abraham.webp",
     title: "Tree Plantation - Dr. Ajith Abraham (MIR Labs, USA)",
     edition: "Green Campus Tradition · ic-ETITE'20",
     location: "Auditorium Lawns, VIT Vellore",
@@ -67,7 +67,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "tree-halonen-2020",
-    image: "/images/gallery/icetite20_tree_plantation_halonen.jpg",
+    image: "/images/gallery/icetite20_tree_plantation_halonen.webp",
     title: "Tree Plantation - Dr. Raija Halonen (Univ. of Oulu)",
     edition: "Green Campus Tradition · ic-ETITE'20",
     location: "Auditorium Lawns, VIT Vellore",
@@ -77,7 +77,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "traditional-welcome-2020",
-    image: "/images/gallery/icetite20_traditional_welcome.jpg",
+    image: "/images/gallery/icetite20_traditional_welcome.webp",
     title: "Traditional Welcome of International Dignitaries",
     edition: "Ceremonial Reception · ic-ETITE'20",
     location: "Anna Auditorium Entrance Foyer",
@@ -87,7 +87,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "delegation-portrait-2020",
-    image: "/images/gallery/icetite20_delegation_portrait.jpg",
+    image: "/images/gallery/icetite20_delegation_portrait.webp",
     title: "Chancellor & International Keynote Delegation",
     edition: "Leadership Delegation · ic-ETITE'20",
     location: "Chancellor's Secretariat, VIT Vellore",
@@ -97,7 +97,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "chancellor-conclave-2020",
-    image: "/images/gallery/icetite20_chancellor_conclave.jpg",
+    image: "/images/gallery/icetite20_chancellor_conclave.webp",
     title: "Pre-Conference Leadership Conclave",
     edition: "Executive Conclave · ic-ETITE'20",
     location: "Chancellor's Reception Lounge",
@@ -107,7 +107,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "keynote-audience-2020",
-    image: "/images/gallery/icetite20_keynote_audience.jpg",
+    image: "/images/gallery/icetite20_keynote_audience.webp",
     title: "Technical Keynote Plenary Session",
     edition: "Technical Sessions · ic-ETITE'20",
     location: "Anna Auditorium Hall",
@@ -117,7 +117,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "leadership-discussion-2020",
-    image: "/images/gallery/icetite20_leadership_discussion.jpg",
+    image: "/images/gallery/icetite20_leadership_discussion.webp",
     title: "Executive & International Speaker Dialogue",
     edition: "Bilateral Dialogue · ic-ETITE'20",
     location: "VIP Executive Lounge",
@@ -127,7 +127,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "inauguration-2024",
-    image: "/images/gallery/icetite24_inauguration.jpg",
+    image: "/images/gallery/icetite24_inauguration.webp",
     title: "ic-ETITE'24 Grand Inaugural Conclave",
     edition: "ic-ETITE'24 Second Edition",
     location: "Chancellor's Secretariat, VIT Vellore",
@@ -137,7 +137,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "dignitaries-2024",
-    image: "/images/gallery/icetite24_dignitaries.jpg",
+    image: "/images/gallery/icetite24_dignitaries.webp",
     title: "ic-ETITE'24 Leadership Summit with MeitY Secretary",
     edition: "ic-ETITE'24 Second Edition",
     location: "Executive Secretariat",
@@ -147,7 +147,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "keynote-2024",
-    image: "/images/gallery/icetite24_keynote.jpg",
+    image: "/images/gallery/icetite24_keynote.webp",
     title: "ic-ETITE'24 International Scholars Forum",
     edition: "ic-ETITE'24 Second Edition",
     location: "VIP Lounge & Anna Auditorium",
@@ -246,8 +246,8 @@ export default function GallerySlideshow() {
             src={activeItem.image}
             alt={activeItem.title}
             fill
-            priority
-            sizes="(max-width: 768px) 100vw, 1200px"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
             className="object-contain md:object-cover transition-all duration-700 brightness-95"
           />
 
@@ -340,6 +340,7 @@ export default function GallerySlideshow() {
               src={item.image}
               alt={item.title}
               fill
+              loading="lazy"
               sizes="96px"
               className="object-cover"
             />

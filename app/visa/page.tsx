@@ -29,7 +29,7 @@ export default function VisaPage() {
         title="Conference Visa & Travel Clearance"
         subtitle="Official visa facilitation guidelines, Government of India statutory clearances, and invitation letter protocols for international participants attending ic-ETITE'28 at VIT Vellore."
         breadcrumb="Visa Information"
-        bgImage="/images/frame_15.jpg"
+        bgImage="/images/frame_.webp"
       />
 
       <div className="container-x py-16 space-y-16">

@@ -17,7 +17,7 @@ export default function TracksPage() {
         title="Research Tracks & Indicative Topics"
         subtitle="Explore 100+ research domains across four core disciplines: Information Technology, Computer Science, Communication Engineering, and Electronics."
         breadcrumb="Research Tracks"
-        bgImage="/images/frame_15.jpg"
+        bgImage="/images/frame_.webp"
       />
 
       <TracksSection isPreview={false} />

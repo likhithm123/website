@@ -46,8 +46,9 @@ export default function TechnicalSponsorsSection() {
                   src="/logos/vit-round-logo.svg"
                   alt="Vellore Institute of Technology Round Seal - SCORE"
                   fill
+                  sizes="112px"
+                  loading="lazy"
                   className="object-contain p-1"
-                  priority
                 />
               </div>
 

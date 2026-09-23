@@ -89,7 +89,7 @@ export default function AboutSection() {
         <div className="w-full lg:w-[40%] min-h-[280px] relative overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/ic-etite24.jpg"
+            src="/images/ic-etite24.webp"
             alt="ic-ETITE'24 conference session"
             className="w-full h-full object-cover"
             style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%)" }}

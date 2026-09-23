@@ -119,8 +119,9 @@ export default function PhotoGridModal({ photos, title, subtitle, theme = "light
             <div className="relative w-full h-[65vh] sm:h-[75vh] rounded-2xl overflow-hidden bg-black/50 border border-white/15">
               <Image
                 src={photos[selectedIndex].src}
-                alt="Conference Photo"
+                alt={photos[selectedIndex].title || "Conference Photo"}
                 fill
+                sizes="(max-width: 1200px) 100vw, 1200px"
                 className="object-contain"
                 priority
               />

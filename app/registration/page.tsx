@@ -17,7 +17,7 @@ export default function RegistrationPage() {
         title="Conference Registration & Fees"
         subtitle="Registration is mandatory for all attending delegates and presenting authors. Tariffs include access to all technical tracks, keynote addresses, and networking sessions."
         breadcrumb="Registration"
-        bgImage="/images/frame_15.jpg"
+        bgImage="/images/frame_.webp"
       />
 
       <RegistrationTable />

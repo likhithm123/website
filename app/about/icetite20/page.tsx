@@ -19,7 +19,7 @@ export default function Icetite20ArchivePage() {
         title="ic-ETITE'20 Photo Gallery & Archive"
         subtitle="Official high-resolution photo collection from the First IEEE International Conference on Emerging Trends in Information Technology and Engineering at VIT Vellore."
         breadcrumb="ic-ETITE'20 Archive"
-        bgImage="/images/frame_10.jpg"
+        bgImage="/images/frame_.webp"
       />
 
       <div className="container-x py-12 sm:py-16">

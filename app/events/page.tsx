@@ -103,7 +103,7 @@ export default function EventsPage() {
         title="Conference Events & Co-located Summits"
         subtitle="ic-ETITE'28 unites academic research, overnight coding innovation, and hands-on industrial technology exhibits at Vellore Institute of Technology."
         breadcrumb="Events"
-        bgImage="/images/frame_1.jpg"
+        bgImage="/images/frame_.webp"
       />
 
       <div className="container-x py-16 sm:py-20">
@@ -144,6 +144,8 @@ export default function EventsPage() {
                       src={evt.logo}
                       alt={evt.title}
                       fill
+                      sizes="160px"
+                      loading="lazy"
                       className="object-contain p-1.5"
                     />
                   </div>

@@ -47,63 +47,63 @@ const rankingsList = [
 
 const archivalGallery = [
   {
-    image: "/images/gallery/icetite20_stage_inaugural.jpg",
+    image: "/images/gallery/icetite20_stage_inaugural.webp",
     title: "ic-ETITE'20 Main Dais & Inauguration",
     badge: "First Edition · 2020",
     caption:
       "Hon'ble Chancellor Dr. G. Viswanathan, Chief Guest, Guests of Honour, and university leadership presiding over the solemn inauguration on the Anna Auditorium dais.",
   },
   {
-    image: "/images/gallery/icetite20_plenary_audience.jpg",
+    image: "/images/gallery/icetite20_plenary_audience.webp",
     title: "Plenary Delegates at Anna Auditorium",
     badge: "Plenary Gathering",
     caption:
       "A full house of international delegates, academic leaders, research scholars, and students participating in the inaugural proceedings.",
   },
   {
-    image: "/images/gallery/icetite20_tree_plantation_barsky.jpg",
+    image: "/images/gallery/icetite20_tree_plantation_barsky.webp",
     title: "Tree Plantation · Prof. Brian A. Barsky",
     badge: "Green Campus Tradition",
     caption:
       "Prof. Brian A. Barsky (UC Berkeley, USA) planting a commemorative sapling with Chancellor Dr. G. Viswanathan outside Anna Auditorium.",
   },
   {
-    image: "/images/gallery/icetite20_tree_plantation_abraham.jpg",
+    image: "/images/gallery/icetite20_tree_plantation_abraham.webp",
     title: "Tree Plantation · Dr. Ajith Abraham",
     badge: "Green Campus Tradition",
     caption:
       "Dr. Ajith Abraham (Director, MIR Labs, USA) and university leadership planting a commemorative tree on the auditorium lawns.",
   },
   {
-    image: "/images/gallery/icetite20_tree_plantation_halonen.jpg",
+    image: "/images/gallery/icetite20_tree_plantation_halonen.webp",
     title: "Tree Plantation · Dr. Raija Halonen",
     badge: "Green Campus Tradition",
     caption:
       "Dr. Raija Halonen (University of Oulu, Finland) participating in the commemorative green plantation tradition.",
   },
   {
-    image: "/images/gallery/icetite20_traditional_welcome.jpg",
+    image: "/images/gallery/icetite20_traditional_welcome.webp",
     title: "Ceremonial Welcome of International Guests",
     badge: "Traditional Welcome",
     caption:
       "Traditional Indian ceremonial floral welcome accorded to international keynote speakers at the Anna Auditorium entrance.",
   },
   {
-    image: "/images/gallery/icetite20_delegation_portrait.jpg",
+    image: "/images/gallery/icetite20_delegation_portrait.webp",
     title: "Chancellor & International Keynote Delegation",
     badge: "Leadership Delegation",
     caption:
       "Official delegation portrait featuring Chancellor Dr. G. Viswanathan and international delegates from UC Berkeley, MIR Labs, and partner institutions.",
   },
   {
-    image: "/images/gallery/icetite24_inauguration.jpg",
+    image: "/images/gallery/icetite24_inauguration.webp",
     title: "ic-ETITE'24 Grand Inaugural Conclave",
     badge: "Second Edition · 2024",
     caption:
       "Hon'ble Chancellor Dr. G. Viswanathan meeting Chief Guest Dr. Zvi Galil, former Dean of Computing at Georgia Tech, USA.",
   },
   {
-    image: "/images/gallery/icetite24_dignitaries.jpg",
+    image: "/images/gallery/icetite24_dignitaries.webp",
     title: "ic-ETITE'24 Leadership Summit with MeitY Secretary",
     badge: "ic-ETITE'24 Edition",
     caption:
@@ -119,7 +119,7 @@ export default function AboutPage() {
         title="About ic-ETITE'28"
         subtitle="The Third IEEE International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE’28) will be held at VIT Vellore, India, on 10–11 February 2028."
         breadcrumb="About Conference"
-        bgImage="/images/frame_15.jpg"
+        bgImage="/images/frame_15.webp"
       />
 
       <div className="container-x py-16 md:py-24 space-y-20">
@@ -154,10 +154,12 @@ export default function AboutPage() {
           <div className="md:col-span-6">
             <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-lg">
               <Image
-                src="/images/gallery/icetite24_inauguration.jpg"
+                src="/images/gallery/icetite24_inauguration.webp"
                 alt="ic-ETITE Conference Plenary Session"
                 width={800}
                 height={450}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-auto object-cover"
               />
               <div className="p-4 bg-slate-50 border-t border-slate-200 text-xs sm:text-sm text-slate-600 font-medium">
@@ -404,7 +406,8 @@ export default function AboutPage() {
                         src={photo.image}
                         alt={photo.title}
                         fill
-                        sizes="(max-width: 640px) 100vw, 360px"
+                        loading="lazy"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute top-3 left-3 z-10">
@@ -442,10 +445,12 @@ export default function AboutPage() {
             <div className="md:col-span-6 order-2 md:order-1">
               <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-lg">
                 <Image
-                  src="/images/vit-campus.jpg"
+                  src="/images/vit-campus.webp"
                   alt="VIT Vellore Main Campus Entrance"
                   width={800}
                   height={450}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-auto object-cover"
                 />
                 <div className="p-4 bg-slate-50 border-t border-slate-200 text-xs sm:text-sm text-slate-600 font-medium">
@@ -531,10 +536,12 @@ export default function AboutPage() {
             <div className="md:col-span-5">
               <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md">
                 <Image
-                  src="/images/004A3344.JPG"
+                  src="/images/004A3344.webp"
                   alt="ic-ETITE Conference Plenary Gathering at Anna Auditorium, VIT Vellore"
                   width={600}
                   height={400}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                   className="w-full h-auto object-cover"
                 />
                 <div className="p-3 bg-slate-50 border-t border-slate-200 text-xs text-slate-600 font-medium">
@@ -584,10 +591,12 @@ export default function AboutPage() {
           <div className="md:col-span-6">
             <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-lg">
               <Image
-                src="/images/ieee-its-workshop.jpg"
+                src="/images/ieee-its-workshop.webp"
                 alt="IEEE Information Theory Society Workshop at VIT"
                 width={800}
                 height={450}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-auto object-cover"
               />
               <div className="p-4 bg-slate-50 border-t border-slate-200 text-xs sm:text-sm text-slate-600 font-medium">

@@ -98,12 +98,13 @@ export default function VitScoreConferenceSection() {
           <div className="md:col-span-6">
             <div className="relative rounded-2xl overflow-hidden border border-[#E2E8F0] shadow-xl group">
               <Image
-                src="/images/frame_15.jpg"
+                src="/images/frame_15.webp"
                 alt="VIT Vellore Silver Jubilee Tower (SJT) Drone Aerial View"
                 width={800}
                 height={450}
                 className="w-full h-[360px] object-cover group-hover:scale-105 transition-transform duration-700"
-                priority
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#002147]/90 via-transparent to-black/20" />
               <div className="absolute bottom-0 inset-x-0 p-5 text-white">
@@ -157,11 +158,13 @@ export default function VitScoreConferenceSection() {
             <div className="md:col-span-5">
               <div className="relative rounded-xl overflow-hidden border border-[#E2E8F0] shadow-md group">
                 <Image
-                  src="/images/frame_1.jpg"
+                  src="/images/frame_1.webp"
                   alt="VIT Silver Jubilee Tower (SJT) Lakeside View"
                   width={600}
                   height={380}
                   className="w-full h-[260px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#002147]/85 to-transparent" />
                 <div className="absolute bottom-3 left-4 right-4 text-white">
@@ -192,11 +195,13 @@ export default function VitScoreConferenceSection() {
             {/* 1. Main Entrance Gate */}
             <div className="relative rounded-xl overflow-hidden border border-[#E2E8F0] shadow-sm group">
               <Image
-                src="/images/frame_5.jpg"
+                src="/images/frame_5.webp"
                 alt="VIT Vellore Main Gate Campus Entrance"
                 width={500}
                 height={320}
                 className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#002147]/90 via-[#002147]/20 to-transparent" />
               <div className="absolute bottom-3 left-3 right-3 text-white">
@@ -208,11 +213,13 @@ export default function VitScoreConferenceSection() {
             {/* 2. Conference Proceedings / ic-ETITE'24 */}
             <div className="relative rounded-xl overflow-hidden border border-[#E2E8F0] shadow-sm group">
               <Image
-                src="/images/ic-etite24.jpg"
+                src="/images/ic-etite24.webp"
                 alt="ic-ETITE 24 Cultural and Academic Gathering"
                 width={500}
                 height={320}
                 className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#002147]/90 via-[#002147]/20 to-transparent" />
               <div className="absolute bottom-3 left-3 right-3 text-white">
@@ -224,11 +231,13 @@ export default function VitScoreConferenceSection() {
             {/* 3. Dr. M.G.R Auditorium / Hall */}
             <div className="relative rounded-xl overflow-hidden border border-[#E2E8F0] shadow-sm group">
               <Image
-                src="/images/vit-auditorium.jpg"
+                src="/images/vit-auditorium.webp"
                 alt="Anna Auditorium Conference Hall"
                 width={500}
                 height={320}
                 className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#002147]/90 via-[#002147]/20 to-transparent" />
               <div className="absolute bottom-3 left-3 right-3 text-white">
@@ -240,11 +249,13 @@ export default function VitScoreConferenceSection() {
             {/* 4. IEEE ITS Workshop & Symposium */}
             <div className="relative rounded-xl overflow-hidden border border-[#E2E8F0] shadow-sm group">
               <Image
-                src="/images/ieee-its-workshop.jpg"
+                src="/images/ieee-its-workshop.webp"
                 alt="IEEE Information Theory Society Technical Session"
                 width={500}
                 height={320}
                 className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#002147]/90 via-[#002147]/20 to-transparent" />
               <div className="absolute bottom-3 left-3 right-3 text-white">

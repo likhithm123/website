@@ -41,7 +41,7 @@ export default function Hero() {
           <video
             ref={videoRef}
             src="/videoplayback-2abc.mp4"
-            poster="/images/frame_15.jpg"
+            poster="/images/frame_15.webp"
             autoPlay
             loop
             muted
@@ -113,14 +113,17 @@ export default function Hero() {
             {/* Action Buttons: Enlarged Dark Download Brochure + Register for Expo + Call for Papers */}
             <div className="flex flex-wrap items-center gap-4">
               {/* Enlarged Dark Download Brochure Button */}
-              <button
-                onClick={() => setBrochureModalOpen(true)}
-                className="group flex items-center gap-3 px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-[#001C3D] hover:bg-[#002855] text-white border-2 border-[#D39E00] shadow-[0_4px_25px_rgba(0,0,0,0.5)] transition-all hover:scale-105 text-sm sm:text-base font-bold"
+              <a
+                href="/brochure_ic-ETITE'24.pdf"
+                download="brochure_ic-ETITE'24.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-[#001C3D] hover:bg-[#002855] text-white border-2 border-[#D39E00] shadow-[0_4px_25px_rgba(0,0,0,0.5)] transition-all hover:scale-105 text-sm sm:text-base font-bold cursor-pointer"
                 aria-label="Download Conference Brochure"
               >
                 <Download className="w-5 h-5 text-[#FFB81C] group-hover:scale-110 transition-transform" />
                 <span className="tracking-wide">Download Brochure</span>
-              </button>
+              </a>
 
               {/* Register for Expo Button (redirects to TechNext '28) */}
               <Link
@@ -322,12 +325,14 @@ export default function Hero() {
                 <span>Print / Save as PDF</span>
               </button>
               <a
-                href="/videoplayback-2abc.mp4"
-                download="ic-ETITE28-Brochure-Media.mp4"
+                href="/brochure_ic-ETITE'24.pdf"
+                download="brochure_ic-ETITE'24.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary text-xs py-2 px-4 inline-flex items-center gap-1.5"
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>Download Media Pack</span>
+                <span>Download Brochure (PDF)</span>
               </a>
             </div>
           </div>

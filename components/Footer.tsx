@@ -22,6 +22,8 @@ export default function Footer() {
                 src="/logos/vit-white-logo.png"
                 alt="VIT Vellore Official Logo"
                 fill
+                sizes="(max-width: 640px) 160px, 192px"
+                loading="lazy"
                 className="object-contain object-left"
               />
             </a>

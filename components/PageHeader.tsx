@@ -15,7 +15,7 @@ export default function PageHeader({
   title,
   subtitle,
   breadcrumb,
-  bgImage = "/images/frame_15.jpg",
+  bgImage = "/images/frame_15.webp",
 }: PageHeaderProps) {
   return (
     <div className="relative bg-[#002147] text-white py-16 md:py-24 overflow-hidden border-b border-white/15 select-none">
@@ -25,6 +25,7 @@ export default function PageHeader({
           src={bgImage}
           alt="VIT Vellore Background"
           fill
+          sizes="100vw"
           className="object-cover object-center opacity-20 filter saturate-150"
           priority
         />

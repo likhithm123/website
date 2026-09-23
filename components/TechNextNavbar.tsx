@@ -30,6 +30,7 @@ export default function TechNextNavbar() {
                 src="/logos/technext-logo.png"
                 alt="TechNext '28"
                 fill
+                sizes="(max-width: 640px) 112px, 144px"
                 className="object-contain object-left"
                 priority
               />

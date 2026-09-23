@@ -19,6 +19,7 @@ export default function IeeeItsSection() {
                   fill
                   className="object-contain"
                   sizes="96px"
+                  loading="lazy"
                 />
               </div>
 

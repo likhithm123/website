@@ -17,7 +17,7 @@ export default function ImportantDatesPage() {
         title="Important Dates & Timeline"
         subtitle="Official conference dates and milestone schedule for ic-ETITE'28. All deadlines are 23:59 IST (UTC +05:30)."
         breadcrumb="Important Dates"
-        bgImage="/images/frame_1.jpg"
+        bgImage="/images/frame_.webp"
       />
 
       <DatesTimeline />
