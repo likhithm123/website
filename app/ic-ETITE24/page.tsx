@@ -207,7 +207,7 @@ export default function Icetite24Page() {
           </Link>
 
           <div className="flex flex-wrap items-center gap-3 mb-5">
-            <span className="bg-[#CCFF00] text-[#001a3d] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">
+            <span className="bg-[#00A3FF] text-[#00142E] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-[0_2px_10px_rgba(0,163,255,0.35)]">
               Second Edition
             </span>
             <span className="bg-white/15 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full border border-white/20">
@@ -218,9 +218,17 @@ export default function Icetite24Page() {
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight mb-4">
-            ic-ETITE<span className="text-[#CCFF00]">&apos;24</span>
-          </h1>
+          <div className="mb-5 pt-1">
+            <Image
+              src="/logos/ic-etite24-logo-clean.png"
+              alt="ic-ETITE'24 Official Logo"
+              width={355}
+              height={64}
+              priority
+              className="h-12 sm:h-16 md:h-20 w-auto object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+            />
+            <h1 className="sr-only">ic-ETITE&apos;24</h1>
+          </div>
           <p className="text-lg sm:text-xl text-white/70 max-w-2xl leading-relaxed mb-8">
             Second International Conference on Emerging Trends in Information Technology and Engineering — organized by SCORE, VIT Vellore, technically co-sponsored by IEEE.
           </p>
@@ -229,7 +237,7 @@ export default function Icetite24Page() {
             href="https://ieeexplore.ieee.org/xpl/conhome/10493200/proceeding"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#CCFF00] text-[#001a3d] font-bold px-6 py-3 rounded-xl hover:bg-white transition-colors text-sm"
+            className="inline-flex items-center gap-2 bg-[#00A3FF] hover:bg-[#38BDF8] text-[#00142E] font-bold px-6 py-3 rounded-xl shadow-[0_4px_20px_rgba(0,163,255,0.35)] hover:shadow-[0_6px_24px_rgba(56,189,248,0.5)] transition-all text-sm"
           >
             <BookOpen className="w-4 h-4" />
             IEEE Xplore Proceedings
@@ -243,7 +251,7 @@ export default function Icetite24Page() {
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
           {stats.map(({ label, value, icon: Icon }) => (
             <div key={label} className="text-center">
-              <div className="text-3xl sm:text-4xl font-black text-[#CCFF00] mb-1">{value}</div>
+              <div className="text-3xl sm:text-4xl font-black text-[#38BDF8] mb-1">{value}</div>
               <div className="text-white/60 text-xs uppercase tracking-wider font-semibold">{label}</div>
             </div>
           ))}
