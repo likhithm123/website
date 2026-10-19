@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import PhotoGridModal from "@/components/PhotoGridModal";
+import BoltPhotoMoments from "@/components/BoltPhotoMoments";
 import BoltFloatingReturn from "@/components/BoltFloatingReturn";
-import { bolt20Photos } from "@/data/photos";
 import {
   Zap,
   Award,
@@ -176,16 +175,9 @@ export default function HackathonPage() {
         </div>
       </section>
 
-      {/* ── PHOTO ARCHIVE (LIGHT THEME, UNDERLINED TITLE, ZERO CAPTIONS) ── */}
-      <section id="gallery" className="py-16 sm:py-20 bg-[#FAFBFD] border-b border-slate-200">
-        <div className="container-x">
-          <PhotoGridModal
-            photos={bolt20Photos}
-            title="BOLT 2.0 Highlights"
-            subtitle="Key moments and team presentations from BOLT 2.0 at VIT Vellore."
-            theme="light"
-          />
-        </div>
+      {/* ── PHOTO ARCHIVE (CONTINUOUS AUTO-SCROLLING FRAMES REEL WITH HOVER) ── */}
+      <section id="gallery">
+        <BoltPhotoMoments />
       </section>
 
       {/* ── DOMAINS & TRACKS GRID ── */}
