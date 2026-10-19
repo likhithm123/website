@@ -2,90 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import GallerySlideshow, { GalleryItem } from "@/components/GallerySlideshow";
+import Icetite24FullGallery from "@/components/Icetite24FullGallery";
+import { ICETITE24_PHOTOS } from "@/data/icetite24GalleryData";
 
-const icetite24GalleryItems: GalleryItem[] = [
-  {
-    id: "stage-main-2024",
-    image: "/images/gallery/icetite24_stage_main.webp",
-    title: "ic-ETITE'24 Main Dais & Dignitaries Inaugural Assembly",
-    edition: "ic-ETITE'24 Second Edition",
-    location: "Anna Auditorium Main Stage, VIT Vellore",
-    caption:
-      "Hon'ble Chancellor Dr. G. Viswanathan, Chief Guest Dr. Zvi Galil, leadership, and international dignitaries on the Anna Auditorium dais.",
-    category: "2024",
-  },
-  {
-    id: "conclave-wide-2024",
-    image: "/images/gallery/icetite24_conclave_wide.jpg",
-    title: "ic-ETITE'24 Leadership & International Dignitaries Conclave",
-    edition: "ic-ETITE'24 Second Edition",
-    location: "Chancellor's Reception Lounge, VIT Vellore",
-    caption:
-      "Hon'ble Chancellor Dr. G. Viswanathan with Chief Guest Dr. Zvi Galil, academic leadership, and organizing chairs during the executive conclave.",
-    category: "2024",
-  },
-  {
-    id: "inauguration-2024",
-    image: "/images/gallery/icetite24_inauguration.webp",
-    title: "ic-ETITE'24 Grand Inaugural Ceremony",
-    edition: "ic-ETITE'24 Second Edition",
-    location: "Anna Auditorium, VIT Vellore",
-    caption:
-      "Official inaugural stage at Anna Auditorium, VIT Vellore with Chancellor Dr. G. Viswanathan and global keynote guests.",
-    category: "2024",
-  },
-  {
-    id: "dignitaries-2024",
-    image: "/images/004A3218.webp",
-    title: "Dignitaries on Stage & Proceedings Release",
-    edition: "ic-ETITE'24 Second Edition",
-    location: "Anna Auditorium Main Stage, VIT Vellore",
-    caption:
-      "Formal unveiling of the ic-ETITE'24 IEEE Xplore proceedings volume and conference schedule.",
-    category: "2024",
-  },
-  {
-    id: "delegates-audience-2024",
-    image: "/images/ic-etite24.webp",
-    title: "ic-ETITE'24 Delegates & Paper Presenters",
-    edition: "ic-ETITE'24 Second Edition",
-    location: "Anna Auditorium, VIT Vellore",
-    caption:
-      "Paper presentation sessions attended by 1,088+ participants from 19 countries.",
-    category: "2024",
-  },
-  {
-    id: "keynote-2024",
-    image: "/images/gallery/icetite24_keynote.webp",
-    title: "Global Keynote Address",
-    edition: "ic-ETITE'24 Second Edition",
-    location: "Anna Auditorium, VIT Vellore",
-    caption:
-      "Keynote presentation by international scientist on frontier trends in information technology and computer engineering.",
-    category: "2024",
-  },
-  {
-    id: "discussions-2024",
-    image: "/images/004A3344.webp",
-    title: "Conference Plenary Discussions",
-    edition: "ic-ETITE'24 Second Edition",
-    location: "VIT Vellore Campus",
-    caption:
-      "Engaging discussions during the technical session at VIT Vellore campus.",
-    category: "2024",
-  },
+const icetite24GalleryItems: GalleryItem[] = ICETITE24_PHOTOS.map((p) => ({
+  id: p.id,
+  image: p.image,
+  title: p.title,
+  edition: p.edition,
+  location: p.location,
+  caption: p.caption,
+  category: "2024" as const,
+}));
 
-  {
-    id: "banner-stage-2024",
-    image: "/images/ic-etite24-preview.webp",
-    title: "ic-ETITE'24 Official Banner Stage",
-    edition: "ic-ETITE'24 Second Edition",
-    location: "SCORE, VIT Vellore",
-    caption:
-      "Second edition milestone celebration at School of Computer Science Engineering and Information Systems (SCORE).",
-    category: "2024",
-  },
-];
 import {
   ArrowLeft,
   ExternalLink,
@@ -314,21 +243,48 @@ export default function Icetite24Page() {
         </div>
       </section>
 
-      {/* ── PHOTO GALLERY SLIDESHOW ── */}
+      {/* ── PHOTO GALLERY & ARCHIVE (ALL 19 PHOTOS) ── */}
       <section className="py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#F7F9FC] border-b border-slate-200">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10 px-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#004B87] bg-[#EBF3F8] px-3 py-1.5 rounded-full border border-[#004B87]/20 inline-block mb-4">
-              Official Photo Archive
+        <div className="max-w-6xl mx-auto space-y-16">
+          {/* Header */}
+          <div className="text-center px-6">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#004B87] bg-[#EBF3F8] px-3.5 py-1.5 rounded-full border border-[#004B87]/20 inline-block mb-4">
+              Official Photo Archive · All 19 Photographs
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#002147] mb-2">
-              ic-ETITE&apos;24 Highlights
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#002147] mb-3">
+              ic-ETITE&apos;24 Highlights &amp; Gallery
             </h2>
-            <p className="text-slate-500 text-base max-w-xl mx-auto">
-              Moments from the second edition — keynotes, inaugurations, sessions &amp; awards.
+            <p className="text-slate-600 text-base max-w-2xl mx-auto">
+              Every memorable moment captured during the second edition — inaugural assembly, keynote plenary, 24-hour BOLT 2.0 hackathon, TechNext industrial expo, and international delegate fellowship.
             </p>
           </div>
-          <GallerySlideshow items={icetite24GalleryItems} showCategoryFilter={false} />
+
+          {/* Featured Slideshow */}
+          <div className="bg-white p-4 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+            <div className="mb-6 flex items-center justify-between border-b border-slate-100 pb-4">
+              <div>
+                <h3 className="font-bold text-lg text-[#002147]">Interactive Slideshow</h3>
+                <p className="text-xs text-slate-500">Auto-playing cinematic archive showcase with full details</p>
+              </div>
+              <span className="text-xs font-bold text-[#004B87] bg-[#EBF3F8] px-3 py-1 rounded-full">
+                19 Archival Moments
+              </span>
+            </div>
+            <GallerySlideshow items={icetite24GalleryItems} showCategoryFilter={false} />
+          </div>
+
+          {/* Full Grid Gallery with Category Filters, Search & Lightbox */}
+          <div>
+            <div className="mb-6 text-center sm:text-left">
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#002147]">
+                Complete Photographic Collection
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-500 mt-1">
+                Filter by event category or search specific topics. Click any photograph to open full-resolution inspection.
+              </p>
+            </div>
+            <Icetite24FullGallery />
+          </div>
         </div>
       </section>
 

@@ -96,18 +96,46 @@ const archivalGallery = [
       "Official delegation portrait featuring Chancellor Dr. G. Viswanathan and international delegates from UC Berkeley, MIR Labs, and partner institutions.",
   },
   {
-    image: "/images/gallery/icetite24_inauguration.webp",
-    title: "ic-ETITE'24 Grand Inaugural Conclave",
+    image: "/images/icetite24/icetite24_16_inaugural_ceremony_dais.jpg",
+    title: "ic-ETITE'24 Grand Inaugural Assembly & Dais",
     badge: "Second Edition · 2024",
     caption:
-      "Hon'ble Chancellor Dr. G. Viswanathan meeting Chief Guest Dr. Zvi Galil, former Dean of Computing at Georgia Tech, USA.",
+      "Hon'ble Chancellor Dr. G. Viswanathan, Chief Guest Dr. Zvi Galil, leadership, and international dignitaries inaugurating ic-ETITE'24 on Anna Auditorium dais.",
   },
   {
-    image: "/images/gallery/icetite24_dignitaries.webp",
-    title: "ic-ETITE'24 Leadership Summit with MeitY Secretary",
-    badge: "ic-ETITE'24 Edition",
+    image: "/images/icetite24/icetite24_18_bolt_hackathon_awards_stage.jpg",
+    title: "BOLT 2.0 Hackathon Award Ceremony",
+    badge: "BOLT 2.0 · 2024",
     caption:
-      "Chancellor Dr. G. Viswanathan and university leadership conferring with Chief Guest Shri S. Krishnan, IAS, Secretary, MeitY, Govt. of India.",
+      "Prestigious certificate and prize distribution to winning student coders and prototype innovators of the 24-hour BOLT 2.0 Hackathon.",
+  },
+  {
+    image: "/images/icetite24/icetite24_04_cisco_expo.jpg",
+    title: "Cisco Technology Expo & Innovation Booth",
+    badge: "Title Sponsor Cisco",
+    caption:
+      "Interactive technology demonstration booth by Title Sponsor Cisco featuring 'Code with Cisco: Igniting Minds, Empowering Innovation'.",
+  },
+  {
+    image: "/images/icetite24/icetite24_11_drone_prototype_expo.jpg",
+    title: "SkyWatch Autonomous Drone Live Demonstration",
+    badge: "TechNext'24 Prototype",
+    caption:
+      "Student engineering team demonstrating autonomous aerial surveillance drone prototype with live telemetry to conference delegates.",
+  },
+  {
+    image: "/images/icetite24/icetite24_13_java_capital_innovators.jpg",
+    title: "Student Innovators & Tech Startup Pavilion",
+    badge: "Startups & Innovators",
+    caption:
+      "Budding tech founders demonstrating breakthrough prototypes and software products supported by Java Capital and IEEE.",
+  },
+  {
+    image: "/images/icetite24/icetite24_01_networking_gala.jpg",
+    title: "Conference Networking Gala & Delegates Assembly",
+    badge: "Networking Colloquium",
+    caption:
+      "Evening networking banquet bringing together keynote speakers, faculty chairs, delegates, and student authors under campus lights.",
   },
 ];
 
@@ -436,6 +464,17 @@ export default function AboutPage() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Link to Full 19-Photo Archive */}
+            <div className="mt-10 text-center">
+              <Link
+                href="/ic-ETITE24#gallery"
+                className="inline-flex items-center gap-2 bg-[#002147] hover:bg-[#003366] text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all"
+              >
+                <span>Explore All 19 Official ic-ETITE’24 Photographs &amp; Full Gallery</span>
+                <ChevronRight className="w-4 h-4 text-[#FFB81C]" />
+              </Link>
             </div>
           </div>
         </section>
