@@ -9,20 +9,6 @@ export interface TeamMember {
 }
 
 export const ieeeItsLeadership: TeamMember[] = [
-  {
-    name: "Dr. Sumangali. K",
-    role: "Associate Professor",
-    title: "SCORE",
-    affiliation: "VIT, Vellore",
-    badge: "Faculty Advisor",
-  },
-  {
-    name: "Dr. Asha. N",
-    role: "Associate Professor",
-    title: "SCORE",
-    affiliation: "VIT, Vellore",
-    badge: "Faculty Advisor",
-  },
 
   {
     name: "Likhith Medarametla",
@@ -40,9 +26,5 @@ export const ieeeItsLeadership: TeamMember[] = [
     affiliation: "SCORE, VIT Vellore",
     badge: "Web Development Lead",
   },
-  {
-    name: "Jayanth",
-    affiliation: "SCORE, VIT Vellore",
-    badge: "Web Development Lead",
-  },
+
 ];
