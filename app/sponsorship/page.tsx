@@ -377,7 +377,8 @@ export default function SponsorshipPage() {
               </a>
 
               <a
-                href="https://icetite.vit.ac.in/docs/ic-ETITE_24.pdf"
+                href="/Formatted_ic-ETITE_Conference_Brochure.pdf"
+                download="ic-ETITE_Conference_Brochure.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm transition-all border border-white/25 hover:scale-[1.02]"

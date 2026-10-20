@@ -114,8 +114,8 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-4">
               {/* Enlarged Dark Download Brochure Button */}
               <a
-                href="/brochure_ic-ETITE'24.pdf"
-                download="brochure_ic-ETITE'24.pdf"
+                href="/Formatted_ic-ETITE_Conference_Brochure.pdf"
+                download="ic-ETITE_Conference_Brochure.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-[#001C3D] hover:bg-[#002855] text-white border-2 border-[#D39E00] shadow-[0_4px_25px_rgba(0,0,0,0.5)] transition-all hover:scale-105 text-sm sm:text-base font-bold cursor-pointer"
@@ -325,8 +325,8 @@ export default function Hero() {
                 <span>Print / Save as PDF</span>
               </button>
               <a
-                href="/brochure_ic-ETITE'24.pdf"
-                download="brochure_ic-ETITE'24.pdf"
+                href="/Formatted_ic-ETITE_Conference_Brochure.pdf"
+                download="ic-ETITE_Conference_Brochure.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-xs py-2 px-4 inline-flex items-center gap-1.5"
