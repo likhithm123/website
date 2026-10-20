@@ -48,7 +48,7 @@ export default function TeamPage() {
           <div className="space-y-8 sm:space-y-10">
             <section className="space-y-2">
               <h2 className="text-xl sm:text-2xl font-bold text-[#004B87] tracking-tight">
-                Web Development Leads &amp; Engineers
+                Web Development Leads
               </h2>
               <div className="space-y-2.5 pt-1">
                 {studentMembers.map((member) => (

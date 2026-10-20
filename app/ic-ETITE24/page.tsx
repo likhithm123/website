@@ -154,7 +154,7 @@ export default function Icetite24Page() {
               width={355}
               height={64}
               priority
-              className="h-12 sm:h-16 md:h-20 w-auto object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+              className="h-8 sm:h-10 md:h-12 w-auto object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
             />
             <h1 className="sr-only">ic-ETITE&apos;24</h1>
           </div>

@@ -92,16 +92,16 @@ export default function Hero() {
 
 
             {/* Main Heading: Exactly as on the video left side */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold leading-[1.12] tracking-tight text-white mb-8 drop-shadow-md">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold leading-[1.15] tracking-tight text-white mb-6 drop-shadow-md">
               Welcome to <span className="text-white">ic-ETITE&apos;28!</span>
             </h1>
 
             {/* Sub-heading: Full conference title exactly as reference */}
-            <p className="text-base sm:text-lg md:text-[1.2rem] text-white/95 leading-snug font-normal max-w-xl mb-8 drop-shadow">
-              The Third International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE&apos;28)
+            <p className="text-base sm:text-lg md:text-[1.2rem] text-white/95 leading-snug font-normal max-w-xl mb-6 drop-shadow">
+              Third International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE)
             </p>
-            <p className="text-xs sm:text-sm text-[#FFB81C] font-semibold mb-10">
-              Organized by School of Computer Science Engineering &amp; Information Systems (SCORE) · VIT Vellore
+            <p className="text-xs sm:text-sm text-[#FFB81C] font-semibold mb-8">
+              Organized by School of Computer Science Engineering and Information Systems (SCORE) · VIT, Vellore
             </p>
 
             {/* Dates & Location Line */}
@@ -208,7 +208,7 @@ export default function Hero() {
               <span>Vellore Institute of Technology (Deemed to be University under section 3 of UGC Act 1956)</span>
             </div>
             <div className="flex items-center gap-4 text-[#4A5568] font-medium">
-              <span>SCORE (School of Computer Science Engineering &amp; Information Systems)</span>
+              <span>SCORE (School of Computer Science Engineering and Information Systems)</span>
               <span>·</span>
               <span>IEEE Information Theory Society, VIT</span>
             </div>

@@ -118,15 +118,30 @@ export default function HomePhotoMoments() {
             </button>
 
             {/* Main Image View */}
-            <div className="relative w-full aspect-[3/2] max-h-[85vh] bg-black flex items-center justify-center overflow-hidden">
+            <div className="relative w-full aspect-[3/2] max-h-[75vh] bg-black flex items-center justify-center overflow-hidden">
               <Image
                 src={activePhoto.image}
-                alt="ic-ETITE'24 photograph full view"
+                alt={activePhoto.title || "ic-ETITE'24 photograph full view"}
                 fill
                 sizes="(max-width: 1200px) 100vw, 1200px"
                 className="object-contain"
                 priority
               />
+            </div>
+
+            {/* Photo Caption Footer */}
+            <div className="p-4 sm:p-5 bg-slate-900 border-t border-white/10 text-white">
+              <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                <span className="px-2.5 py-0.5 rounded-full bg-[#FFB81C] text-[#002147] text-[11px] font-bold uppercase tracking-wider">
+                  {activePhoto.badge}
+                </span>
+                <h3 className="font-semibold text-sm sm:text-base text-white">
+                  {activePhoto.title}
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                {activePhoto.caption}
+              </p>
             </div>
           </div>
         </div>
