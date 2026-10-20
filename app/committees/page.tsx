@@ -209,7 +209,6 @@ export default function CommitteesPage() {
     { name: "Likhith Medarametla", affiliation: "SCORE, VIT Vellore" },
     { name: "Judson Daniel", affiliation: "SCORE, VIT Vellore" },
     { name: "M.J.V.Maheswara Reddy", affiliation: "SCORE, VIT Vellore" },
-    { name: "Jayanth", affiliation: "SCORE, VIT Vellore" },
   ];
 
   // Helper to deduplicate committee members by normalized name
