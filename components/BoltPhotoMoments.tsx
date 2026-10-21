@@ -23,11 +23,11 @@ const TILT_ANGLES = [
 const boltGalleryPhotos = [
   {
     id: "bolt-stage-award-2024",
-    src: "/images/icetite24/icetite24_18_bolt_hackathon_awards_stage.jpg",
+    src: "/images/icetite24/icetite24_18_bolt_hackathon_awards_stage.webp",
   },
   {
     id: "bolt-winners-dais-2024",
-    src: "/images/icetite24/icetite24_19_bolt_winners_felicitation.jpg",
+    src: "/images/icetite24/icetite24_19_bolt_winners_felicitation.webp",
   },
   ...bolt20Photos.map((p) => ({
     id: p.id,
